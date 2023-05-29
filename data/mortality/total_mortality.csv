@@ -1,0 +1,2641 @@
+State,Year,Month,Period,Indicator,Data Value
+UNITED STATES,2021,January,Monthly,Number of Live Births,277000
+UNITED STATES,2021,February,Monthly,Number of Live Births,266000
+UNITED STATES,2021,March,Monthly,Number of Live Births,302000
+UNITED STATES,2021,April,Monthly,Number of Live Births,293000
+UNITED STATES,2021,May,Monthly,Number of Live Births,301000
+UNITED STATES,2021,June,Monthly,Number of Live Births,313000
+UNITED STATES,2021,July,Monthly,Number of Live Births,326000
+UNITED STATES,2021,August,Monthly,Number of Live Births,330000
+UNITED STATES,2021,September,Monthly,Number of Live Births,325000
+UNITED STATES,2021,October,Monthly,Number of Live Births,315000
+UNITED STATES,2021,November,Monthly,Number of Live Births,301000
+UNITED STATES,2021,December,Monthly,Number of Live Births,311000
+UNITED STATES,2022,January,Monthly,Number of Live Births,295000
+UNITED STATES,2022,February,Monthly,Number of Live Births,276000
+UNITED STATES,2022,March,Monthly,Number of Live Births,307000
+UNITED STATES,2022,April,Monthly,Number of Live Births,288000
+UNITED STATES,2022,May,Monthly,Number of Live Births,297000
+UNITED STATES,2022,June,Monthly,Number of Live Births,306000
+UNITED STATES,2022,July,Monthly,Number of Live Births,321000
+UNITED STATES,2022,August,Monthly,Number of Live Births,336000
+UNITED STATES,2022,September,Monthly,Number of Live Births,312000
+UNITED STATES,2022,October,Monthly,Number of Live Births,306000
+UNITED STATES,2022,November,Monthly,Number of Live Births,307000
+UNITED STATES,2022,December,Monthly,Number of Live Births,314000
+UNITED STATES,2021,January,Monthly,Number of Deaths,373000
+UNITED STATES,2021,February,Monthly,Number of Deaths,282000
+UNITED STATES,2021,March,Monthly,Number of Deaths,270000
+UNITED STATES,2021,April,Monthly,Number of Deaths,256000
+UNITED STATES,2021,May,Monthly,Number of Deaths,258000
+UNITED STATES,2021,June,Monthly,Number of Deaths,245000
+UNITED STATES,2021,July,Monthly,Number of Deaths,257000
+UNITED STATES,2021,August,Monthly,Number of Deaths,303000
+UNITED STATES,2021,September,Monthly,Number of Deaths,312000
+UNITED STATES,2021,October,Monthly,Number of Deaths,300000
+UNITED STATES,2021,November,Monthly,Number of Deaths,288000
+UNITED STATES,2021,December,Monthly,Number of Deaths,319000
+UNITED STATES,2022,January,Monthly,Number of Deaths,369000
+UNITED STATES,2022,February,Monthly,Number of Deaths,289000
+UNITED STATES,2022,March,Monthly,Number of Deaths,268000
+UNITED STATES,2022,April,Monthly,Number of Deaths,246000
+UNITED STATES,2022,May,Monthly,Number of Deaths,254000
+UNITED STATES,2022,June,Monthly,Number of Deaths,248000
+UNITED STATES,2022,July,Monthly,Number of Deaths,260000
+UNITED STATES,2022,August,Monthly,Number of Deaths,259000
+UNITED STATES,2022,September,Monthly,Number of Deaths,251000
+UNITED STATES,2022,October,Monthly,Number of Deaths,264000
+UNITED STATES,2022,November,Monthly,Number of Deaths,267000
+UNITED STATES,2022,December,Monthly,Number of Deaths,297000
+UNITED STATES,2021,January,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,February,Monthly,Number of Infant Deaths,1500
+UNITED STATES,2021,March,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,April,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,May,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,June,Monthly,Number of Infant Deaths,1600
+UNITED STATES,2021,July,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,August,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,September,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,October,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2021,November,Monthly,Number of Infant Deaths,1600
+UNITED STATES,2021,December,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,January,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,February,Monthly,Number of Infant Deaths,1500
+UNITED STATES,2022,March,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,April,Monthly,Number of Infant Deaths,1600
+UNITED STATES,2022,May,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,June,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,July,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,August,Monthly,Number of Infant Deaths,1800
+UNITED STATES,2022,September,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,October,Monthly,Number of Infant Deaths,1700
+UNITED STATES,2022,November,Monthly,Number of Infant Deaths,1600
+UNITED STATES,2022,December,Monthly,Number of Infant Deaths,1600
+UNITED STATES,2021,January,12 Month-ending,Number of Live Births,3586000
+UNITED STATES,2021,February,12 Month-ending,Number of Live Births,3569000
+UNITED STATES,2021,March,12 Month-ending,Number of Live Births,3569000
+UNITED STATES,2021,April,12 Month-ending,Number of Live Births,3572000
+UNITED STATES,2021,May,12 Month-ending,Number of Live Births,3572000
+UNITED STATES,2021,June,12 Month-ending,Number of Live Births,3583000
+UNITED STATES,2021,July,12 Month-ending,Number of Live Births,3587000
+UNITED STATES,2021,August,12 Month-ending,Number of Live Births,3597000
+UNITED STATES,2021,September,12 Month-ending,Number of Live Births,3611000
+UNITED STATES,2021,October,12 Month-ending,Number of Live Births,3621000
+UNITED STATES,2021,November,12 Month-ending,Number of Live Births,3640000
+UNITED STATES,2021,December,12 Month-ending,Number of Live Births,3661000
+UNITED STATES,2022,January,12 Month-ending,Number of Live Births,3679000
+UNITED STATES,2022,February,12 Month-ending,Number of Live Births,3688000
+UNITED STATES,2022,March,12 Month-ending,Number of Live Births,3693000
+UNITED STATES,2022,April,12 Month-ending,Number of Live Births,3689000
+UNITED STATES,2022,May,12 Month-ending,Number of Live Births,3685000
+UNITED STATES,2022,June,12 Month-ending,Number of Live Births,3678000
+UNITED STATES,2022,July,12 Month-ending,Number of Live Births,3672000
+UNITED STATES,2022,August,12 Month-ending,Number of Live Births,3678000
+UNITED STATES,2022,September,12 Month-ending,Number of Live Births,3665000
+UNITED STATES,2022,October,12 Month-ending,Number of Live Births,3656000
+UNITED STATES,2022,November,12 Month-ending,Number of Live Births,3661000
+UNITED STATES,2022,December,12 Month-ending,Number of Live Births,3664000
+UNITED STATES,2021,January,12 Month-ending,Number of Deaths,3492000
+UNITED STATES,2021,February,12 Month-ending,Number of Deaths,3530000
+UNITED STATES,2021,March,12 Month-ending,Number of Deaths,3531000
+UNITED STATES,2021,April,12 Month-ending,Number of Deaths,3465000
+UNITED STATES,2021,May,12 Month-ending,Number of Deaths,3443000
+UNITED STATES,2021,June,12 Month-ending,Number of Deaths,3438000
+UNITED STATES,2021,July,12 Month-ending,Number of Deaths,3417000
+UNITED STATES,2021,August,12 Month-ending,Number of Deaths,3443000
+UNITED STATES,2021,September,12 Month-ending,Number of Deaths,3498000
+UNITED STATES,2021,October,12 Month-ending,Number of Deaths,3525000
+UNITED STATES,2021,November,12 Month-ending,Number of Deaths,3511000
+UNITED STATES,2021,December,12 Month-ending,Number of Deaths,3464000
+UNITED STATES,2022,January,12 Month-ending,Number of Deaths,3460000
+UNITED STATES,2022,February,12 Month-ending,Number of Deaths,3467000
+UNITED STATES,2022,March,12 Month-ending,Number of Deaths,3465000
+UNITED STATES,2022,April,12 Month-ending,Number of Deaths,3454000
+UNITED STATES,2022,May,12 Month-ending,Number of Deaths,3451000
+UNITED STATES,2022,June,12 Month-ending,Number of Deaths,3454000
+UNITED STATES,2022,July,12 Month-ending,Number of Deaths,3457000
+UNITED STATES,2022,August,12 Month-ending,Number of Deaths,3413000
+UNITED STATES,2022,September,12 Month-ending,Number of Deaths,3352000
+UNITED STATES,2022,October,12 Month-ending,Number of Deaths,3316000
+UNITED STATES,2022,November,12 Month-ending,Number of Deaths,3295000
+UNITED STATES,2022,December,12 Month-ending,Number of Deaths,3273000
+UNITED STATES,2021,January,12 Month-ending,Number of Infant Deaths,19400
+UNITED STATES,2021,February,12 Month-ending,Number of Infant Deaths,19200
+UNITED STATES,2021,March,12 Month-ending,Number of Infant Deaths,19200
+UNITED STATES,2021,April,12 Month-ending,Number of Infant Deaths,19300
+UNITED STATES,2021,May,12 Month-ending,Number of Infant Deaths,19300
+UNITED STATES,2021,June,12 Month-ending,Number of Infant Deaths,19200
+UNITED STATES,2021,July,12 Month-ending,Number of Infant Deaths,19300
+UNITED STATES,2021,August,12 Month-ending,Number of Infant Deaths,19400
+UNITED STATES,2021,September,12 Month-ending,Number of Infant Deaths,19500
+UNITED STATES,2021,October,12 Month-ending,Number of Infant Deaths,19600
+UNITED STATES,2021,November,12 Month-ending,Number of Infant Deaths,19700
+UNITED STATES,2021,December,12 Month-ending,Number of Infant Deaths,19900
+UNITED STATES,2022,January,12 Month-ending,Number of Infant Deaths,19900
+UNITED STATES,2022,February,12 Month-ending,Number of Infant Deaths,19900
+UNITED STATES,2022,March,12 Month-ending,Number of Infant Deaths,20000
+UNITED STATES,2022,April,12 Month-ending,Number of Infant Deaths,19900
+UNITED STATES,2022,May,12 Month-ending,Number of Infant Deaths,19900
+UNITED STATES,2022,June,12 Month-ending,Number of Infant Deaths,20000
+UNITED STATES,2022,July,12 Month-ending,Number of Infant Deaths,20100
+UNITED STATES,2022,August,12 Month-ending,Number of Infant Deaths,20200
+UNITED STATES,2022,September,12 Month-ending,Number of Infant Deaths,20200
+UNITED STATES,2022,October,12 Month-ending,Number of Infant Deaths,20200
+UNITED STATES,2022,November,12 Month-ending,Number of Infant Deaths,20200
+UNITED STATES,2022,December,12 Month-ending,Number of Infant Deaths,20100
+ALABAMA,2021,January,Monthly,Number of Deaths,7972
+ALASKA,2021,January,Monthly,Number of Deaths,488
+ARIZONA,2021,January,Monthly,Number of Deaths,10191
+ARKANSAS,2021,January,Monthly,Number of Deaths,4273
+CALIFORNIA,2021,January,Monthly,Number of Deaths,47952
+COLORADO,2021,January,Monthly,Number of Deaths,4357
+CONNECTICUT,2021,January,Monthly,Number of Deaths,3772
+DELAWARE,2021,January,Monthly,Number of Deaths,1216
+DISTRICT OF COLUMBIA,2021,January,Monthly,Number of Deaths,626
+FLORIDA,2021,January,Monthly,Number of Deaths,24609
+GEORGIA,2021,January,Monthly,Number of Deaths,12891
+HAWAII,2021,January,Monthly,Number of Deaths,982
+IDAHO,2021,January,Monthly,Number of Deaths,1517
+ILLINOIS,2021,January,Monthly,Number of Deaths,12287
+INDIANA,2021,January,Monthly,Number of Deaths,8052
+IOWA,2021,January,Monthly,Number of Deaths,3279
+KANSAS,2021,January,Monthly,Number of Deaths,3380
+KENTUCKY,2021,January,Monthly,Number of Deaths,5888
+LOUISIANA,2021,January,Monthly,Number of Deaths,5939
+MAINE,2021,January,Monthly,Number of Deaths,1557
+MARYLAND,2021,January,Monthly,Number of Deaths,6111
+MASSACHUSETTS,2021,January,Monthly,Number of Deaths,6765
+MICHIGAN,2021,January,Monthly,Number of Deaths,10521
+MINNESOTA,2021,January,Monthly,Number of Deaths,4586
+MISSISSIPPI,2021,January,Monthly,Number of Deaths,4580
+MISSOURI,2021,January,Monthly,Number of Deaths,7349
+MONTANA,2021,January,Monthly,Number of Deaths,1045
+NEBRASKA,2021,January,Monthly,Number of Deaths,1786
+NEVADA,2021,January,Monthly,Number of Deaths,3545
+NEW HAMPSHIRE,2021,January,Monthly,Number of Deaths,1441
+NEW JERSEY,2021,January,Monthly,Number of Deaths,9216
+NEW MEXICO,2021,January,Monthly,Number of Deaths,2500
+NEW YORK,2021,January,Monthly,Number of Deaths,20337
+NORTH CAROLINA,2021,January,Monthly,Number of Deaths,12944
+NORTH DAKOTA,2021,January,Monthly,Number of Deaths,612
+OHIO,2021,January,Monthly,Number of Deaths,15162
+OKLAHOMA,2021,January,Monthly,Number of Deaths,5706
+OREGON,2021,January,Monthly,Number of Deaths,3844
+PENNSYLVANIA,2021,January,Monthly,Number of Deaths,16892
+RHODE ISLAND,2021,January,Monthly,Number of Deaths,1236
+SOUTH CAROLINA,2021,January,Monthly,Number of Deaths,7353
+SOUTH DAKOTA,2021,January,Monthly,Number of Deaths,892
+TENNESSEE,2021,January,Monthly,Number of Deaths,9599
+TEXAS,2021,January,Monthly,Number of Deaths,30254
+UTAH,2021,January,Monthly,Number of Deaths,2126
+VERMONT,2021,January,Monthly,Number of Deaths,578
+VIRGINIA,2021,January,Monthly,Number of Deaths,9170
+WASHINGTON,2021,January,Monthly,Number of Deaths,6039
+WEST VIRGINIA,2021,January,Monthly,Number of Deaths,3009
+WISCONSIN,2021,January,Monthly,Number of Deaths,5700
+WYOMING,2021,January,Monthly,Number of Deaths,573
+PUERTO RICO,2021,January,Monthly,Number of Deaths,2983
+ALABAMA,2021,February,Monthly,Number of Deaths,5661
+ALASKA,2021,February,Monthly,Number of Deaths,376
+ARIZONA,2021,February,Monthly,Number of Deaths,6627
+ARKANSAS,2021,February,Monthly,Number of Deaths,3290
+CALIFORNIA,2021,February,Monthly,Number of Deaths,29920
+COLORADO,2021,February,Monthly,Number of Deaths,3447
+CONNECTICUT,2021,February,Monthly,Number of Deaths,2834
+DELAWARE,2021,February,Monthly,Number of Deaths,906
+DISTRICT OF COLUMBIA,2021,February,Monthly,Number of Deaths,494
+FLORIDA,2021,February,Monthly,Number of Deaths,20693
+GEORGIA,2021,February,Monthly,Number of Deaths,9324
+HAWAII,2021,February,Monthly,Number of Deaths,995
+IDAHO,2021,February,Monthly,Number of Deaths,1236
+ILLINOIS,2021,February,Monthly,Number of Deaths,10049
+INDIANA,2021,February,Monthly,Number of Deaths,5952
+IOWA,2021,February,Monthly,Number of Deaths,2533
+KANSAS,2021,February,Monthly,Number of Deaths,2510
+KENTUCKY,2021,February,Monthly,Number of Deaths,4619
+LOUISIANA,2021,February,Monthly,Number of Deaths,4622
+MAINE,2021,February,Monthly,Number of Deaths,1217
+MARYLAND,2021,February,Monthly,Number of Deaths,4916
+MASSACHUSETTS,2021,February,Monthly,Number of Deaths,5356
+MICHIGAN,2021,February,Monthly,Number of Deaths,8610
+MINNESOTA,2021,February,Monthly,Number of Deaths,3748
+MISSISSIPPI,2021,February,Monthly,Number of Deaths,3381
+MISSOURI,2021,February,Monthly,Number of Deaths,5654
+MONTANA,2021,February,Monthly,Number of Deaths,864
+NEBRASKA,2021,February,Monthly,Number of Deaths,1318
+NEVADA,2021,February,Monthly,Number of Deaths,2604
+NEW HAMPSHIRE,2021,February,Monthly,Number of Deaths,1060
+NEW JERSEY,2021,February,Monthly,Number of Deaths,7575
+NEW MEXICO,2021,February,Monthly,Number of Deaths,1880
+NEW YORK,2021,February,Monthly,Number of Deaths,16483
+NORTH CAROLINA,2021,February,Monthly,Number of Deaths,9691
+NORTH DAKOTA,2021,February,Monthly,Number of Deaths,514
+OHIO,2021,February,Monthly,Number of Deaths,11611
+OKLAHOMA,2021,February,Monthly,Number of Deaths,4069
+OREGON,2021,February,Monthly,Number of Deaths,3230
+PENNSYLVANIA,2021,February,Monthly,Number of Deaths,12429
+RHODE ISLAND,2021,February,Monthly,Number of Deaths,938
+SOUTH CAROLINA,2021,February,Monthly,Number of Deaths,5413
+SOUTH DAKOTA,2021,February,Monthly,Number of Deaths,701
+TENNESSEE,2021,February,Monthly,Number of Deaths,6898
+TEXAS,2021,February,Monthly,Number of Deaths,23729
+UTAH,2021,February,Monthly,Number of Deaths,1676
+VERMONT,2021,February,Monthly,Number of Deaths,597
+VIRGINIA,2021,February,Monthly,Number of Deaths,7294
+WASHINGTON,2021,February,Monthly,Number of Deaths,5071
+WEST VIRGINIA,2021,February,Monthly,Number of Deaths,2245
+WISCONSIN,2021,February,Monthly,Number of Deaths,4541
+WYOMING,2021,February,Monthly,Number of Deaths,458
+PUERTO RICO,2021,February,Monthly,Number of Deaths,2562
+ALABAMA,2021,March,Monthly,Number of Deaths,5174
+ALASKA,2021,March,Monthly,Number of Deaths,433
+ARIZONA,2021,March,Monthly,Number of Deaths,6080
+ARKANSAS,2021,March,Monthly,Number of Deaths,3111
+CALIFORNIA,2021,March,Monthly,Number of Deaths,26686
+COLORADO,2021,March,Monthly,Number of Deaths,3808
+CONNECTICUT,2021,March,Monthly,Number of Deaths,2857
+DELAWARE,2021,March,Monthly,Number of Deaths,918
+DISTRICT OF COLUMBIA,2021,March,Monthly,Number of Deaths,491
+FLORIDA,2021,March,Monthly,Number of Deaths,20363
+GEORGIA,2021,March,Monthly,Number of Deaths,8405
+HAWAII,2021,March,Monthly,Number of Deaths,1068
+IDAHO,2021,March,Monthly,Number of Deaths,1363
+ILLINOIS,2021,March,Monthly,Number of Deaths,9718
+INDIANA,2021,March,Monthly,Number of Deaths,5869
+IOWA,2021,March,Monthly,Number of Deaths,2474
+KANSAS,2021,March,Monthly,Number of Deaths,2431
+KENTUCKY,2021,March,Monthly,Number of Deaths,4676
+LOUISIANA,2021,March,Monthly,Number of Deaths,4557
+MAINE,2021,March,Monthly,Number of Deaths,1274
+MARYLAND,2021,March,Monthly,Number of Deaths,4984
+MASSACHUSETTS,2021,March,Monthly,Number of Deaths,5168
+MICHIGAN,2021,March,Monthly,Number of Deaths,9034
+MINNESOTA,2021,March,Monthly,Number of Deaths,3872
+MISSISSIPPI,2021,March,Monthly,Number of Deaths,3155
+MISSOURI,2021,March,Monthly,Number of Deaths,5655
+MONTANA,2021,March,Monthly,Number of Deaths,884
+NEBRASKA,2021,March,Monthly,Number of Deaths,1453
+NEVADA,2021,March,Monthly,Number of Deaths,2497
+NEW HAMPSHIRE,2021,March,Monthly,Number of Deaths,1051
+NEW JERSEY,2021,March,Monthly,Number of Deaths,7371
+NEW MEXICO,2021,March,Monthly,Number of Deaths,2032
+NEW YORK,2021,March,Monthly,Number of Deaths,15816
+NORTH CAROLINA,2021,March,Monthly,Number of Deaths,8931
+NORTH DAKOTA,2021,March,Monthly,Number of Deaths,586
+OHIO,2021,March,Monthly,Number of Deaths,11015
+OKLAHOMA,2021,March,Monthly,Number of Deaths,3778
+OREGON,2021,March,Monthly,Number of Deaths,3527
+PENNSYLVANIA,2021,March,Monthly,Number of Deaths,12006
+RHODE ISLAND,2021,March,Monthly,Number of Deaths,936
+SOUTH CAROLINA,2021,March,Monthly,Number of Deaths,5035
+SOUTH DAKOTA,2021,March,Monthly,Number of Deaths,722
+TENNESSEE,2021,March,Monthly,Number of Deaths,6760
+TEXAS,2021,March,Monthly,Number of Deaths,20769
+UTAH,2021,March,Monthly,Number of Deaths,1706
+VERMONT,2021,March,Monthly,Number of Deaths,514
+VIRGINIA,2021,March,Monthly,Number of Deaths,6815
+WASHINGTON,2021,March,Monthly,Number of Deaths,5268
+WEST VIRGINIA,2021,March,Monthly,Number of Deaths,2271
+WISCONSIN,2021,March,Monthly,Number of Deaths,4572
+WYOMING,2021,March,Monthly,Number of Deaths,451
+PUERTO RICO,2021,March,Monthly,Number of Deaths,2763
+ALABAMA,2021,April,Monthly,Number of Deaths,5068
+ALASKA,2021,April,Monthly,Number of Deaths,427
+ARIZONA,2021,April,Monthly,Number of Deaths,5452
+ARKANSAS,2021,April,Monthly,Number of Deaths,2834
+CALIFORNIA,2021,April,Monthly,Number of Deaths,23185
+COLORADO,2021,April,Monthly,Number of Deaths,3504
+CONNECTICUT,2021,April,Monthly,Number of Deaths,2570
+DELAWARE,2021,April,Monthly,Number of Deaths,854
+DISTRICT OF COLUMBIA,2021,April,Monthly,Number of Deaths,459
+FLORIDA,2021,April,Monthly,Number of Deaths,19554
+GEORGIA,2021,April,Monthly,Number of Deaths,8027
+HAWAII,2021,April,Monthly,Number of Deaths,1010
+IDAHO,2021,April,Monthly,Number of Deaths,1277
+ILLINOIS,2021,April,Monthly,Number of Deaths,9654
+INDIANA,2021,April,Monthly,Number of Deaths,5744
+IOWA,2021,April,Monthly,Number of Deaths,2620
+KANSAS,2021,April,Monthly,Number of Deaths,2259
+KENTUCKY,2021,April,Monthly,Number of Deaths,4511
+LOUISIANA,2021,April,Monthly,Number of Deaths,4216
+MAINE,2021,April,Monthly,Number of Deaths,1290
+MARYLAND,2021,April,Monthly,Number of Deaths,4701
+MASSACHUSETTS,2021,April,Monthly,Number of Deaths,4761
+MICHIGAN,2021,April,Monthly,Number of Deaths,10013
+MINNESOTA,2021,April,Monthly,Number of Deaths,3899
+MISSISSIPPI,2021,April,Monthly,Number of Deaths,2912
+MISSOURI,2021,April,Monthly,Number of Deaths,5480
+MONTANA,2021,April,Monthly,Number of Deaths,902
+NEBRASKA,2021,April,Monthly,Number of Deaths,1460
+NEVADA,2021,April,Monthly,Number of Deaths,2270
+NEW HAMPSHIRE,2021,April,Monthly,Number of Deaths,1053
+NEW JERSEY,2021,April,Monthly,Number of Deaths,7127
+NEW MEXICO,2021,April,Monthly,Number of Deaths,1862
+NEW YORK,2021,April,Monthly,Number of Deaths,14272
+NORTH CAROLINA,2021,April,Monthly,Number of Deaths,8683
+NORTH DAKOTA,2021,April,Monthly,Number of Deaths,534
+OHIO,2021,April,Monthly,Number of Deaths,10601
+OKLAHOMA,2021,April,Monthly,Number of Deaths,3453
+OREGON,2021,April,Monthly,Number of Deaths,3336
+PENNSYLVANIA,2021,April,Monthly,Number of Deaths,11882
+RHODE ISLAND,2021,April,Monthly,Number of Deaths,830
+SOUTH CAROLINA,2021,April,Monthly,Number of Deaths,4793
+SOUTH DAKOTA,2021,April,Monthly,Number of Deaths,671
+TENNESSEE,2021,April,Monthly,Number of Deaths,6714
+TEXAS,2021,April,Monthly,Number of Deaths,18895
+UTAH,2021,April,Monthly,Number of Deaths,1641
+VERMONT,2021,April,Monthly,Number of Deaths,521
+VIRGINIA,2021,April,Monthly,Number of Deaths,6463
+WASHINGTON,2021,April,Monthly,Number of Deaths,5189
+WEST VIRGINIA,2021,April,Monthly,Number of Deaths,2202
+WISCONSIN,2021,April,Monthly,Number of Deaths,4426
+WYOMING,2021,April,Monthly,Number of Deaths,412
+PUERTO RICO,2021,April,Monthly,Number of Deaths,2745
+ALABAMA,2021,May,Monthly,Number of Deaths,5005
+ALASKA,2021,May,Monthly,Number of Deaths,446
+ARIZONA,2021,May,Monthly,Number of Deaths,5724
+ARKANSAS,2021,May,Monthly,Number of Deaths,3046
+CALIFORNIA,2021,May,Monthly,Number of Deaths,23410
+COLORADO,2021,May,Monthly,Number of Deaths,3672
+CONNECTICUT,2021,May,Monthly,Number of Deaths,2671
+DELAWARE,2021,May,Monthly,Number of Deaths,886
+DISTRICT OF COLUMBIA,2021,May,Monthly,Number of Deaths,447
+FLORIDA,2021,May,Monthly,Number of Deaths,19804
+GEORGIA,2021,May,Monthly,Number of Deaths,8051
+HAWAII,2021,May,Monthly,Number of Deaths,1013
+IDAHO,2021,May,Monthly,Number of Deaths,1348
+ILLINOIS,2021,May,Monthly,Number of Deaths,9769
+INDIANA,2021,May,Monthly,Number of Deaths,5848
+IOWA,2021,May,Monthly,Number of Deaths,2524
+KANSAS,2021,May,Monthly,Number of Deaths,2363
+KENTUCKY,2021,May,Monthly,Number of Deaths,4449
+LOUISIANA,2021,May,Monthly,Number of Deaths,4229
+MAINE,2021,May,Monthly,Number of Deaths,1380
+MARYLAND,2021,May,Monthly,Number of Deaths,4580
+MASSACHUSETTS,2021,May,Monthly,Number of Deaths,4822
+MICHIGAN,2021,May,Monthly,Number of Deaths,9618
+MINNESOTA,2021,May,Monthly,Number of Deaths,4022
+MISSISSIPPI,2021,May,Monthly,Number of Deaths,2965
+MISSOURI,2021,May,Monthly,Number of Deaths,5505
+MONTANA,2021,May,Monthly,Number of Deaths,907
+NEBRASKA,2021,May,Monthly,Number of Deaths,1486
+NEVADA,2021,May,Monthly,Number of Deaths,2314
+NEW HAMPSHIRE,2021,May,Monthly,Number of Deaths,1086
+NEW JERSEY,2021,May,Monthly,Number of Deaths,6422
+NEW MEXICO,2021,May,Monthly,Number of Deaths,1914
+NEW YORK,2021,May,Monthly,Number of Deaths,13689
+NORTH CAROLINA,2021,May,Monthly,Number of Deaths,8929
+NORTH DAKOTA,2021,May,Monthly,Number of Deaths,566
+OHIO,2021,May,Monthly,Number of Deaths,10856
+OKLAHOMA,2021,May,Monthly,Number of Deaths,3549
+OREGON,2021,May,Monthly,Number of Deaths,3499
+PENNSYLVANIA,2021,May,Monthly,Number of Deaths,11792
+RHODE ISLAND,2021,May,Monthly,Number of Deaths,890
+SOUTH CAROLINA,2021,May,Monthly,Number of Deaths,4786
+SOUTH DAKOTA,2021,May,Monthly,Number of Deaths,685
+TENNESSEE,2021,May,Monthly,Number of Deaths,6729
+TEXAS,2021,May,Monthly,Number of Deaths,18955
+UTAH,2021,May,Monthly,Number of Deaths,1703
+VERMONT,2021,May,Monthly,Number of Deaths,532
+VIRGINIA,2021,May,Monthly,Number of Deaths,6495
+WASHINGTON,2021,May,Monthly,Number of Deaths,5262
+WEST VIRGINIA,2021,May,Monthly,Number of Deaths,2149
+WISCONSIN,2021,May,Monthly,Number of Deaths,4510
+WYOMING,2021,May,Monthly,Number of Deaths,457
+PUERTO RICO,2021,May,Monthly,Number of Deaths,2902
+ALABAMA,2021,June,Monthly,Number of Deaths,4787
+ALASKA,2021,June,Monthly,Number of Deaths,427
+ARIZONA,2021,June,Monthly,Number of Deaths,5691
+ARKANSAS,2021,June,Monthly,Number of Deaths,2936
+CALIFORNIA,2021,June,Monthly,Number of Deaths,22644
+COLORADO,2021,June,Monthly,Number of Deaths,3557
+CONNECTICUT,2021,June,Monthly,Number of Deaths,2494
+DELAWARE,2021,June,Monthly,Number of Deaths,794
+DISTRICT OF COLUMBIA,2021,June,Monthly,Number of Deaths,426
+FLORIDA,2021,June,Monthly,Number of Deaths,18711
+GEORGIA,2021,June,Monthly,Number of Deaths,7479
+HAWAII,2021,June,Monthly,Number of Deaths,951
+IDAHO,2021,June,Monthly,Number of Deaths,1328
+ILLINOIS,2021,June,Monthly,Number of Deaths,9168
+INDIANA,2021,June,Monthly,Number of Deaths,5690
+IOWA,2021,June,Monthly,Number of Deaths,2448
+KANSAS,2021,June,Monthly,Number of Deaths,2296
+KENTUCKY,2021,June,Monthly,Number of Deaths,4414
+LOUISIANA,2021,June,Monthly,Number of Deaths,4225
+MAINE,2021,June,Monthly,Number of Deaths,1321
+MARYLAND,2021,June,Monthly,Number of Deaths,4065
+MASSACHUSETTS,2021,June,Monthly,Number of Deaths,4528
+MICHIGAN,2021,June,Monthly,Number of Deaths,8365
+MINNESOTA,2021,June,Monthly,Number of Deaths,3740
+MISSISSIPPI,2021,June,Monthly,Number of Deaths,2892
+MISSOURI,2021,June,Monthly,Number of Deaths,5463
+MONTANA,2021,June,Monthly,Number of Deaths,941
+NEBRASKA,2021,June,Monthly,Number of Deaths,1337
+NEVADA,2021,June,Monthly,Number of Deaths,2324
+NEW HAMPSHIRE,2021,June,Monthly,Number of Deaths,1084
+NEW JERSEY,2021,June,Monthly,Number of Deaths,5971
+NEW MEXICO,2021,June,Monthly,Number of Deaths,1796
+NEW YORK,2021,June,Monthly,Number of Deaths,12468
+NORTH CAROLINA,2021,June,Monthly,Number of Deaths,8259
+NORTH DAKOTA,2021,June,Monthly,Number of Deaths,549
+OHIO,2021,June,Monthly,Number of Deaths,10062
+OKLAHOMA,2021,June,Monthly,Number of Deaths,3525
+OREGON,2021,June,Monthly,Number of Deaths,3518
+PENNSYLVANIA,2021,June,Monthly,Number of Deaths,10691
+RHODE ISLAND,2021,June,Monthly,Number of Deaths,796
+SOUTH CAROLINA,2021,June,Monthly,Number of Deaths,4554
+SOUTH DAKOTA,2021,June,Monthly,Number of Deaths,661
+TENNESSEE,2021,June,Monthly,Number of Deaths,6419
+TEXAS,2021,June,Monthly,Number of Deaths,18206
+UTAH,2021,June,Monthly,Number of Deaths,1675
+VERMONT,2021,June,Monthly,Number of Deaths,468
+VIRGINIA,2021,June,Monthly,Number of Deaths,5987
+WASHINGTON,2021,June,Monthly,Number of Deaths,5613
+WEST VIRGINIA,2021,June,Monthly,Number of Deaths,2062
+WISCONSIN,2021,June,Monthly,Number of Deaths,4383
+WYOMING,2021,June,Monthly,Number of Deaths,488
+PUERTO RICO,2021,June,Monthly,Number of Deaths,2594
+ALABAMA,2021,July,Monthly,Number of Deaths,5013
+ALASKA,2021,July,Monthly,Number of Deaths,481
+ARIZONA,2021,July,Monthly,Number of Deaths,5728
+ARKANSAS,2021,July,Monthly,Number of Deaths,3359
+CALIFORNIA,2021,July,Monthly,Number of Deaths,23676
+COLORADO,2021,July,Monthly,Number of Deaths,3676
+CONNECTICUT,2021,July,Monthly,Number of Deaths,2623
+DELAWARE,2021,July,Monthly,Number of Deaths,788
+DISTRICT OF COLUMBIA,2021,July,Monthly,Number of Deaths,466
+FLORIDA,2021,July,Monthly,Number of Deaths,20792
+GEORGIA,2021,July,Monthly,Number of Deaths,7969
+HAWAII,2021,July,Monthly,Number of Deaths,1001
+IDAHO,2021,July,Monthly,Number of Deaths,1391
+ILLINOIS,2021,July,Monthly,Number of Deaths,9499
+INDIANA,2021,July,Monthly,Number of Deaths,5756
+IOWA,2021,July,Monthly,Number of Deaths,2588
+KANSAS,2021,July,Monthly,Number of Deaths,2465
+KENTUCKY,2021,July,Monthly,Number of Deaths,4485
+LOUISIANA,2021,July,Monthly,Number of Deaths,4664
+MAINE,2021,July,Monthly,Number of Deaths,1348
+MARYLAND,2021,July,Monthly,Number of Deaths,4160
+MASSACHUSETTS,2021,July,Monthly,Number of Deaths,4750
+MICHIGAN,2021,July,Monthly,Number of Deaths,8499
+MINNESOTA,2021,July,Monthly,Number of Deaths,3901
+MISSISSIPPI,2021,July,Monthly,Number of Deaths,3222
+MISSOURI,2021,July,Monthly,Number of Deaths,6168
+MONTANA,2021,July,Monthly,Number of Deaths,987
+NEBRASKA,2021,July,Monthly,Number of Deaths,1416
+NEVADA,2021,July,Monthly,Number of Deaths,2771
+NEW HAMPSHIRE,2021,July,Monthly,Number of Deaths,1091
+NEW JERSEY,2021,July,Monthly,Number of Deaths,6124
+NEW MEXICO,2021,July,Monthly,Number of Deaths,1808
+NEW YORK,2021,July,Monthly,Number of Deaths,12898
+NORTH CAROLINA,2021,July,Monthly,Number of Deaths,8730
+NORTH DAKOTA,2021,July,Monthly,Number of Deaths,551
+OHIO,2021,July,Monthly,Number of Deaths,10357
+OKLAHOMA,2021,July,Monthly,Number of Deaths,3864
+OREGON,2021,July,Monthly,Number of Deaths,3549
+PENNSYLVANIA,2021,July,Monthly,Number of Deaths,10994
+RHODE ISLAND,2021,July,Monthly,Number of Deaths,793
+SOUTH CAROLINA,2021,July,Monthly,Number of Deaths,4822
+SOUTH DAKOTA,2021,July,Monthly,Number of Deaths,700
+TENNESSEE,2021,July,Monthly,Number of Deaths,6427
+TEXAS,2021,July,Monthly,Number of Deaths,19562
+UTAH,2021,July,Monthly,Number of Deaths,1845
+VERMONT,2021,July,Monthly,Number of Deaths,546
+VIRGINIA,2021,July,Monthly,Number of Deaths,6347
+WASHINGTON,2021,July,Monthly,Number of Deaths,5526
+WEST VIRGINIA,2021,July,Monthly,Number of Deaths,2045
+WISCONSIN,2021,July,Monthly,Number of Deaths,4612
+WYOMING,2021,July,Monthly,Number of Deaths,471
+PUERTO RICO,2021,July,Monthly,Number of Deaths,2666
+ALABAMA,2021,August,Monthly,Number of Deaths,6783
+ALASKA,2021,August,Monthly,Number of Deaths,611
+ARIZONA,2021,August,Monthly,Number of Deaths,6667
+ARKANSAS,2021,August,Monthly,Number of Deaths,4016
+CALIFORNIA,2021,August,Monthly,Number of Deaths,27026
+COLORADO,2021,August,Monthly,Number of Deaths,3896
+CONNECTICUT,2021,August,Monthly,Number of Deaths,2775
+DELAWARE,2021,August,Monthly,Number of Deaths,924
+DISTRICT OF COLUMBIA,2021,August,Monthly,Number of Deaths,472
+FLORIDA,2021,August,Monthly,Number of Deaths,29827
+GEORGIA,2021,August,Monthly,Number of Deaths,10960
+HAWAII,2021,August,Monthly,Number of Deaths,1225
+IDAHO,2021,August,Monthly,Number of Deaths,1532
+ILLINOIS,2021,August,Monthly,Number of Deaths,10133
+INDIANA,2021,August,Monthly,Number of Deaths,6451
+IOWA,2021,August,Monthly,Number of Deaths,2781
+KANSAS,2021,August,Monthly,Number of Deaths,2787
+KENTUCKY,2021,August,Monthly,Number of Deaths,5272
+LOUISIANA,2021,August,Monthly,Number of Deaths,6144
+MAINE,2021,August,Monthly,Number of Deaths,1357
+MARYLAND,2021,August,Monthly,Number of Deaths,4363
+MASSACHUSETTS,2021,August,Monthly,Number of Deaths,4936
+MICHIGAN,2021,August,Monthly,Number of Deaths,8974
+MINNESOTA,2021,August,Monthly,Number of Deaths,4079
+MISSISSIPPI,2021,August,Monthly,Number of Deaths,4339
+MISSOURI,2021,August,Monthly,Number of Deaths,7019
+MONTANA,2021,August,Monthly,Number of Deaths,1140
+NEBRASKA,2021,August,Monthly,Number of Deaths,1569
+NEVADA,2021,August,Monthly,Number of Deaths,3001
+NEW HAMPSHIRE,2021,August,Monthly,Number of Deaths,1127
+NEW JERSEY,2021,August,Monthly,Number of Deaths,6512
+NEW MEXICO,2021,August,Monthly,Number of Deaths,2045
+NEW YORK,2021,August,Monthly,Number of Deaths,14040
+NORTH CAROLINA,2021,August,Monthly,Number of Deaths,10401
+NORTH DAKOTA,2021,August,Monthly,Number of Deaths,555
+OHIO,2021,August,Monthly,Number of Deaths,11373
+OKLAHOMA,2021,August,Monthly,Number of Deaths,4824
+OREGON,2021,August,Monthly,Number of Deaths,4047
+PENNSYLVANIA,2021,August,Monthly,Number of Deaths,11661
+RHODE ISLAND,2021,August,Monthly,Number of Deaths,900
+SOUTH CAROLINA,2021,August,Monthly,Number of Deaths,5936
+SOUTH DAKOTA,2021,August,Monthly,Number of Deaths,737
+TENNESSEE,2021,August,Monthly,Number of Deaths,8167
+TEXAS,2021,August,Monthly,Number of Deaths,26196
+UTAH,2021,August,Monthly,Number of Deaths,1956
+VERMONT,2021,August,Monthly,Number of Deaths,560
+VIRGINIA,2021,August,Monthly,Number of Deaths,7117
+WASHINGTON,2021,August,Monthly,Number of Deaths,5968
+WEST VIRGINIA,2021,August,Monthly,Number of Deaths,2447
+WISCONSIN,2021,August,Monthly,Number of Deaths,4978
+WYOMING,2021,August,Monthly,Number of Deaths,593
+PUERTO RICO,2021,August,Monthly,Number of Deaths,3040
+ALABAMA,2021,September,Monthly,Number of Deaths,6896
+ALASKA,2021,September,Monthly,Number of Deaths,663
+ARIZONA,2021,September,Monthly,Number of Deaths,6790
+ARKANSAS,2021,September,Monthly,Number of Deaths,3664
+CALIFORNIA,2021,September,Monthly,Number of Deaths,27207
+COLORADO,2021,September,Monthly,Number of Deaths,4083
+CONNECTICUT,2021,September,Monthly,Number of Deaths,2786
+DELAWARE,2021,September,Monthly,Number of Deaths,945
+DISTRICT OF COLUMBIA,2021,September,Monthly,Number of Deaths,446
+FLORIDA,2021,September,Monthly,Number of Deaths,26648
+GEORGIA,2021,September,Monthly,Number of Deaths,11882
+HAWAII,2021,September,Monthly,Number of Deaths,1260
+IDAHO,2021,September,Monthly,Number of Deaths,1999
+ILLINOIS,2021,September,Monthly,Number of Deaths,10357
+INDIANA,2021,September,Monthly,Number of Deaths,7180
+IOWA,2021,September,Monthly,Number of Deaths,3056
+KANSAS,2021,September,Monthly,Number of Deaths,2864
+KENTUCKY,2021,September,Monthly,Number of Deaths,6162
+LOUISIANA,2021,September,Monthly,Number of Deaths,5423
+MAINE,2021,September,Monthly,Number of Deaths,1451
+MARYLAND,2021,September,Monthly,Number of Deaths,4762
+MASSACHUSETTS,2021,September,Monthly,Number of Deaths,4957
+MICHIGAN,2021,September,Monthly,Number of Deaths,9198
+MINNESOTA,2021,September,Monthly,Number of Deaths,4268
+MISSISSIPPI,2021,September,Monthly,Number of Deaths,4056
+MISSOURI,2021,September,Monthly,Number of Deaths,6402
+MONTANA,2021,September,Monthly,Number of Deaths,1266
+NEBRASKA,2021,September,Monthly,Number of Deaths,1608
+NEVADA,2021,September,Monthly,Number of Deaths,2913
+NEW HAMPSHIRE,2021,September,Monthly,Number of Deaths,1128
+NEW JERSEY,2021,September,Monthly,Number of Deaths,6663
+NEW MEXICO,2021,September,Monthly,Number of Deaths,2165
+NEW YORK,2021,September,Monthly,Number of Deaths,14092
+NORTH CAROLINA,2021,September,Monthly,Number of Deaths,11089
+NORTH DAKOTA,2021,September,Monthly,Number of Deaths,654
+OHIO,2021,September,Monthly,Number of Deaths,12951
+OKLAHOMA,2021,September,Monthly,Number of Deaths,4895
+OREGON,2021,September,Monthly,Number of Deaths,4301
+PENNSYLVANIA,2021,September,Monthly,Number of Deaths,12435
+RHODE ISLAND,2021,September,Monthly,Number of Deaths,878
+SOUTH CAROLINA,2021,September,Monthly,Number of Deaths,6562
+SOUTH DAKOTA,2021,September,Monthly,Number of Deaths,835
+TENNESSEE,2021,September,Monthly,Number of Deaths,9535
+TEXAS,2021,September,Monthly,Number of Deaths,26894
+UTAH,2021,September,Monthly,Number of Deaths,2040
+VERMONT,2021,September,Monthly,Number of Deaths,653
+VIRGINIA,2021,September,Monthly,Number of Deaths,7463
+WASHINGTON,2021,September,Monthly,Number of Deaths,6423
+WEST VIRGINIA,2021,September,Monthly,Number of Deaths,2923
+WISCONSIN,2021,September,Monthly,Number of Deaths,5263
+WYOMING,2021,September,Monthly,Number of Deaths,639
+PUERTO RICO,2021,September,Monthly,Number of Deaths,2901
+ALABAMA,2021,October,Monthly,Number of Deaths,5708
+ALASKA,2021,October,Monthly,Number of Deaths,738
+ARIZONA,2021,October,Monthly,Number of Deaths,6802
+ARKANSAS,2021,October,Monthly,Number of Deaths,3477
+CALIFORNIA,2021,October,Monthly,Number of Deaths,27129
+COLORADO,2021,October,Monthly,Number of Deaths,4513
+CONNECTICUT,2021,October,Monthly,Number of Deaths,2878
+DELAWARE,2021,October,Monthly,Number of Deaths,1016
+DISTRICT OF COLUMBIA,2021,October,Monthly,Number of Deaths,508
+FLORIDA,2021,October,Monthly,Number of Deaths,21150
+GEORGIA,2021,October,Monthly,Number of Deaths,9451
+HAWAII,2021,October,Monthly,Number of Deaths,1134
+IDAHO,2021,October,Monthly,Number of Deaths,2119
+ILLINOIS,2021,October,Monthly,Number of Deaths,10555
+INDIANA,2021,October,Monthly,Number of Deaths,7062
+IOWA,2021,October,Monthly,Number of Deaths,3205
+KANSAS,2021,October,Monthly,Number of Deaths,2760
+KENTUCKY,2021,October,Monthly,Number of Deaths,5501
+LOUISIANA,2021,October,Monthly,Number of Deaths,4562
+MAINE,2021,October,Monthly,Number of Deaths,1607
+MARYLAND,2021,October,Monthly,Number of Deaths,4962
+MASSACHUSETTS,2021,October,Monthly,Number of Deaths,5326
+MICHIGAN,2021,October,Monthly,Number of Deaths,10208
+MINNESOTA,2021,October,Monthly,Number of Deaths,4714
+MISSISSIPPI,2021,October,Monthly,Number of Deaths,3230
+MISSOURI,2021,October,Monthly,Number of Deaths,6100
+MONTANA,2021,October,Monthly,Number of Deaths,1447
+NEBRASKA,2021,October,Monthly,Number of Deaths,1782
+NEVADA,2021,October,Monthly,Number of Deaths,2848
+NEW HAMPSHIRE,2021,October,Monthly,Number of Deaths,1260
+NEW JERSEY,2021,October,Monthly,Number of Deaths,7045
+NEW MEXICO,2021,October,Monthly,Number of Deaths,2176
+NEW YORK,2021,October,Monthly,Number of Deaths,14903
+NORTH CAROLINA,2021,October,Monthly,Number of Deaths,10347
+NORTH DAKOTA,2021,October,Monthly,Number of Deaths,780
+OHIO,2021,October,Monthly,Number of Deaths,13719
+OKLAHOMA,2021,October,Monthly,Number of Deaths,4341
+OREGON,2021,October,Monthly,Number of Deaths,4233
+PENNSYLVANIA,2021,October,Monthly,Number of Deaths,13800
+RHODE ISLAND,2021,October,Monthly,Number of Deaths,941
+SOUTH CAROLINA,2021,October,Monthly,Number of Deaths,5737
+SOUTH DAKOTA,2021,October,Monthly,Number of Deaths,837
+TENNESSEE,2021,October,Monthly,Number of Deaths,7970
+TEXAS,2021,October,Monthly,Number of Deaths,22775
+UTAH,2021,October,Monthly,Number of Deaths,2178
+VERMONT,2021,October,Monthly,Number of Deaths,632
+VIRGINIA,2021,October,Monthly,Number of Deaths,7791
+WASHINGTON,2021,October,Monthly,Number of Deaths,6299
+WEST VIRGINIA,2021,October,Monthly,Number of Deaths,2821
+WISCONSIN,2021,October,Monthly,Number of Deaths,5720
+WYOMING,2021,October,Monthly,Number of Deaths,744
+PUERTO RICO,2021,October,Monthly,Number of Deaths,2732
+ALABAMA,2021,November,Monthly,Number of Deaths,5128
+ALASKA,2021,November,Monthly,Number of Deaths,608
+ARIZONA,2021,November,Monthly,Number of Deaths,7337
+ARKANSAS,2021,November,Monthly,Number of Deaths,3261
+CALIFORNIA,2021,November,Monthly,Number of Deaths,25741
+COLORADO,2021,November,Monthly,Number of Deaths,4891
+CONNECTICUT,2021,November,Monthly,Number of Deaths,2977
+DELAWARE,2021,November,Monthly,Number of Deaths,933
+DISTRICT OF COLUMBIA,2021,November,Monthly,Number of Deaths,463
+FLORIDA,2021,November,Monthly,Number of Deaths,19052
+GEORGIA,2021,November,Monthly,Number of Deaths,8536
+HAWAII,2021,November,Monthly,Number of Deaths,1031
+IDAHO,2021,November,Monthly,Number of Deaths,1723
+ILLINOIS,2021,November,Monthly,Number of Deaths,10720
+INDIANA,2021,November,Monthly,Number of Deaths,7039
+IOWA,2021,November,Monthly,Number of Deaths,3172
+KANSAS,2021,November,Monthly,Number of Deaths,2754
+KENTUCKY,2021,November,Monthly,Number of Deaths,5005
+LOUISIANA,2021,November,Monthly,Number of Deaths,4344
+MAINE,2021,November,Monthly,Number of Deaths,1676
+MARYLAND,2021,November,Monthly,Number of Deaths,4674
+MASSACHUSETTS,2021,November,Monthly,Number of Deaths,5456
+MICHIGAN,2021,November,Monthly,Number of Deaths,11574
+MINNESOTA,2021,November,Monthly,Number of Deaths,5080
+MISSISSIPPI,2021,November,Monthly,Number of Deaths,3131
+MISSOURI,2021,November,Monthly,Number of Deaths,6096
+MONTANA,2021,November,Monthly,Number of Deaths,1225
+NEBRASKA,2021,November,Monthly,Number of Deaths,1741
+NEVADA,2021,November,Monthly,Number of Deaths,2745
+NEW HAMPSHIRE,2021,November,Monthly,Number of Deaths,1304
+NEW JERSEY,2021,November,Monthly,Number of Deaths,6819
+NEW MEXICO,2021,November,Monthly,Number of Deaths,2408
+NEW YORK,2021,November,Monthly,Number of Deaths,15165
+NORTH CAROLINA,2021,November,Monthly,Number of Deaths,9408
+NORTH DAKOTA,2021,November,Monthly,Number of Deaths,735
+OHIO,2021,November,Monthly,Number of Deaths,13438
+OKLAHOMA,2021,November,Monthly,Number of Deaths,3929
+OREGON,2021,November,Monthly,Number of Deaths,3766
+PENNSYLVANIA,2021,November,Monthly,Number of Deaths,14008
+RHODE ISLAND,2021,November,Monthly,Number of Deaths,983
+SOUTH CAROLINA,2021,November,Monthly,Number of Deaths,5175
+SOUTH DAKOTA,2021,November,Monthly,Number of Deaths,893
+TENNESSEE,2021,November,Monthly,Number of Deaths,7220
+TEXAS,2021,November,Monthly,Number of Deaths,20170
+UTAH,2021,November,Monthly,Number of Deaths,2058
+VERMONT,2021,November,Monthly,Number of Deaths,632
+VIRGINIA,2021,November,Monthly,Number of Deaths,7299
+WASHINGTON,2021,November,Monthly,Number of Deaths,5875
+WEST VIRGINIA,2021,November,Monthly,Number of Deaths,2655
+WISCONSIN,2021,November,Monthly,Number of Deaths,5786
+WYOMING,2021,November,Monthly,Number of Deaths,656
+PUERTO RICO,2021,November,Monthly,Number of Deaths,2631
+ALABAMA,2021,December,Monthly,Number of Deaths,5425
+ALASKA,2021,December,Monthly,Number of Deaths,565
+ARIZONA,2021,December,Monthly,Number of Deaths,8385
+ARKANSAS,2021,December,Monthly,Number of Deaths,3616
+CALIFORNIA,2021,December,Monthly,Number of Deaths,28715
+COLORADO,2021,December,Monthly,Number of Deaths,4916
+CONNECTICUT,2021,December,Monthly,Number of Deaths,3321
+DELAWARE,2021,December,Monthly,Number of Deaths,1091
+DISTRICT OF COLUMBIA,2021,December,Monthly,Number of Deaths,520
+FLORIDA,2021,December,Monthly,Number of Deaths,20239
+GEORGIA,2021,December,Monthly,Number of Deaths,9170
+HAWAII,2021,December,Monthly,Number of Deaths,1071
+IDAHO,2021,December,Monthly,Number of Deaths,1650
+ILLINOIS,2021,December,Monthly,Number of Deaths,12551
+INDIANA,2021,December,Monthly,Number of Deaths,8076
+IOWA,2021,December,Monthly,Number of Deaths,3579
+KANSAS,2021,December,Monthly,Number of Deaths,3255
+KENTUCKY,2021,December,Monthly,Number of Deaths,5725
+LOUISIANA,2021,December,Monthly,Number of Deaths,4412
+MAINE,2021,December,Monthly,Number of Deaths,1826
+MARYLAND,2021,December,Monthly,Number of Deaths,5473
+MASSACHUSETTS,2021,December,Monthly,Number of Deaths,6183
+MICHIGAN,2021,December,Monthly,Number of Deaths,13076
+MINNESOTA,2021,December,Monthly,Number of Deaths,5548
+MISSISSIPPI,2021,December,Monthly,Number of Deaths,3360
+MISSOURI,2021,December,Monthly,Number of Deaths,6937
+MONTANA,2021,December,Monthly,Number of Deaths,1125
+NEBRASKA,2021,December,Monthly,Number of Deaths,1901
+NEVADA,2021,December,Monthly,Number of Deaths,2922
+NEW HAMPSHIRE,2021,December,Monthly,Number of Deaths,1469
+NEW JERSEY,2021,December,Monthly,Number of Deaths,7869
+NEW MEXICO,2021,December,Monthly,Number of Deaths,2823
+NEW YORK,2021,December,Monthly,Number of Deaths,17091
+NORTH CAROLINA,2021,December,Monthly,Number of Deaths,10388
+NORTH DAKOTA,2021,December,Monthly,Number of Deaths,762
+OHIO,2021,December,Monthly,Number of Deaths,16051
+OKLAHOMA,2021,December,Monthly,Number of Deaths,4598
+OREGON,2021,December,Monthly,Number of Deaths,4077
+PENNSYLVANIA,2021,December,Monthly,Number of Deaths,16063
+RHODE ISLAND,2021,December,Monthly,Number of Deaths,1161
+SOUTH CAROLINA,2021,December,Monthly,Number of Deaths,5504
+SOUTH DAKOTA,2021,December,Monthly,Number of Deaths,924
+TENNESSEE,2021,December,Monthly,Number of Deaths,7983
+TEXAS,2021,December,Monthly,Number of Deaths,21323
+UTAH,2021,December,Monthly,Number of Deaths,2125
+VERMONT,2021,December,Monthly,Number of Deaths,644
+VIRGINIA,2021,December,Monthly,Number of Deaths,7926
+WASHINGTON,2021,December,Monthly,Number of Deaths,6140
+WEST VIRGINIA,2021,December,Monthly,Number of Deaths,2847
+WISCONSIN,2021,December,Monthly,Number of Deaths,6487
+WYOMING,2021,December,Monthly,Number of Deaths,543
+PUERTO RICO,2021,December,Monthly,Number of Deaths,2837
+ALABAMA,2022,January,Monthly,Number of Deaths,6824
+ALASKA,2022,January,Monthly,Number of Deaths,535
+ARIZONA,2022,January,Monthly,Number of Deaths,8446
+ARKANSAS,2022,January,Monthly,Number of Deaths,4084
+CALIFORNIA,2022,January,Monthly,Number of Deaths,34795
+COLORADO,2022,January,Monthly,Number of Deaths,5115
+CONNECTICUT,2022,January,Monthly,Number of Deaths,3995
+DELAWARE,2022,January,Monthly,Number of Deaths,1316
+DISTRICT OF COLUMBIA,2022,January,Monthly,Number of Deaths,639
+FLORIDA,2022,January,Monthly,Number of Deaths,25229
+GEORGIA,2022,January,Monthly,Number of Deaths,11662
+HAWAII,2022,January,Monthly,Number of Deaths,1317
+IDAHO,2022,January,Monthly,Number of Deaths,1726
+ILLINOIS,2022,January,Monthly,Number of Deaths,14903
+INDIANA,2022,January,Monthly,Number of Deaths,8683
+IOWA,2022,January,Monthly,Number of Deaths,3674
+KANSAS,2022,January,Monthly,Number of Deaths,3849
+KENTUCKY,2022,January,Monthly,Number of Deaths,6285
+LOUISIANA,2022,January,Monthly,Number of Deaths,5684
+MAINE,2022,January,Monthly,Number of Deaths,1758
+MARYLAND,2022,January,Monthly,Number of Deaths,6701
+MASSACHUSETTS,2022,January,Monthly,Number of Deaths,7065
+MICHIGAN,2022,January,Monthly,Number of Deaths,12380
+MINNESOTA,2022,January,Monthly,Number of Deaths,5343
+MISSISSIPPI,2022,January,Monthly,Number of Deaths,4291
+MISSOURI,2022,January,Monthly,Number of Deaths,8090
+MONTANA,2022,January,Monthly,Number of Deaths,1199
+NEBRASKA,2022,January,Monthly,Number of Deaths,2023
+NEVADA,2022,January,Monthly,Number of Deaths,3546
+NEW HAMPSHIRE,2022,January,Monthly,Number of Deaths,1490
+NEW JERSEY,2022,January,Monthly,Number of Deaths,10443
+NEW MEXICO,2022,January,Monthly,Number of Deaths,2728
+NEW YORK,2022,January,Monthly,Number of Deaths,20595
+NORTH CAROLINA,2022,January,Monthly,Number of Deaths,11948
+NORTH DAKOTA,2022,January,Monthly,Number of Deaths,712
+OHIO,2022,January,Monthly,Number of Deaths,16949
+OKLAHOMA,2022,January,Monthly,Number of Deaths,5748
+OREGON,2022,January,Monthly,Number of Deaths,4375
+PENNSYLVANIA,2022,January,Monthly,Number of Deaths,17391
+RHODE ISLAND,2022,January,Monthly,Number of Deaths,1204
+SOUTH CAROLINA,2022,January,Monthly,Number of Deaths,6870
+SOUTH DAKOTA,2022,January,Monthly,Number of Deaths,976
+TENNESSEE,2022,January,Monthly,Number of Deaths,9260
+TEXAS,2022,January,Monthly,Number of Deaths,27495
+UTAH,2022,January,Monthly,Number of Deaths,2261
+VERMONT,2022,January,Monthly,Number of Deaths,685
+VIRGINIA,2022,January,Monthly,Number of Deaths,9483
+WASHINGTON,2022,January,Monthly,Number of Deaths,7083
+WEST VIRGINIA,2022,January,Monthly,Number of Deaths,2947
+WISCONSIN,2022,January,Monthly,Number of Deaths,6765
+WYOMING,2022,January,Monthly,Number of Deaths,597
+PUERTO RICO,2022,January,Monthly,Number of Deaths,3711
+ALABAMA,2022,February,Monthly,Number of Deaths,6076
+ALASKA,2022,February,Monthly,Number of Deaths,446
+ARIZONA,2022,February,Monthly,Number of Deaths,6792
+ARKANSAS,2022,February,Monthly,Number of Deaths,3621
+CALIFORNIA,2022,February,Monthly,Number of Deaths,28491
+COLORADO,2022,February,Monthly,Number of Deaths,3887
+CONNECTICUT,2022,February,Monthly,Number of Deaths,2944
+DELAWARE,2022,February,Monthly,Number of Deaths,999
+DISTRICT OF COLUMBIA,2022,February,Monthly,Number of Deaths,453
+FLORIDA,2022,February,Monthly,Number of Deaths,21432
+GEORGIA,2022,February,Monthly,Number of Deaths,9224
+HAWAII,2022,February,Monthly,Number of Deaths,1128
+IDAHO,2022,February,Monthly,Number of Deaths,1484
+ILLINOIS,2022,February,Monthly,Number of Deaths,10407
+INDIANA,2022,February,Monthly,Number of Deaths,6683
+IOWA,2022,February,Monthly,Number of Deaths,2955
+KANSAS,2022,February,Monthly,Number of Deaths,2844
+KENTUCKY,2022,February,Monthly,Number of Deaths,5253
+LOUISIANA,2022,February,Monthly,Number of Deaths,4818
+MAINE,2022,February,Monthly,Number of Deaths,1402
+MARYLAND,2022,February,Monthly,Number of Deaths,4597
+MASSACHUSETTS,2022,February,Monthly,Number of Deaths,5260
+MICHIGAN,2022,February,Monthly,Number of Deaths,9286
+MINNESOTA,2022,February,Monthly,Number of Deaths,4230
+MISSISSIPPI,2022,February,Monthly,Number of Deaths,3543
+MISSOURI,2022,February,Monthly,Number of Deaths,6310
+MONTANA,2022,February,Monthly,Number of Deaths,1036
+NEBRASKA,2022,February,Monthly,Number of Deaths,1636
+NEVADA,2022,February,Monthly,Number of Deaths,2847
+NEW HAMPSHIRE,2022,February,Monthly,Number of Deaths,1201
+NEW JERSEY,2022,February,Monthly,Number of Deaths,6871
+NEW MEXICO,2022,February,Monthly,Number of Deaths,2126
+NEW YORK,2022,February,Monthly,Number of Deaths,14485
+NORTH CAROLINA,2022,February,Monthly,Number of Deaths,9571
+NORTH DAKOTA,2022,February,Monthly,Number of Deaths,623
+OHIO,2022,February,Monthly,Number of Deaths,11929
+OKLAHOMA,2022,February,Monthly,Number of Deaths,4498
+OREGON,2022,February,Monthly,Number of Deaths,3830
+PENNSYLVANIA,2022,February,Monthly,Number of Deaths,12525
+RHODE ISLAND,2022,February,Monthly,Number of Deaths,918
+SOUTH CAROLINA,2022,February,Monthly,Number of Deaths,5620
+SOUTH DAKOTA,2022,February,Monthly,Number of Deaths,809
+TENNESSEE,2022,February,Monthly,Number of Deaths,7904
+TEXAS,2022,February,Monthly,Number of Deaths,22765
+UTAH,2022,February,Monthly,Number of Deaths,1864
+VERMONT,2022,February,Monthly,Number of Deaths,578
+VIRGINIA,2022,February,Monthly,Number of Deaths,7216
+WASHINGTON,2022,February,Monthly,Number of Deaths,5718
+WEST VIRGINIA,2022,February,Monthly,Number of Deaths,2585
+WISCONSIN,2022,February,Monthly,Number of Deaths,5121
+WYOMING,2022,February,Monthly,Number of Deaths,533
+PUERTO RICO,2022,February,Monthly,Number of Deaths,2680
+ALABAMA,2022,March,Monthly,Number of Deaths,5104
+ALASKA,2022,March,Monthly,Number of Deaths,461
+ARIZONA,2022,March,Monthly,Number of Deaths,6254
+ARKANSAS,2022,March,Monthly,Number of Deaths,3243
+CALIFORNIA,2022,March,Monthly,Number of Deaths,25427
+COLORADO,2022,March,Monthly,Number of Deaths,3859
+CONNECTICUT,2022,March,Monthly,Number of Deaths,2759
+DELAWARE,2022,March,Monthly,Number of Deaths,934
+DISTRICT OF COLUMBIA,2022,March,Monthly,Number of Deaths,455
+FLORIDA,2022,March,Monthly,Number of Deaths,20242
+GEORGIA,2022,March,Monthly,Number of Deaths,8304
+HAWAII,2022,March,Monthly,Number of Deaths,1014
+IDAHO,2022,March,Monthly,Number of Deaths,1394
+ILLINOIS,2022,March,Monthly,Number of Deaths,9762
+INDIANA,2022,March,Monthly,Number of Deaths,6076
+IOWA,2022,March,Monthly,Number of Deaths,2779
+KANSAS,2022,March,Monthly,Number of Deaths,2669
+KENTUCKY,2022,March,Monthly,Number of Deaths,4828
+LOUISIANA,2022,March,Monthly,Number of Deaths,4395
+MAINE,2022,March,Monthly,Number of Deaths,1421
+MARYLAND,2022,March,Monthly,Number of Deaths,4597
+MASSACHUSETTS,2022,March,Monthly,Number of Deaths,5047
+MICHIGAN,2022,March,Monthly,Number of Deaths,8930
+MINNESOTA,2022,March,Monthly,Number of Deaths,4140
+MISSISSIPPI,2022,March,Monthly,Number of Deaths,3097
+MISSOURI,2022,March,Monthly,Number of Deaths,5795
+MONTANA,2022,March,Monthly,Number of Deaths,995
+NEBRASKA,2022,March,Monthly,Number of Deaths,1525
+NEVADA,2022,March,Monthly,Number of Deaths,2531
+NEW HAMPSHIRE,2022,March,Monthly,Number of Deaths,1192
+NEW JERSEY,2022,March,Monthly,Number of Deaths,6534
+NEW MEXICO,2022,March,Monthly,Number of Deaths,1982
+NEW YORK,2022,March,Monthly,Number of Deaths,13776
+NORTH CAROLINA,2022,March,Monthly,Number of Deaths,8710
+NORTH DAKOTA,2022,March,Monthly,Number of Deaths,581
+OHIO,2022,March,Monthly,Number of Deaths,11154
+OKLAHOMA,2022,March,Monthly,Number of Deaths,4058
+OREGON,2022,March,Monthly,Number of Deaths,3627
+PENNSYLVANIA,2022,March,Monthly,Number of Deaths,11925
+RHODE ISLAND,2022,March,Monthly,Number of Deaths,852
+SOUTH CAROLINA,2022,March,Monthly,Number of Deaths,4914
+SOUTH DAKOTA,2022,March,Monthly,Number of Deaths,722
+TENNESSEE,2022,March,Monthly,Number of Deaths,7024
+TEXAS,2022,March,Monthly,Number of Deaths,20161
+UTAH,2022,March,Monthly,Number of Deaths,1843
+VERMONT,2022,March,Monthly,Number of Deaths,575
+VIRGINIA,2022,March,Monthly,Number of Deaths,6819
+WASHINGTON,2022,March,Monthly,Number of Deaths,5501
+WEST VIRGINIA,2022,March,Monthly,Number of Deaths,2443
+WISCONSIN,2022,March,Monthly,Number of Deaths,4894
+WYOMING,2022,March,Monthly,Number of Deaths,472
+PUERTO RICO,2022,March,Monthly,Number of Deaths,2730
+ALABAMA,2022,April,Monthly,Number of Deaths,4641
+ALASKA,2022,April,Monthly,Number of Deaths,426
+ARIZONA,2022,April,Monthly,Number of Deaths,5590
+ARKANSAS,2022,April,Monthly,Number of Deaths,2845
+CALIFORNIA,2022,April,Monthly,Number of Deaths,23212
+COLORADO,2022,April,Monthly,Number of Deaths,3577
+CONNECTICUT,2022,April,Monthly,Number of Deaths,2685
+DELAWARE,2022,April,Monthly,Number of Deaths,868
+DISTRICT OF COLUMBIA,2022,April,Monthly,Number of Deaths,397
+FLORIDA,2022,April,Monthly,Number of Deaths,18394
+GEORGIA,2022,April,Monthly,Number of Deaths,7689
+HAWAII,2022,April,Monthly,Number of Deaths,1022
+IDAHO,2022,April,Monthly,Number of Deaths,1299
+ILLINOIS,2022,April,Monthly,Number of Deaths,9156
+INDIANA,2022,April,Monthly,Number of Deaths,5571
+IOWA,2022,April,Monthly,Number of Deaths,2565
+KANSAS,2022,April,Monthly,Number of Deaths,2282
+KENTUCKY,2022,April,Monthly,Number of Deaths,4399
+LOUISIANA,2022,April,Monthly,Number of Deaths,3945
+MAINE,2022,April,Monthly,Number of Deaths,1316
+MARYLAND,2022,April,Monthly,Number of Deaths,4200
+MASSACHUSETTS,2022,April,Monthly,Number of Deaths,4717
+MICHIGAN,2022,April,Monthly,Number of Deaths,8388
+MINNESOTA,2022,April,Monthly,Number of Deaths,3926
+MISSISSIPPI,2022,April,Monthly,Number of Deaths,2800
+MISSOURI,2022,April,Monthly,Number of Deaths,5344
+MONTANA,2022,April,Monthly,Number of Deaths,840
+NEBRASKA,2022,April,Monthly,Number of Deaths,1388
+NEVADA,2022,April,Monthly,Number of Deaths,2400
+NEW HAMPSHIRE,2022,April,Monthly,Number of Deaths,1127
+NEW JERSEY,2022,April,Monthly,Number of Deaths,5986
+NEW MEXICO,2022,April,Monthly,Number of Deaths,1732
+NEW YORK,2022,April,Monthly,Number of Deaths,12973
+NORTH CAROLINA,2022,April,Monthly,Number of Deaths,8129
+NORTH DAKOTA,2022,April,Monthly,Number of Deaths,497
+OHIO,2022,April,Monthly,Number of Deaths,10165
+OKLAHOMA,2022,April,Monthly,Number of Deaths,3519
+OREGON,2022,April,Monthly,Number of Deaths,3471
+PENNSYLVANIA,2022,April,Monthly,Number of Deaths,11009
+RHODE ISLAND,2022,April,Monthly,Number of Deaths,805
+SOUTH CAROLINA,2022,April,Monthly,Number of Deaths,4428
+SOUTH DAKOTA,2022,April,Monthly,Number of Deaths,708
+TENNESSEE,2022,April,Monthly,Number of Deaths,6314
+TEXAS,2022,April,Monthly,Number of Deaths,17957
+UTAH,2022,April,Monthly,Number of Deaths,1725
+VERMONT,2022,April,Monthly,Number of Deaths,518
+VIRGINIA,2022,April,Monthly,Number of Deaths,6210
+WASHINGTON,2022,April,Monthly,Number of Deaths,5334
+WEST VIRGINIA,2022,April,Monthly,Number of Deaths,2160
+WISCONSIN,2022,April,Monthly,Number of Deaths,4566
+WYOMING,2022,April,Monthly,Number of Deaths,483
+PUERTO RICO,2022,April,Monthly,Number of Deaths,2644
+ALABAMA,2022,May,Monthly,Number of Deaths,4695
+ALASKA,2022,May,Monthly,Number of Deaths,445
+ARIZONA,2022,May,Monthly,Number of Deaths,5766
+ARKANSAS,2022,May,Monthly,Number of Deaths,2980
+CALIFORNIA,2022,May,Monthly,Number of Deaths,24087
+COLORADO,2022,May,Monthly,Number of Deaths,3766
+CONNECTICUT,2022,May,Monthly,Number of Deaths,2817
+DELAWARE,2022,May,Monthly,Number of Deaths,895
+DISTRICT OF COLUMBIA,2022,May,Monthly,Number of Deaths,431
+FLORIDA,2022,May,Monthly,Number of Deaths,18937
+GEORGIA,2022,May,Monthly,Number of Deaths,7795
+HAWAII,2022,May,Monthly,Number of Deaths,1118
+IDAHO,2022,May,Monthly,Number of Deaths,1252
+ILLINOIS,2022,May,Monthly,Number of Deaths,9461
+INDIANA,2022,May,Monthly,Number of Deaths,5664
+IOWA,2022,May,Monthly,Number of Deaths,2671
+KANSAS,2022,May,Monthly,Number of Deaths,2433
+KENTUCKY,2022,May,Monthly,Number of Deaths,4302
+LOUISIANA,2022,May,Monthly,Number of Deaths,4142
+MAINE,2022,May,Monthly,Number of Deaths,1378
+MARYLAND,2022,May,Monthly,Number of Deaths,4296
+MASSACHUSETTS,2022,May,Monthly,Number of Deaths,5151
+MICHIGAN,2022,May,Monthly,Number of Deaths,8933
+MINNESOTA,2022,May,Monthly,Number of Deaths,4036
+MISSISSIPPI,2022,May,Monthly,Number of Deaths,2840
+MISSOURI,2022,May,Monthly,Number of Deaths,5569
+MONTANA,2022,May,Monthly,Number of Deaths,957
+NEBRASKA,2022,May,Monthly,Number of Deaths,1443
+NEVADA,2022,May,Monthly,Number of Deaths,2391
+NEW HAMPSHIRE,2022,May,Monthly,Number of Deaths,1161
+NEW JERSEY,2022,May,Monthly,Number of Deaths,6507
+NEW MEXICO,2022,May,Monthly,Number of Deaths,1895
+NEW YORK,2022,May,Monthly,Number of Deaths,13809
+NORTH CAROLINA,2022,May,Monthly,Number of Deaths,8642
+NORTH DAKOTA,2022,May,Monthly,Number of Deaths,581
+OHIO,2022,May,Monthly,Number of Deaths,10377
+OKLAHOMA,2022,May,Monthly,Number of Deaths,3568
+OREGON,2022,May,Monthly,Number of Deaths,3547
+PENNSYLVANIA,2022,May,Monthly,Number of Deaths,11299
+RHODE ISLAND,2022,May,Monthly,Number of Deaths,862
+SOUTH CAROLINA,2022,May,Monthly,Number of Deaths,4662
+SOUTH DAKOTA,2022,May,Monthly,Number of Deaths,688
+TENNESSEE,2022,May,Monthly,Number of Deaths,6383
+TEXAS,2022,May,Monthly,Number of Deaths,18154
+UTAH,2022,May,Monthly,Number of Deaths,1734
+VERMONT,2022,May,Monthly,Number of Deaths,568
+VIRGINIA,2022,May,Monthly,Number of Deaths,6466
+WASHINGTON,2022,May,Monthly,Number of Deaths,5491
+WEST VIRGINIA,2022,May,Monthly,Number of Deaths,2120
+WISCONSIN,2022,May,Monthly,Number of Deaths,4742
+WYOMING,2022,May,Monthly,Number of Deaths,476
+PUERTO RICO,2022,May,Monthly,Number of Deaths,2878
+ALABAMA,2022,June,Monthly,Number of Deaths,4702
+ALASKA,2022,June,Monthly,Number of Deaths,484
+ARIZONA,2022,June,Monthly,Number of Deaths,5561
+ARKANSAS,2022,June,Monthly,Number of Deaths,2922
+CALIFORNIA,2022,June,Monthly,Number of Deaths,23801
+COLORADO,2022,June,Monthly,Number of Deaths,3669
+CONNECTICUT,2022,June,Monthly,Number of Deaths,2579
+DELAWARE,2022,June,Monthly,Number of Deaths,813
+DISTRICT OF COLUMBIA,2022,June,Monthly,Number of Deaths,425
+FLORIDA,2022,June,Monthly,Number of Deaths,18956
+GEORGIA,2022,June,Monthly,Number of Deaths,7576
+HAWAII,2022,June,Monthly,Number of Deaths,1048
+IDAHO,2022,June,Monthly,Number of Deaths,1430
+ILLINOIS,2022,June,Monthly,Number of Deaths,9187
+INDIANA,2022,June,Monthly,Number of Deaths,5618
+IOWA,2022,June,Monthly,Number of Deaths,2654
+KANSAS,2022,June,Monthly,Number of Deaths,2295
+KENTUCKY,2022,June,Monthly,Number of Deaths,4375
+LOUISIANA,2022,June,Monthly,Number of Deaths,3934
+MAINE,2022,June,Monthly,Number of Deaths,1396
+MARYLAND,2022,June,Monthly,Number of Deaths,4266
+MASSACHUSETTS,2022,June,Monthly,Number of Deaths,4792
+MICHIGAN,2022,June,Monthly,Number of Deaths,8316
+MINNESOTA,2022,June,Monthly,Number of Deaths,3846
+MISSISSIPPI,2022,June,Monthly,Number of Deaths,2770
+MISSOURI,2022,June,Monthly,Number of Deaths,5436
+MONTANA,2022,June,Monthly,Number of Deaths,827
+NEBRASKA,2022,June,Monthly,Number of Deaths,1304
+NEVADA,2022,June,Monthly,Number of Deaths,2352
+NEW HAMPSHIRE,2022,June,Monthly,Number of Deaths,1171
+NEW JERSEY,2022,June,Monthly,Number of Deaths,6061
+NEW MEXICO,2022,June,Monthly,Number of Deaths,1775
+NEW YORK,2022,June,Monthly,Number of Deaths,12862
+NORTH CAROLINA,2022,June,Monthly,Number of Deaths,8626
+NORTH DAKOTA,2022,June,Monthly,Number of Deaths,534
+OHIO,2022,June,Monthly,Number of Deaths,10135
+OKLAHOMA,2022,June,Monthly,Number of Deaths,3519
+OREGON,2022,June,Monthly,Number of Deaths,3410
+PENNSYLVANIA,2022,June,Monthly,Number of Deaths,11000
+RHODE ISLAND,2022,June,Monthly,Number of Deaths,804
+SOUTH CAROLINA,2022,June,Monthly,Number of Deaths,4618
+SOUTH DAKOTA,2022,June,Monthly,Number of Deaths,632
+TENNESSEE,2022,June,Monthly,Number of Deaths,6357
+TEXAS,2022,June,Monthly,Number of Deaths,18212
+UTAH,2022,June,Monthly,Number of Deaths,1806
+VERMONT,2022,June,Monthly,Number of Deaths,572
+VIRGINIA,2022,June,Monthly,Number of Deaths,6314
+WASHINGTON,2022,June,Monthly,Number of Deaths,5346
+WEST VIRGINIA,2022,June,Monthly,Number of Deaths,2117
+WISCONSIN,2022,June,Monthly,Number of Deaths,4530
+WYOMING,2022,June,Monthly,Number of Deaths,459
+PUERTO RICO,2022,June,Monthly,Number of Deaths,2795
+ALABAMA,2022,July,Monthly,Number of Deaths,4956
+ALASKA,2022,July,Monthly,Number of Deaths,508
+ARIZONA,2022,July,Monthly,Number of Deaths,6055
+ARKANSAS,2022,July,Monthly,Number of Deaths,2991
+CALIFORNIA,2022,July,Monthly,Number of Deaths,25202
+COLORADO,2022,July,Monthly,Number of Deaths,3713
+CONNECTICUT,2022,July,Monthly,Number of Deaths,2681
+DELAWARE,2022,July,Monthly,Number of Deaths,905
+DISTRICT OF COLUMBIA,2022,July,Monthly,Number of Deaths,439
+FLORIDA,2022,July,Monthly,Number of Deaths,19555
+GEORGIA,2022,July,Monthly,Number of Deaths,8130
+HAWAII,2022,July,Monthly,Number of Deaths,1041
+IDAHO,2022,July,Monthly,Number of Deaths,1474
+ILLINOIS,2022,July,Monthly,Number of Deaths,9535
+INDIANA,2022,July,Monthly,Number of Deaths,5993
+IOWA,2022,July,Monthly,Number of Deaths,2638
+KANSAS,2022,July,Monthly,Number of Deaths,2414
+KENTUCKY,2022,July,Monthly,Number of Deaths,4500
+LOUISIANA,2022,July,Monthly,Number of Deaths,4279
+MAINE,2022,July,Monthly,Number of Deaths,1331
+MARYLAND,2022,July,Monthly,Number of Deaths,4239
+MASSACHUSETTS,2022,July,Monthly,Number of Deaths,4998
+MICHIGAN,2022,July,Monthly,Number of Deaths,8606
+MINNESOTA,2022,July,Monthly,Number of Deaths,3992
+MISSISSIPPI,2022,July,Monthly,Number of Deaths,3103
+MISSOURI,2022,July,Monthly,Number of Deaths,5649
+MONTANA,2022,July,Monthly,Number of Deaths,1024
+NEBRASKA,2022,July,Monthly,Number of Deaths,1490
+NEVADA,2022,July,Monthly,Number of Deaths,2538
+NEW HAMPSHIRE,2022,July,Monthly,Number of Deaths,1165
+NEW JERSEY,2022,July,Monthly,Number of Deaths,6340
+NEW MEXICO,2022,July,Monthly,Number of Deaths,1792
+NEW YORK,2022,July,Monthly,Number of Deaths,13432
+NORTH CAROLINA,2022,July,Monthly,Number of Deaths,8855
+NORTH DAKOTA,2022,July,Monthly,Number of Deaths,524
+OHIO,2022,July,Monthly,Number of Deaths,10673
+OKLAHOMA,2022,July,Monthly,Number of Deaths,3829
+OREGON,2022,July,Monthly,Number of Deaths,3519
+PENNSYLVANIA,2022,July,Monthly,Number of Deaths,11150
+RHODE ISLAND,2022,July,Monthly,Number of Deaths,875
+SOUTH CAROLINA,2022,July,Monthly,Number of Deaths,4855
+SOUTH DAKOTA,2022,July,Monthly,Number of Deaths,763
+TENNESSEE,2022,July,Monthly,Number of Deaths,6549
+TEXAS,2022,July,Monthly,Number of Deaths,19799
+UTAH,2022,July,Monthly,Number of Deaths,1767
+VERMONT,2022,July,Monthly,Number of Deaths,571
+VIRGINIA,2022,July,Monthly,Number of Deaths,6593
+WASHINGTON,2022,July,Monthly,Number of Deaths,5702
+WEST VIRGINIA,2022,July,Monthly,Number of Deaths,2186
+WISCONSIN,2022,July,Monthly,Number of Deaths,4707
+WYOMING,2022,July,Monthly,Number of Deaths,487
+PUERTO RICO,2022,July,Monthly,Number of Deaths,2992
+ALABAMA,2022,August,Monthly,Number of Deaths,4906
+ALASKA,2022,August,Monthly,Number of Deaths,476
+ARIZONA,2022,August,Monthly,Number of Deaths,5630
+ARKANSAS,2022,August,Monthly,Number of Deaths,2994
+CALIFORNIA,2022,August,Monthly,Number of Deaths,25032
+COLORADO,2022,August,Monthly,Number of Deaths,3550
+CONNECTICUT,2022,August,Monthly,Number of Deaths,2583
+DELAWARE,2022,August,Monthly,Number of Deaths,829
+DISTRICT OF COLUMBIA,2022,August,Monthly,Number of Deaths,416
+FLORIDA,2022,August,Monthly,Number of Deaths,19693
+GEORGIA,2022,August,Monthly,Number of Deaths,8157
+HAWAII,2022,August,Monthly,Number of Deaths,1096
+IDAHO,2022,August,Monthly,Number of Deaths,1414
+ILLINOIS,2022,August,Monthly,Number of Deaths,9562
+INDIANA,2022,August,Monthly,Number of Deaths,6038
+IOWA,2022,August,Monthly,Number of Deaths,2730
+KANSAS,2022,August,Monthly,Number of Deaths,2475
+KENTUCKY,2022,August,Monthly,Number of Deaths,4494
+LOUISIANA,2022,August,Monthly,Number of Deaths,4192
+MAINE,2022,August,Monthly,Number of Deaths,1344
+MARYLAND,2022,August,Monthly,Number of Deaths,4379
+MASSACHUSETTS,2022,August,Monthly,Number of Deaths,5061
+MICHIGAN,2022,August,Monthly,Number of Deaths,8679
+MINNESOTA,2022,August,Monthly,Number of Deaths,4044
+MISSISSIPPI,2022,August,Monthly,Number of Deaths,3004
+MISSOURI,2022,August,Monthly,Number of Deaths,5537
+MONTANA,2022,August,Monthly,Number of Deaths,947
+NEBRASKA,2022,August,Monthly,Number of Deaths,1459
+NEVADA,2022,August,Monthly,Number of Deaths,2349
+NEW HAMPSHIRE,2022,August,Monthly,Number of Deaths,1201
+NEW JERSEY,2022,August,Monthly,Number of Deaths,6224
+NEW MEXICO,2022,August,Monthly,Number of Deaths,1770
+NEW YORK,2022,August,Monthly,Number of Deaths,13636
+NORTH CAROLINA,2022,August,Monthly,Number of Deaths,8947
+NORTH DAKOTA,2022,August,Monthly,Number of Deaths,615
+OHIO,2022,August,Monthly,Number of Deaths,10718
+OKLAHOMA,2022,August,Monthly,Number of Deaths,3693
+OREGON,2022,August,Monthly,Number of Deaths,3525
+PENNSYLVANIA,2022,August,Monthly,Number of Deaths,11232
+RHODE ISLAND,2022,August,Monthly,Number of Deaths,836
+SOUTH CAROLINA,2022,August,Monthly,Number of Deaths,4864
+SOUTH DAKOTA,2022,August,Monthly,Number of Deaths,696
+TENNESSEE,2022,August,Monthly,Number of Deaths,6652
+TEXAS,2022,August,Monthly,Number of Deaths,19258
+UTAH,2022,August,Monthly,Number of Deaths,1708
+VERMONT,2022,August,Monthly,Number of Deaths,533
+VIRGINIA,2022,August,Monthly,Number of Deaths,6697
+WASHINGTON,2022,August,Monthly,Number of Deaths,5612
+WEST VIRGINIA,2022,August,Monthly,Number of Deaths,2166
+WISCONSIN,2022,August,Monthly,Number of Deaths,4706
+WYOMING,2022,August,Monthly,Number of Deaths,496
+PUERTO RICO,2022,August,Monthly,Number of Deaths,3008
+ALABAMA,2022,September,Monthly,Number of Deaths,4776
+ALASKA,2022,September,Monthly,Number of Deaths,454
+ARIZONA,2022,September,Monthly,Number of Deaths,5448
+ARKANSAS,2022,September,Monthly,Number of Deaths,2976
+CALIFORNIA,2022,September,Monthly,Number of Deaths,24235
+COLORADO,2022,September,Monthly,Number of Deaths,3614
+CONNECTICUT,2022,September,Monthly,Number of Deaths,2554
+DELAWARE,2022,September,Monthly,Number of Deaths,838
+DISTRICT OF COLUMBIA,2022,September,Monthly,Number of Deaths,453
+FLORIDA,2022,September,Monthly,Number of Deaths,18544
+GEORGIA,2022,September,Monthly,Number of Deaths,7905
+HAWAII,2022,September,Monthly,Number of Deaths,1058
+IDAHO,2022,September,Monthly,Number of Deaths,1307
+ILLINOIS,2022,September,Monthly,Number of Deaths,9251
+INDIANA,2022,September,Monthly,Number of Deaths,5775
+IOWA,2022,September,Monthly,Number of Deaths,2669
+KANSAS,2022,September,Monthly,Number of Deaths,2397
+KENTUCKY,2022,September,Monthly,Number of Deaths,4261
+LOUISIANA,2022,September,Monthly,Number of Deaths,3905
+MAINE,2022,September,Monthly,Number of Deaths,1438
+MARYLAND,2022,September,Monthly,Number of Deaths,4189
+MASSACHUSETTS,2022,September,Monthly,Number of Deaths,4818
+MICHIGAN,2022,September,Monthly,Number of Deaths,8560
+MINNESOTA,2022,September,Monthly,Number of Deaths,4053
+MISSISSIPPI,2022,September,Monthly,Number of Deaths,2819
+MISSOURI,2022,September,Monthly,Number of Deaths,5376
+MONTANA,2022,September,Monthly,Number of Deaths,980
+NEBRASKA,2022,September,Monthly,Number of Deaths,1433
+NEVADA,2022,September,Monthly,Number of Deaths,2297
+NEW HAMPSHIRE,2022,September,Monthly,Number of Deaths,1109
+NEW JERSEY,2022,September,Monthly,Number of Deaths,6270
+NEW MEXICO,2022,September,Monthly,Number of Deaths,1709
+NEW YORK,2022,September,Monthly,Number of Deaths,13141
+NORTH CAROLINA,2022,September,Monthly,Number of Deaths,8781
+NORTH DAKOTA,2022,September,Monthly,Number of Deaths,577
+OHIO,2022,September,Monthly,Number of Deaths,10380
+OKLAHOMA,2022,September,Monthly,Number of Deaths,3635
+OREGON,2022,September,Monthly,Number of Deaths,3356
+PENNSYLVANIA,2022,September,Monthly,Number of Deaths,10986
+RHODE ISLAND,2022,September,Monthly,Number of Deaths,769
+SOUTH CAROLINA,2022,September,Monthly,Number of Deaths,4794
+SOUTH DAKOTA,2022,September,Monthly,Number of Deaths,693
+TENNESSEE,2022,September,Monthly,Number of Deaths,6575
+TEXAS,2022,September,Monthly,Number of Deaths,18221
+UTAH,2022,September,Monthly,Number of Deaths,1709
+VERMONT,2022,September,Monthly,Number of Deaths,515
+VIRGINIA,2022,September,Monthly,Number of Deaths,6441
+WASHINGTON,2022,September,Monthly,Number of Deaths,5382
+WEST VIRGINIA,2022,September,Monthly,Number of Deaths,2044
+WISCONSIN,2022,September,Monthly,Number of Deaths,4639
+WYOMING,2022,September,Monthly,Number of Deaths,463
+PUERTO RICO,2022,September,Monthly,Number of Deaths,2847
+ALABAMA,2022,October,Monthly,Number of Deaths,5142
+ALASKA,2022,October,Monthly,Number of Deaths,471
+ARIZONA,2022,October,Monthly,Number of Deaths,5615
+ARKANSAS,2022,October,Monthly,Number of Deaths,3143
+CALIFORNIA,2022,October,Monthly,Number of Deaths,23890
+COLORADO,2022,October,Monthly,Number of Deaths,3747
+CONNECTICUT,2022,October,Monthly,Number of Deaths,2868
+DELAWARE,2022,October,Monthly,Number of Deaths,957
+DISTRICT OF COLUMBIA,2022,October,Monthly,Number of Deaths,448
+FLORIDA,2022,October,Monthly,Number of Deaths,19334
+GEORGIA,2022,October,Monthly,Number of Deaths,8340
+HAWAII,2022,October,Monthly,Number of Deaths,1078
+IDAHO,2022,October,Monthly,Number of Deaths,1400
+ILLINOIS,2022,October,Monthly,Number of Deaths,10137
+INDIANA,2022,October,Monthly,Number of Deaths,6254
+IOWA,2022,October,Monthly,Number of Deaths,2736
+KANSAS,2022,October,Monthly,Number of Deaths,2523
+KENTUCKY,2022,October,Monthly,Number of Deaths,4626
+LOUISIANA,2022,October,Monthly,Number of Deaths,4050
+MAINE,2022,October,Monthly,Number of Deaths,1515
+MARYLAND,2022,October,Monthly,Number of Deaths,4610
+MASSACHUSETTS,2022,October,Monthly,Number of Deaths,5398
+MICHIGAN,2022,October,Monthly,Number of Deaths,9094
+MINNESOTA,2022,October,Monthly,Number of Deaths,4263
+MISSISSIPPI,2022,October,Monthly,Number of Deaths,3063
+MISSOURI,2022,October,Monthly,Number of Deaths,5638
+MONTANA,2022,October,Monthly,Number of Deaths,942
+NEBRASKA,2022,October,Monthly,Number of Deaths,1577
+NEVADA,2022,October,Monthly,Number of Deaths,2359
+NEW HAMPSHIRE,2022,October,Monthly,Number of Deaths,1228
+NEW JERSEY,2022,October,Monthly,Number of Deaths,6649
+NEW MEXICO,2022,October,Monthly,Number of Deaths,1768
+NEW YORK,2022,October,Monthly,Number of Deaths,14402
+NORTH CAROLINA,2022,October,Monthly,Number of Deaths,9188
+NORTH DAKOTA,2022,October,Monthly,Number of Deaths,599
+OHIO,2022,October,Monthly,Number of Deaths,11174
+OKLAHOMA,2022,October,Monthly,Number of Deaths,3673
+OREGON,2022,October,Monthly,Number of Deaths,3600
+PENNSYLVANIA,2022,October,Monthly,Number of Deaths,12191
+RHODE ISLAND,2022,October,Monthly,Number of Deaths,929
+SOUTH CAROLINA,2022,October,Monthly,Number of Deaths,5089
+SOUTH DAKOTA,2022,October,Monthly,Number of Deaths,766
+TENNESSEE,2022,October,Monthly,Number of Deaths,6699
+TEXAS,2022,October,Monthly,Number of Deaths,18995
+UTAH,2022,October,Monthly,Number of Deaths,1749
+VERMONT,2022,October,Monthly,Number of Deaths,574
+VIRGINIA,2022,October,Monthly,Number of Deaths,6802
+WASHINGTON,2022,October,Monthly,Number of Deaths,5383
+WEST VIRGINIA,2022,October,Monthly,Number of Deaths,2157
+WISCONSIN,2022,October,Monthly,Number of Deaths,5094
+WYOMING,2022,October,Monthly,Number of Deaths,444
+PUERTO RICO,2022,October,Monthly,Number of Deaths,2968
+ALABAMA,2022,November,Monthly,Number of Deaths,4952
+ALASKA,2022,November,Monthly,Number of Deaths,442
+ARIZONA,2022,November,Monthly,Number of Deaths,6135
+ARKANSAS,2022,November,Monthly,Number of Deaths,3102
+CALIFORNIA,2022,November,Monthly,Number of Deaths,25700
+COLORADO,2022,November,Monthly,Number of Deaths,3972
+CONNECTICUT,2022,November,Monthly,Number of Deaths,2900
+DELAWARE,2022,November,Monthly,Number of Deaths,923
+DISTRICT OF COLUMBIA,2022,November,Monthly,Number of Deaths,459
+FLORIDA,2022,November,Monthly,Number of Deaths,18601
+GEORGIA,2022,November,Monthly,Number of Deaths,7920
+HAWAII,2022,November,Monthly,Number of Deaths,1072
+IDAHO,2022,November,Monthly,Number of Deaths,1444
+ILLINOIS,2022,November,Monthly,Number of Deaths,10217
+INDIANA,2022,November,Monthly,Number of Deaths,5973
+IOWA,2022,November,Monthly,Number of Deaths,2690
+KANSAS,2022,November,Monthly,Number of Deaths,2552
+KENTUCKY,2022,November,Monthly,Number of Deaths,4812
+LOUISIANA,2022,November,Monthly,Number of Deaths,4142
+MAINE,2022,November,Monthly,Number of Deaths,1416
+MARYLAND,2022,November,Monthly,Number of Deaths,4763
+MASSACHUSETTS,2022,November,Monthly,Number of Deaths,5086
+MICHIGAN,2022,November,Monthly,Number of Deaths,9156
+MINNESOTA,2022,November,Monthly,Number of Deaths,4434
+MISSISSIPPI,2022,November,Monthly,Number of Deaths,2996
+MISSOURI,2022,November,Monthly,Number of Deaths,5772
+MONTANA,2022,November,Monthly,Number of Deaths,968
+NEBRASKA,2022,November,Monthly,Number of Deaths,1517
+NEVADA,2022,November,Monthly,Number of Deaths,2467
+NEW HAMPSHIRE,2022,November,Monthly,Number of Deaths,1244
+NEW JERSEY,2022,November,Monthly,Number of Deaths,6654
+NEW MEXICO,2022,November,Monthly,Number of Deaths,1844
+NEW YORK,2022,November,Monthly,Number of Deaths,14579
+NORTH CAROLINA,2022,November,Monthly,Number of Deaths,9125
+NORTH DAKOTA,2022,November,Monthly,Number of Deaths,575
+OHIO,2022,November,Monthly,Number of Deaths,11378
+OKLAHOMA,2022,November,Monthly,Number of Deaths,3769
+OREGON,2022,November,Monthly,Number of Deaths,3653
+PENNSYLVANIA,2022,November,Monthly,Number of Deaths,11944
+RHODE ISLAND,2022,November,Monthly,Number of Deaths,900
+SOUTH CAROLINA,2022,November,Monthly,Number of Deaths,5018
+SOUTH DAKOTA,2022,November,Monthly,Number of Deaths,735
+TENNESSEE,2022,November,Monthly,Number of Deaths,6863
+TEXAS,2022,November,Monthly,Number of Deaths,19107
+UTAH,2022,November,Monthly,Number of Deaths,1750
+VERMONT,2022,November,Monthly,Number of Deaths,596
+VIRGINIA,2022,November,Monthly,Number of Deaths,6777
+WASHINGTON,2022,November,Monthly,Number of Deaths,5769
+WEST VIRGINIA,2022,November,Monthly,Number of Deaths,2283
+WISCONSIN,2022,November,Monthly,Number of Deaths,5057
+WYOMING,2022,November,Monthly,Number of Deaths,520
+PUERTO RICO,2022,November,Monthly,Number of Deaths,2996
+ALABAMA,2022,December,Monthly,Number of Deaths,5313
+ALASKA,2022,December,Monthly,Number of Deaths,510
+ARIZONA,2022,December,Monthly,Number of Deaths,6828
+ARKANSAS,2022,December,Monthly,Number of Deaths,3460
+CALIFORNIA,2022,December,Monthly,Number of Deaths,29617
+COLORADO,2022,December,Monthly,Number of Deaths,4372
+CONNECTICUT,2022,December,Monthly,Number of Deaths,3294
+DELAWARE,2022,December,Monthly,Number of Deaths,1022
+DISTRICT OF COLUMBIA,2022,December,Monthly,Number of Deaths,494
+FLORIDA,2022,December,Monthly,Number of Deaths,20511
+GEORGIA,2022,December,Monthly,Number of Deaths,8624
+HAWAII,2022,December,Monthly,Number of Deaths,1124
+IDAHO,2022,December,Monthly,Number of Deaths,1562
+ILLINOIS,2022,December,Monthly,Number of Deaths,11283
+INDIANA,2022,December,Monthly,Number of Deaths,6971
+IOWA,2022,December,Monthly,Number of Deaths,3208
+KANSAS,2022,December,Monthly,Number of Deaths,2932
+KENTUCKY,2022,December,Monthly,Number of Deaths,5134
+LOUISIANA,2022,December,Monthly,Number of Deaths,4054
+MAINE,2022,December,Monthly,Number of Deaths,1601
+MARYLAND,2022,December,Monthly,Number of Deaths,4995
+MASSACHUSETTS,2022,December,Monthly,Number of Deaths,5805
+MICHIGAN,2022,December,Monthly,Number of Deaths,10050
+MINNESOTA,2022,December,Monthly,Number of Deaths,4701
+MISSISSIPPI,2022,December,Monthly,Number of Deaths,3289
+MISSOURI,2022,December,Monthly,Number of Deaths,6599
+MONTANA,2022,December,Monthly,Number of Deaths,1016
+NEBRASKA,2022,December,Monthly,Number of Deaths,1729
+NEVADA,2022,December,Monthly,Number of Deaths,2784
+NEW HAMPSHIRE,2022,December,Monthly,Number of Deaths,1310
+NEW JERSEY,2022,December,Monthly,Number of Deaths,7523
+NEW MEXICO,2022,December,Monthly,Number of Deaths,2107
+NEW YORK,2022,December,Monthly,Number of Deaths,16396
+NORTH CAROLINA,2022,December,Monthly,Number of Deaths,9985
+NORTH DAKOTA,2022,December,Monthly,Number of Deaths,649
+OHIO,2022,December,Monthly,Number of Deaths,12762
+OKLAHOMA,2022,December,Monthly,Number of Deaths,4267
+OREGON,2022,December,Monthly,Number of Deaths,4396
+PENNSYLVANIA,2022,December,Monthly,Number of Deaths,13442
+RHODE ISLAND,2022,December,Monthly,Number of Deaths,969
+SOUTH CAROLINA,2022,December,Monthly,Number of Deaths,5507
+SOUTH DAKOTA,2022,December,Monthly,Number of Deaths,815
+TENNESSEE,2022,December,Monthly,Number of Deaths,7450
+TEXAS,2022,December,Monthly,Number of Deaths,21345
+UTAH,2022,December,Monthly,Number of Deaths,2039
+VERMONT,2022,December,Monthly,Number of Deaths,625
+VIRGINIA,2022,December,Monthly,Number of Deaths,7455
+WASHINGTON,2022,December,Monthly,Number of Deaths,6692
+WEST VIRGINIA,2022,December,Monthly,Number of Deaths,2584
+WISCONSIN,2022,December,Monthly,Number of Deaths,5589
+WYOMING,2022,December,Monthly,Number of Deaths,503
+PUERTO RICO,2022,December,Monthly,Number of Deaths,3217
+ALABAMA,2021,January,Monthly,Number of Live Births,4545
+ALASKA,2021,January,Monthly,Number of Live Births,748
+ARIZONA,2021,January,Monthly,Number of Live Births,6121
+ARKANSAS,2021,January,Monthly,Number of Live Births,2860
+CALIFORNIA,2021,January,Monthly,Number of Live Births,31905
+COLORADO,2021,January,Monthly,Number of Live Births,4659
+CONNECTICUT,2021,January,Monthly,Number of Live Births,2420
+DELAWARE,2021,January,Monthly,Number of Live Births,742
+DISTRICT OF COLUMBIA,2021,January,Monthly,Number of Live Births,662
+FLORIDA,2021,January,Monthly,Number of Live Births,16538
+GEORGIA,2021,January,Monthly,Number of Live Births,9677
+HAWAII,2021,January,Monthly,Number of Live Births,1203
+IDAHO,2021,January,Monthly,Number of Live Births,1684
+ILLINOIS,2021,January,Monthly,Number of Live Births,9757
+INDIANA,2021,January,Monthly,Number of Live Births,6156
+IOWA,2021,January,Monthly,Number of Live Births,2835
+KANSAS,2021,January,Monthly,Number of Live Births,2610
+KENTUCKY,2021,January,Monthly,Number of Live Births,4099
+LOUISIANA,2021,January,Monthly,Number of Live Births,4687
+MAINE,2021,January,Monthly,Number of Live Births,882
+MARYLAND,2021,January,Monthly,Number of Live Births,5183
+MASSACHUSETTS,2021,January,Monthly,Number of Live Births,4900
+MICHIGAN,2021,January,Monthly,Number of Live Births,7707
+MINNESOTA,2021,January,Monthly,Number of Live Births,4656
+MISSISSIPPI,2021,January,Monthly,Number of Live Births,2723
+MISSOURI,2021,January,Monthly,Number of Live Births,5426
+MONTANA,2021,January,Monthly,Number of Live Births,838
+NEBRASKA,2021,January,Monthly,Number of Live Births,1802
+NEVADA,2021,January,Monthly,Number of Live Births,2536
+NEW HAMPSHIRE,2021,January,Monthly,Number of Live Births,868
+NEW JERSEY,2021,January,Monthly,Number of Live Births,7189
+NEW MEXICO,2021,January,Monthly,Number of Live Births,1652
+NEW YORK,2021,January,Monthly,Number of Live Births,15206
+NORTH CAROLINA,2021,January,Monthly,Number of Live Births,9270
+NORTH DAKOTA,2021,January,Monthly,Number of Live Births,781
+OHIO,2021,January,Monthly,Number of Live Births,9876
+OKLAHOMA,2021,January,Monthly,Number of Live Births,3735
+OREGON,2021,January,Monthly,Number of Live Births,3122
+PENNSYLVANIA,2021,January,Monthly,Number of Live Births,10068
+RHODE ISLAND,2021,January,Monthly,Number of Live Births,723
+SOUTH CAROLINA,2021,January,Monthly,Number of Live Births,4563
+SOUTH DAKOTA,2021,January,Monthly,Number of Live Births,896
+TENNESSEE,2021,January,Monthly,Number of Live Births,6335
+TEXAS,2021,January,Monthly,Number of Live Births,28255
+UTAH,2021,January,Monthly,Number of Live Births,3364
+VERMONT,2021,January,Monthly,Number of Live Births,376
+VIRGINIA,2021,January,Monthly,Number of Live Births,7340
+WASHINGTON,2021,January,Monthly,Number of Live Births,6341
+WEST VIRGINIA,2021,January,Monthly,Number of Live Births,1338
+WISCONSIN,2021,January,Monthly,Number of Live Births,4545
+WYOMING,2021,January,Monthly,Number of Live Births,446
+PUERTO RICO,2021,January,Monthly,Number of Live Births,1434
+ALABAMA,2021,February,Monthly,Number of Live Births,4383
+ALASKA,2021,February,Monthly,Number of Live Births,661
+ARIZONA,2021,February,Monthly,Number of Live Births,5555
+ARKANSAS,2021,February,Monthly,Number of Live Births,2664
+CALIFORNIA,2021,February,Monthly,Number of Live Births,30020
+COLORADO,2021,February,Monthly,Number of Live Births,4781
+CONNECTICUT,2021,February,Monthly,Number of Live Births,2534
+DELAWARE,2021,February,Monthly,Number of Live Births,688
+DISTRICT OF COLUMBIA,2021,February,Monthly,Number of Live Births,586
+FLORIDA,2021,February,Monthly,Number of Live Births,16112
+GEORGIA,2021,February,Monthly,Number of Live Births,9106
+HAWAII,2021,February,Monthly,Number of Live Births,1116
+IDAHO,2021,February,Monthly,Number of Live Births,1570
+ILLINOIS,2021,February,Monthly,Number of Live Births,9631
+INDIANA,2021,February,Monthly,Number of Live Births,5629
+IOWA,2021,February,Monthly,Number of Live Births,2749
+KANSAS,2021,February,Monthly,Number of Live Births,2579
+KENTUCKY,2021,February,Monthly,Number of Live Births,3939
+LOUISIANA,2021,February,Monthly,Number of Live Births,4420
+MAINE,2021,February,Monthly,Number of Live Births,815
+MARYLAND,2021,February,Monthly,Number of Live Births,4908
+MASSACHUSETTS,2021,February,Monthly,Number of Live Births,4817
+MICHIGAN,2021,February,Monthly,Number of Live Births,7611
+MINNESOTA,2021,February,Monthly,Number of Live Births,4656
+MISSISSIPPI,2021,February,Monthly,Number of Live Births,2629
+MISSOURI,2021,February,Monthly,Number of Live Births,4967
+MONTANA,2021,February,Monthly,Number of Live Births,827
+NEBRASKA,2021,February,Monthly,Number of Live Births,1855
+NEVADA,2021,February,Monthly,Number of Live Births,2448
+NEW HAMPSHIRE,2021,February,Monthly,Number of Live Births,908
+NEW JERSEY,2021,February,Monthly,Number of Live Births,7345
+NEW MEXICO,2021,February,Monthly,Number of Live Births,1553
+NEW YORK,2021,February,Monthly,Number of Live Births,15285
+NORTH CAROLINA,2021,February,Monthly,Number of Live Births,8827
+NORTH DAKOTA,2021,February,Monthly,Number of Live Births,764
+OHIO,2021,February,Monthly,Number of Live Births,9722
+OKLAHOMA,2021,February,Monthly,Number of Live Births,3488
+OREGON,2021,February,Monthly,Number of Live Births,2901
+PENNSYLVANIA,2021,February,Monthly,Number of Live Births,9634
+RHODE ISLAND,2021,February,Monthly,Number of Live Births,695
+SOUTH CAROLINA,2021,February,Monthly,Number of Live Births,4207
+SOUTH DAKOTA,2021,February,Monthly,Number of Live Births,826
+TENNESSEE,2021,February,Monthly,Number of Live Births,6033
+TEXAS,2021,February,Monthly,Number of Live Births,26624
+UTAH,2021,February,Monthly,Number of Live Births,3433
+VERMONT,2021,February,Monthly,Number of Live Births,366
+VIRGINIA,2021,February,Monthly,Number of Live Births,6988
+WASHINGTON,2021,February,Monthly,Number of Live Births,6106
+WEST VIRGINIA,2021,February,Monthly,Number of Live Births,1249
+WISCONSIN,2021,February,Monthly,Number of Live Births,4437
+WYOMING,2021,February,Monthly,Number of Live Births,448
+PUERTO RICO,2021,February,Monthly,Number of Live Births,1243
+ALABAMA,2021,March,Monthly,Number of Live Births,4738
+ALASKA,2021,March,Monthly,Number of Live Births,802
+ARIZONA,2021,March,Monthly,Number of Live Births,5979
+ARKANSAS,2021,March,Monthly,Number of Live Births,3036
+CALIFORNIA,2021,March,Monthly,Number of Live Births,34561
+COLORADO,2021,March,Monthly,Number of Live Births,5287
+CONNECTICUT,2021,March,Monthly,Number of Live Births,2986
+DELAWARE,2021,March,Monthly,Number of Live Births,827
+DISTRICT OF COLUMBIA,2021,March,Monthly,Number of Live Births,664
+FLORIDA,2021,March,Monthly,Number of Live Births,17239
+GEORGIA,2021,March,Monthly,Number of Live Births,10153
+HAWAII,2021,March,Monthly,Number of Live Births,1415
+IDAHO,2021,March,Monthly,Number of Live Births,1971
+ILLINOIS,2021,March,Monthly,Number of Live Births,11267
+INDIANA,2021,March,Monthly,Number of Live Births,6329
+IOWA,2021,March,Monthly,Number of Live Births,3122
+KANSAS,2021,March,Monthly,Number of Live Births,2950
+KENTUCKY,2021,March,Monthly,Number of Live Births,4350
+LOUISIANA,2021,March,Monthly,Number of Live Births,4896
+MAINE,2021,March,Monthly,Number of Live Births,959
+MARYLAND,2021,March,Monthly,Number of Live Births,5631
+MASSACHUSETTS,2021,March,Monthly,Number of Live Births,5740
+MICHIGAN,2021,March,Monthly,Number of Live Births,8586
+MINNESOTA,2021,March,Monthly,Number of Live Births,5401
+MISSISSIPPI,2021,March,Monthly,Number of Live Births,2916
+MISSOURI,2021,March,Monthly,Number of Live Births,5881
+MONTANA,2021,March,Monthly,Number of Live Births,970
+NEBRASKA,2021,March,Monthly,Number of Live Births,2063
+NEVADA,2021,March,Monthly,Number of Live Births,2738
+NEW HAMPSHIRE,2021,March,Monthly,Number of Live Births,995
+NEW JERSEY,2021,March,Monthly,Number of Live Births,8406
+NEW MEXICO,2021,March,Monthly,Number of Live Births,1705
+NEW YORK,2021,March,Monthly,Number of Live Births,17864
+NORTH CAROLINA,2021,March,Monthly,Number of Live Births,9708
+NORTH DAKOTA,2021,March,Monthly,Number of Live Births,905
+OHIO,2021,March,Monthly,Number of Live Births,10801
+OKLAHOMA,2021,March,Monthly,Number of Live Births,4036
+OREGON,2021,March,Monthly,Number of Live Births,3417
+PENNSYLVANIA,2021,March,Monthly,Number of Live Births,10952
+RHODE ISLAND,2021,March,Monthly,Number of Live Births,871
+SOUTH CAROLINA,2021,March,Monthly,Number of Live Births,4609
+SOUTH DAKOTA,2021,March,Monthly,Number of Live Births,954
+TENNESSEE,2021,March,Monthly,Number of Live Births,6748
+TEXAS,2021,March,Monthly,Number of Live Births,30184
+UTAH,2021,March,Monthly,Number of Live Births,4117
+VERMONT,2021,March,Monthly,Number of Live Births,408
+VIRGINIA,2021,March,Monthly,Number of Live Births,8151
+WASHINGTON,2021,March,Monthly,Number of Live Births,6908
+WEST VIRGINIA,2021,March,Monthly,Number of Live Births,1542
+WISCONSIN,2021,March,Monthly,Number of Live Births,5133
+WYOMING,2021,March,Monthly,Number of Live Births,545
+PUERTO RICO,2021,March,Monthly,Number of Live Births,1512
+ALABAMA,2021,April,Monthly,Number of Live Births,4522
+ALASKA,2021,April,Monthly,Number of Live Births,815
+ARIZONA,2021,April,Monthly,Number of Live Births,5997
+ARKANSAS,2021,April,Monthly,Number of Live Births,2701
+CALIFORNIA,2021,April,Monthly,Number of Live Births,33401
+COLORADO,2021,April,Monthly,Number of Live Births,5329
+CONNECTICUT,2021,April,Monthly,Number of Live Births,2971
+DELAWARE,2021,April,Monthly,Number of Live Births,840
+DISTRICT OF COLUMBIA,2021,April,Monthly,Number of Live Births,638
+FLORIDA,2021,April,Monthly,Number of Live Births,16745
+GEORGIA,2021,April,Monthly,Number of Live Births,9828
+HAWAII,2021,April,Monthly,Number of Live Births,1269
+IDAHO,2021,April,Monthly,Number of Live Births,1873
+ILLINOIS,2021,April,Monthly,Number of Live Births,10904
+INDIANA,2021,April,Monthly,Number of Live Births,6287
+IOWA,2021,April,Monthly,Number of Live Births,2979
+KANSAS,2021,April,Monthly,Number of Live Births,2865
+KENTUCKY,2021,April,Monthly,Number of Live Births,4129
+LOUISIANA,2021,April,Monthly,Number of Live Births,4241
+MAINE,2021,April,Monthly,Number of Live Births,986
+MARYLAND,2021,April,Monthly,Number of Live Births,5450
+MASSACHUSETTS,2021,April,Monthly,Number of Live Births,5696
+MICHIGAN,2021,April,Monthly,Number of Live Births,8564
+MINNESOTA,2021,April,Monthly,Number of Live Births,5287
+MISSISSIPPI,2021,April,Monthly,Number of Live Births,2551
+MISSOURI,2021,April,Monthly,Number of Live Births,5528
+MONTANA,2021,April,Monthly,Number of Live Births,957
+NEBRASKA,2021,April,Monthly,Number of Live Births,2029
+NEVADA,2021,April,Monthly,Number of Live Births,2612
+NEW HAMPSHIRE,2021,April,Monthly,Number of Live Births,1110
+NEW JERSEY,2021,April,Monthly,Number of Live Births,8361
+NEW MEXICO,2021,April,Monthly,Number of Live Births,1727
+NEW YORK,2021,April,Monthly,Number of Live Births,17345
+NORTH CAROLINA,2021,April,Monthly,Number of Live Births,9575
+NORTH DAKOTA,2021,April,Monthly,Number of Live Births,845
+OHIO,2021,April,Monthly,Number of Live Births,10485
+OKLAHOMA,2021,April,Monthly,Number of Live Births,3764
+OREGON,2021,April,Monthly,Number of Live Births,3398
+PENNSYLVANIA,2021,April,Monthly,Number of Live Births,10835
+RHODE ISLAND,2021,April,Monthly,Number of Live Births,873
+SOUTH CAROLINA,2021,April,Monthly,Number of Live Births,4396
+SOUTH DAKOTA,2021,April,Monthly,Number of Live Births,1016
+TENNESSEE,2021,April,Monthly,Number of Live Births,6387
+TEXAS,2021,April,Monthly,Number of Live Births,28498
+UTAH,2021,April,Monthly,Number of Live Births,3899
+VERMONT,2021,April,Monthly,Number of Live Births,447
+VIRGINIA,2021,April,Monthly,Number of Live Births,7821
+WASHINGTON,2021,April,Monthly,Number of Live Births,7037
+WEST VIRGINIA,2021,April,Monthly,Number of Live Births,1437
+WISCONSIN,2021,April,Monthly,Number of Live Births,5159
+WYOMING,2021,April,Monthly,Number of Live Births,524
+PUERTO RICO,2021,April,Monthly,Number of Live Births,1499
+ALABAMA,2021,May,Monthly,Number of Live Births,4490
+ALASKA,2021,May,Monthly,Number of Live Births,864
+ARIZONA,2021,May,Monthly,Number of Live Births,6009
+ARKANSAS,2021,May,Monthly,Number of Live Births,2790
+CALIFORNIA,2021,May,Monthly,Number of Live Births,34282
+COLORADO,2021,May,Monthly,Number of Live Births,5422
+CONNECTICUT,2021,May,Monthly,Number of Live Births,3043
+DELAWARE,2021,May,Monthly,Number of Live Births,871
+DISTRICT OF COLUMBIA,2021,May,Monthly,Number of Live Births,685
+FLORIDA,2021,May,Monthly,Number of Live Births,16923
+GEORGIA,2021,May,Monthly,Number of Live Births,9878
+HAWAII,2021,May,Monthly,Number of Live Births,1287
+IDAHO,2021,May,Monthly,Number of Live Births,1960
+ILLINOIS,2021,May,Monthly,Number of Live Births,11071
+INDIANA,2021,May,Monthly,Number of Live Births,6512
+IOWA,2021,May,Monthly,Number of Live Births,3066
+KANSAS,2021,May,Monthly,Number of Live Births,2878
+KENTUCKY,2021,May,Monthly,Number of Live Births,4261
+LOUISIANA,2021,May,Monthly,Number of Live Births,4390
+MAINE,2021,May,Monthly,Number of Live Births,1039
+MARYLAND,2021,May,Monthly,Number of Live Births,5674
+MASSACHUSETTS,2021,May,Monthly,Number of Live Births,6119
+MICHIGAN,2021,May,Monthly,Number of Live Births,8949
+MINNESOTA,2021,May,Monthly,Number of Live Births,5602
+MISSISSIPPI,2021,May,Monthly,Number of Live Births,2739
+MISSOURI,2021,May,Monthly,Number of Live Births,5814
+MONTANA,2021,May,Monthly,Number of Live Births,946
+NEBRASKA,2021,May,Monthly,Number of Live Births,2121
+NEVADA,2021,May,Monthly,Number of Live Births,2793
+NEW HAMPSHIRE,2021,May,Monthly,Number of Live Births,1088
+NEW JERSEY,2021,May,Monthly,Number of Live Births,8343
+NEW MEXICO,2021,May,Monthly,Number of Live Births,1715
+NEW YORK,2021,May,Monthly,Number of Live Births,17835
+NORTH CAROLINA,2021,May,Monthly,Number of Live Births,9797
+NORTH DAKOTA,2021,May,Monthly,Number of Live Births,825
+OHIO,2021,May,Monthly,Number of Live Births,10852
+OKLAHOMA,2021,May,Monthly,Number of Live Births,3946
+OREGON,2021,May,Monthly,Number of Live Births,3568
+PENNSYLVANIA,2021,May,Monthly,Number of Live Births,10996
+RHODE ISLAND,2021,May,Monthly,Number of Live Births,895
+SOUTH CAROLINA,2021,May,Monthly,Number of Live Births,4576
+SOUTH DAKOTA,2021,May,Monthly,Number of Live Births,960
+TENNESSEE,2021,May,Monthly,Number of Live Births,6547
+TEXAS,2021,May,Monthly,Number of Live Births,29230
+UTAH,2021,May,Monthly,Number of Live Births,4113
+VERMONT,2021,May,Monthly,Number of Live Births,437
+VIRGINIA,2021,May,Monthly,Number of Live Births,7956
+WASHINGTON,2021,May,Monthly,Number of Live Births,7177
+WEST VIRGINIA,2021,May,Monthly,Number of Live Births,1427
+WISCONSIN,2021,May,Monthly,Number of Live Births,5339
+WYOMING,2021,May,Monthly,Number of Live Births,549
+PUERTO RICO,2021,May,Monthly,Number of Live Births,1516
+ALABAMA,2021,June,Monthly,Number of Live Births,4909
+ALASKA,2021,June,Monthly,Number of Live Births,808
+ARIZONA,2021,June,Monthly,Number of Live Births,6176
+ARKANSAS,2021,June,Monthly,Number of Live Births,3057
+CALIFORNIA,2021,June,Monthly,Number of Live Births,34849
+COLORADO,2021,June,Monthly,Number of Live Births,5524
+CONNECTICUT,2021,June,Monthly,Number of Live Births,3092
+DELAWARE,2021,June,Monthly,Number of Live Births,926
+DISTRICT OF COLUMBIA,2021,June,Monthly,Number of Live Births,665
+FLORIDA,2021,June,Monthly,Number of Live Births,17503
+GEORGIA,2021,June,Monthly,Number of Live Births,10384
+HAWAII,2021,June,Monthly,Number of Live Births,1270
+IDAHO,2021,June,Monthly,Number of Live Births,1979
+ILLINOIS,2021,June,Monthly,Number of Live Births,11868
+INDIANA,2021,June,Monthly,Number of Live Births,6898
+IOWA,2021,June,Monthly,Number of Live Births,3202
+KANSAS,2021,June,Monthly,Number of Live Births,2959
+KENTUCKY,2021,June,Monthly,Number of Live Births,4385
+LOUISIANA,2021,June,Monthly,Number of Live Births,4747
+MAINE,2021,June,Monthly,Number of Live Births,1071
+MARYLAND,2021,June,Monthly,Number of Live Births,5994
+MASSACHUSETTS,2021,June,Monthly,Number of Live Births,6187
+MICHIGAN,2021,June,Monthly,Number of Live Births,9517
+MINNESOTA,2021,June,Monthly,Number of Live Births,5794
+MISSISSIPPI,2021,June,Monthly,Number of Live Births,2957
+MISSOURI,2021,June,Monthly,Number of Live Births,6088
+MONTANA,2021,June,Monthly,Number of Live Births,1032
+NEBRASKA,2021,June,Monthly,Number of Live Births,2187
+NEVADA,2021,June,Monthly,Number of Live Births,2849
+NEW HAMPSHIRE,2021,June,Monthly,Number of Live Births,1157
+NEW JERSEY,2021,June,Monthly,Number of Live Births,8772
+NEW MEXICO,2021,June,Monthly,Number of Live Births,1794
+NEW YORK,2021,June,Monthly,Number of Live Births,18609
+NORTH CAROLINA,2021,June,Monthly,Number of Live Births,10269
+NORTH DAKOTA,2021,June,Monthly,Number of Live Births,888
+OHIO,2021,June,Monthly,Number of Live Births,11217
+OKLAHOMA,2021,June,Monthly,Number of Live Births,4127
+OREGON,2021,June,Monthly,Number of Live Births,3569
+PENNSYLVANIA,2021,June,Monthly,Number of Live Births,11453
+RHODE ISLAND,2021,June,Monthly,Number of Live Births,942
+SOUTH CAROLINA,2021,June,Monthly,Number of Live Births,4743
+SOUTH DAKOTA,2021,June,Monthly,Number of Live Births,1020
+TENNESSEE,2021,June,Monthly,Number of Live Births,6873
+TEXAS,2021,June,Monthly,Number of Live Births,30945
+UTAH,2021,June,Monthly,Number of Live Births,4240
+VERMONT,2021,June,Monthly,Number of Live Births,504
+VIRGINIA,2021,June,Monthly,Number of Live Births,8466
+WASHINGTON,2021,June,Monthly,Number of Live Births,7195
+WEST VIRGINIA,2021,June,Monthly,Number of Live Births,1577
+WISCONSIN,2021,June,Monthly,Number of Live Births,5550
+WYOMING,2021,June,Monthly,Number of Live Births,535
+PUERTO RICO,2021,June,Monthly,Number of Live Births,1635
+ALABAMA,2021,July,Monthly,Number of Live Births,5153
+ALASKA,2021,July,Monthly,Number of Live Births,863
+ARIZONA,2021,July,Monthly,Number of Live Births,6865
+ARKANSAS,2021,July,Monthly,Number of Live Births,3225
+CALIFORNIA,2021,July,Monthly,Number of Live Births,36371
+COLORADO,2021,July,Monthly,Number of Live Births,5608
+CONNECTICUT,2021,July,Monthly,Number of Live Births,3181
+DELAWARE,2021,July,Monthly,Number of Live Births,990
+DISTRICT OF COLUMBIA,2021,July,Monthly,Number of Live Births,714
+FLORIDA,2021,July,Monthly,Number of Live Births,18508
+GEORGIA,2021,July,Monthly,Number of Live Births,10904
+HAWAII,2021,July,Monthly,Number of Live Births,1351
+IDAHO,2021,July,Monthly,Number of Live Births,1962
+ILLINOIS,2021,July,Monthly,Number of Live Births,11932
+INDIANA,2021,July,Monthly,Number of Live Births,7209
+IOWA,2021,July,Monthly,Number of Live Births,3372
+KANSAS,2021,July,Monthly,Number of Live Births,3116
+KENTUCKY,2021,July,Monthly,Number of Live Births,4794
+LOUISIANA,2021,July,Monthly,Number of Live Births,5069
+MAINE,2021,July,Monthly,Number of Live Births,1128
+MARYLAND,2021,July,Monthly,Number of Live Births,6178
+MASSACHUSETTS,2021,July,Monthly,Number of Live Births,6290
+MICHIGAN,2021,July,Monthly,Number of Live Births,9744
+MINNESOTA,2021,July,Monthly,Number of Live Births,5857
+MISSISSIPPI,2021,July,Monthly,Number of Live Births,3093
+MISSOURI,2021,July,Monthly,Number of Live Births,6326
+MONTANA,2021,July,Monthly,Number of Live Births,1015
+NEBRASKA,2021,July,Monthly,Number of Live Births,2162
+NEVADA,2021,July,Monthly,Number of Live Births,2947
+NEW HAMPSHIRE,2021,July,Monthly,Number of Live Births,1202
+NEW JERSEY,2021,July,Monthly,Number of Live Births,9103
+NEW MEXICO,2021,July,Monthly,Number of Live Births,1830
+NEW YORK,2021,July,Monthly,Number of Live Births,19011
+NORTH CAROLINA,2021,July,Monthly,Number of Live Births,10650
+NORTH DAKOTA,2021,July,Monthly,Number of Live Births,867
+OHIO,2021,July,Monthly,Number of Live Births,11611
+OKLAHOMA,2021,July,Monthly,Number of Live Births,4286
+OREGON,2021,July,Monthly,Number of Live Births,3684
+PENNSYLVANIA,2021,July,Monthly,Number of Live Births,12192
+RHODE ISLAND,2021,July,Monthly,Number of Live Births,959
+SOUTH CAROLINA,2021,July,Monthly,Number of Live Births,4992
+SOUTH DAKOTA,2021,July,Monthly,Number of Live Births,997
+TENNESSEE,2021,July,Monthly,Number of Live Births,7195
+TEXAS,2021,July,Monthly,Number of Live Births,32873
+UTAH,2021,July,Monthly,Number of Live Births,4217
+VERMONT,2021,July,Monthly,Number of Live Births,502
+VIRGINIA,2021,July,Monthly,Number of Live Births,8575
+WASHINGTON,2021,July,Monthly,Number of Live Births,7482
+WEST VIRGINIA,2021,July,Monthly,Number of Live Births,1595
+WISCONSIN,2021,July,Monthly,Number of Live Births,5525
+WYOMING,2021,July,Monthly,Number of Live Births,592
+PUERTO RICO,2021,July,Monthly,Number of Live Births,1582
+ALABAMA,2021,August,Monthly,Number of Live Births,5164
+ALASKA,2021,August,Monthly,Number of Live Births,818
+ARIZONA,2021,August,Monthly,Number of Live Births,7023
+ARKANSAS,2021,August,Monthly,Number of Live Births,3352
+CALIFORNIA,2021,August,Monthly,Number of Live Births,38248
+COLORADO,2021,August,Monthly,Number of Live Births,5658
+CONNECTICUT,2021,August,Monthly,Number of Live Births,3292
+DELAWARE,2021,August,Monthly,Number of Live Births,946
+DISTRICT OF COLUMBIA,2021,August,Monthly,Number of Live Births,708
+FLORIDA,2021,August,Monthly,Number of Live Births,19598
+GEORGIA,2021,August,Monthly,Number of Live Births,11286
+HAWAII,2021,August,Monthly,Number of Live Births,1419
+IDAHO,2021,August,Monthly,Number of Live Births,2063
+ILLINOIS,2021,August,Monthly,Number of Live Births,11794
+INDIANA,2021,August,Monthly,Number of Live Births,7178
+IOWA,2021,August,Monthly,Number of Live Births,3287
+KANSAS,2021,August,Monthly,Number of Live Births,3041
+KENTUCKY,2021,August,Monthly,Number of Live Births,4761
+LOUISIANA,2021,August,Monthly,Number of Live Births,5088
+MAINE,2021,August,Monthly,Number of Live Births,1108
+MARYLAND,2021,August,Monthly,Number of Live Births,6140
+MASSACHUSETTS,2021,August,Monthly,Number of Live Births,6283
+MICHIGAN,2021,August,Monthly,Number of Live Births,9452
+MINNESOTA,2021,August,Monthly,Number of Live Births,5743
+MISSISSIPPI,2021,August,Monthly,Number of Live Births,3198
+MISSOURI,2021,August,Monthly,Number of Live Births,6243
+MONTANA,2021,August,Monthly,Number of Live Births,960
+NEBRASKA,2021,August,Monthly,Number of Live Births,2115
+NEVADA,2021,August,Monthly,Number of Live Births,3093
+NEW HAMPSHIRE,2021,August,Monthly,Number of Live Births,1196
+NEW JERSEY,2021,August,Monthly,Number of Live Births,9171
+NEW MEXICO,2021,August,Monthly,Number of Live Births,1806
+NEW YORK,2021,August,Monthly,Number of Live Births,18909
+NORTH CAROLINA,2021,August,Monthly,Number of Live Births,11015
+NORTH DAKOTA,2021,August,Monthly,Number of Live Births,865
+OHIO,2021,August,Monthly,Number of Live Births,11528
+OKLAHOMA,2021,August,Monthly,Number of Live Births,4334
+OREGON,2021,August,Monthly,Number of Live Births,3687
+PENNSYLVANIA,2021,August,Monthly,Number of Live Births,11709
+RHODE ISLAND,2021,August,Monthly,Number of Live Births,997
+SOUTH CAROLINA,2021,August,Monthly,Number of Live Births,5242
+SOUTH DAKOTA,2021,August,Monthly,Number of Live Births,1017
+TENNESSEE,2021,August,Monthly,Number of Live Births,7278
+TEXAS,2021,August,Monthly,Number of Live Births,33710
+UTAH,2021,August,Monthly,Number of Live Births,4181
+VERMONT,2021,August,Monthly,Number of Live Births,529
+VIRGINIA,2021,August,Monthly,Number of Live Births,8566
+WASHINGTON,2021,August,Monthly,Number of Live Births,7568
+WEST VIRGINIA,2021,August,Monthly,Number of Live Births,1558
+WISCONSIN,2021,August,Monthly,Number of Live Births,5460
+WYOMING,2021,August,Monthly,Number of Live Births,566
+PUERTO RICO,2021,August,Monthly,Number of Live Births,1700
+ALABAMA,2021,September,Monthly,Number of Live Births,5171
+ALASKA,2021,September,Monthly,Number of Live Births,837
+ARIZONA,2021,September,Monthly,Number of Live Births,7048
+ARKANSAS,2021,September,Monthly,Number of Live Births,3300
+CALIFORNIA,2021,September,Monthly,Number of Live Births,37358
+COLORADO,2021,September,Monthly,Number of Live Births,5364
+CONNECTICUT,2021,September,Monthly,Number of Live Births,3244
+DELAWARE,2021,September,Monthly,Number of Live Births,1013
+DISTRICT OF COLUMBIA,2021,September,Monthly,Number of Live Births,734
+FLORIDA,2021,September,Monthly,Number of Live Births,20028
+GEORGIA,2021,September,Monthly,Number of Live Births,11109
+HAWAII,2021,September,Monthly,Number of Live Births,1386
+IDAHO,2021,September,Monthly,Number of Live Births,1885
+ILLINOIS,2021,September,Monthly,Number of Live Births,11409
+INDIANA,2021,September,Monthly,Number of Live Births,7150
+IOWA,2021,September,Monthly,Number of Live Births,3233
+KANSAS,2021,September,Monthly,Number of Live Births,3049
+KENTUCKY,2021,September,Monthly,Number of Live Births,4688
+LOUISIANA,2021,September,Monthly,Number of Live Births,5114
+MAINE,2021,September,Monthly,Number of Live Births,1099
+MARYLAND,2021,September,Monthly,Number of Live Births,5981
+MASSACHUSETTS,2021,September,Monthly,Number of Live Births,6253
+MICHIGAN,2021,September,Monthly,Number of Live Births,9102
+MINNESOTA,2021,September,Monthly,Number of Live Births,5580
+MISSISSIPPI,2021,September,Monthly,Number of Live Births,3165
+MISSOURI,2021,September,Monthly,Number of Live Births,6032
+MONTANA,2021,September,Monthly,Number of Live Births,970
+NEBRASKA,2021,September,Monthly,Number of Live Births,2105
+NEVADA,2021,September,Monthly,Number of Live Births,2907
+NEW HAMPSHIRE,2021,September,Monthly,Number of Live Births,1090
+NEW JERSEY,2021,September,Monthly,Number of Live Births,9012
+NEW MEXICO,2021,September,Monthly,Number of Live Births,1875
+NEW YORK,2021,September,Monthly,Number of Live Births,18321
+NORTH CAROLINA,2021,September,Monthly,Number of Live Births,10834
+NORTH DAKOTA,2021,September,Monthly,Number of Live Births,874
+OHIO,2021,September,Monthly,Number of Live Births,11446
+OKLAHOMA,2021,September,Monthly,Number of Live Births,4214
+OREGON,2021,September,Monthly,Number of Live Births,3611
+PENNSYLVANIA,2021,September,Monthly,Number of Live Births,11597
+RHODE ISLAND,2021,September,Monthly,Number of Live Births,917
+SOUTH CAROLINA,2021,September,Monthly,Number of Live Births,5081
+SOUTH DAKOTA,2021,September,Monthly,Number of Live Births,1028
+TENNESSEE,2021,September,Monthly,Number of Live Births,7427
+TEXAS,2021,September,Monthly,Number of Live Births,33894
+UTAH,2021,September,Monthly,Number of Live Births,4042
+VERMONT,2021,September,Monthly,Number of Live Births,462
+VIRGINIA,2021,September,Monthly,Number of Live Births,8685
+WASHINGTON,2021,September,Monthly,Number of Live Births,7267
+WEST VIRGINIA,2021,September,Monthly,Number of Live Births,1534
+WISCONSIN,2021,September,Monthly,Number of Live Births,5400
+WYOMING,2021,September,Monthly,Number of Live Births,513
+PUERTO RICO,2021,September,Monthly,Number of Live Births,1866
+ALABAMA,2021,October,Monthly,Number of Live Births,4980
+ALASKA,2021,October,Monthly,Number of Live Births,738
+ARIZONA,2021,October,Monthly,Number of Live Births,7008
+ARKANSAS,2021,October,Monthly,Number of Live Births,3134
+CALIFORNIA,2021,October,Monthly,Number of Live Births,36996
+COLORADO,2021,October,Monthly,Number of Live Births,5296
+CONNECTICUT,2021,October,Monthly,Number of Live Births,3004
+DELAWARE,2021,October,Monthly,Number of Live Births,924
+DISTRICT OF COLUMBIA,2021,October,Monthly,Number of Live Births,664
+FLORIDA,2021,October,Monthly,Number of Live Births,19525
+GEORGIA,2021,October,Monthly,Number of Live Births,10709
+HAWAII,2021,October,Monthly,Number of Live Births,1333
+IDAHO,2021,October,Monthly,Number of Live Births,1873
+ILLINOIS,2021,October,Monthly,Number of Live Births,11065
+INDIANA,2021,October,Monthly,Number of Live Births,6973
+IOWA,2021,October,Monthly,Number of Live Births,3154
+KANSAS,2021,October,Monthly,Number of Live Births,2961
+KENTUCKY,2021,October,Monthly,Number of Live Births,4487
+LOUISIANA,2021,October,Monthly,Number of Live Births,4904
+MAINE,2021,October,Monthly,Number of Live Births,978
+MARYLAND,2021,October,Monthly,Number of Live Births,5943
+MASSACHUSETTS,2021,October,Monthly,Number of Live Births,5927
+MICHIGAN,2021,October,Monthly,Number of Live Births,8604
+MINNESOTA,2021,October,Monthly,Number of Live Births,5398
+MISSISSIPPI,2021,October,Monthly,Number of Live Births,3083
+MISSOURI,2021,October,Monthly,Number of Live Births,5898
+MONTANA,2021,October,Monthly,Number of Live Births,905
+NEBRASKA,2021,October,Monthly,Number of Live Births,2036
+NEVADA,2021,October,Monthly,Number of Live Births,2978
+NEW HAMPSHIRE,2021,October,Monthly,Number of Live Births,1076
+NEW JERSEY,2021,October,Monthly,Number of Live Births,8744
+NEW MEXICO,2021,October,Monthly,Number of Live Births,1795
+NEW YORK,2021,October,Monthly,Number of Live Births,18287
+NORTH CAROLINA,2021,October,Monthly,Number of Live Births,10313
+NORTH DAKOTA,2021,October,Monthly,Number of Live Births,846
+OHIO,2021,October,Monthly,Number of Live Births,10991
+OKLAHOMA,2021,October,Monthly,Number of Live Births,4022
+OREGON,2021,October,Monthly,Number of Live Births,3513
+PENNSYLVANIA,2021,October,Monthly,Number of Live Births,11272
+RHODE ISLAND,2021,October,Monthly,Number of Live Births,900
+SOUTH CAROLINA,2021,October,Monthly,Number of Live Births,4760
+SOUTH DAKOTA,2021,October,Monthly,Number of Live Births,972
+TENNESSEE,2021,October,Monthly,Number of Live Births,6931
+TEXAS,2021,October,Monthly,Number of Live Births,32551
+UTAH,2021,October,Monthly,Number of Live Births,3833
+VERMONT,2021,October,Monthly,Number of Live Births,436
+VIRGINIA,2021,October,Monthly,Number of Live Births,8181
+WASHINGTON,2021,October,Monthly,Number of Live Births,7040
+WEST VIRGINIA,2021,October,Monthly,Number of Live Births,1500
+WISCONSIN,2021,October,Monthly,Number of Live Births,5190
+WYOMING,2021,October,Monthly,Number of Live Births,488
+PUERTO RICO,2021,October,Monthly,Number of Live Births,1755
+ALABAMA,2021,November,Monthly,Number of Live Births,4861
+ALASKA,2021,November,Monthly,Number of Live Births,705
+ARIZONA,2021,November,Monthly,Number of Live Births,6668
+ARKANSAS,2021,November,Monthly,Number of Live Births,3011
+CALIFORNIA,2021,November,Monthly,Number of Live Births,35382
+COLORADO,2021,November,Monthly,Number of Live Births,4989
+CONNECTICUT,2021,November,Monthly,Number of Live Births,2830
+DELAWARE,2021,November,Monthly,Number of Live Births,872
+DISTRICT OF COLUMBIA,2021,November,Monthly,Number of Live Births,714
+FLORIDA,2021,November,Monthly,Number of Live Births,18435
+GEORGIA,2021,November,Monthly,Number of Live Births,10253
+HAWAII,2021,November,Monthly,Number of Live Births,1256
+IDAHO,2021,November,Monthly,Number of Live Births,1804
+ILLINOIS,2021,November,Monthly,Number of Live Births,10423
+INDIANA,2021,November,Monthly,Number of Live Births,6628
+IOWA,2021,November,Monthly,Number of Live Births,3006
+KANSAS,2021,November,Monthly,Number of Live Births,2885
+KENTUCKY,2021,November,Monthly,Number of Live Births,4237
+LOUISIANA,2021,November,Monthly,Number of Live Births,4893
+MAINE,2021,November,Monthly,Number of Live Births,987
+MARYLAND,2021,November,Monthly,Number of Live Births,5515
+MASSACHUSETTS,2021,November,Monthly,Number of Live Births,5640
+MICHIGAN,2021,November,Monthly,Number of Live Births,8401
+MINNESOTA,2021,November,Monthly,Number of Live Births,5256
+MISSISSIPPI,2021,November,Monthly,Number of Live Births,2851
+MISSOURI,2021,November,Monthly,Number of Live Births,5476
+MONTANA,2021,November,Monthly,Number of Live Births,863
+NEBRASKA,2021,November,Monthly,Number of Live Births,1896
+NEVADA,2021,November,Monthly,Number of Live Births,2813
+NEW HAMPSHIRE,2021,November,Monthly,Number of Live Births,1038
+NEW JERSEY,2021,November,Monthly,Number of Live Births,8219
+NEW MEXICO,2021,November,Monthly,Number of Live Births,1760
+NEW YORK,2021,November,Monthly,Number of Live Births,17202
+NORTH CAROLINA,2021,November,Monthly,Number of Live Births,10019
+NORTH DAKOTA,2021,November,Monthly,Number of Live Births,822
+OHIO,2021,November,Monthly,Number of Live Births,10383
+OKLAHOMA,2021,November,Monthly,Number of Live Births,3969
+OREGON,2021,November,Monthly,Number of Live Births,3327
+PENNSYLVANIA,2021,November,Monthly,Number of Live Births,10720
+RHODE ISLAND,2021,November,Monthly,Number of Live Births,832
+SOUTH CAROLINA,2021,November,Monthly,Number of Live Births,4770
+SOUTH DAKOTA,2021,November,Monthly,Number of Live Births,934
+TENNESSEE,2021,November,Monthly,Number of Live Births,6614
+TEXAS,2021,November,Monthly,Number of Live Births,32022
+UTAH,2021,November,Monthly,Number of Live Births,3678
+VERMONT,2021,November,Monthly,Number of Live Births,379
+VIRGINIA,2021,November,Monthly,Number of Live Births,7754
+WASHINGTON,2021,November,Monthly,Number of Live Births,6671
+WEST VIRGINIA,2021,November,Monthly,Number of Live Births,1368
+WISCONSIN,2021,November,Monthly,Number of Live Births,4966
+WYOMING,2021,November,Monthly,Number of Live Births,497
+PUERTO RICO,2021,November,Monthly,Number of Live Births,1771
+ALABAMA,2021,December,Monthly,Number of Live Births,5056
+ALASKA,2021,December,Monthly,Number of Live Births,715
+ARIZONA,2021,December,Monthly,Number of Live Births,6964
+ARKANSAS,2021,December,Monthly,Number of Live Births,3219
+CALIFORNIA,2021,December,Monthly,Number of Live Births,36647
+COLORADO,2021,December,Monthly,Number of Live Births,5039
+CONNECTICUT,2021,December,Monthly,Number of Live Births,2886
+DELAWARE,2021,December,Monthly,Number of Live Births,865
+DISTRICT OF COLUMBIA,2021,December,Monthly,Number of Live Births,652
+FLORIDA,2021,December,Monthly,Number of Live Births,19240
+GEORGIA,2021,December,Monthly,Number of Live Births,10891
+HAWAII,2021,December,Monthly,Number of Live Births,1307
+IDAHO,2021,December,Monthly,Number of Live Births,1852
+ILLINOIS,2021,December,Monthly,Number of Live Births,10709
+INDIANA,2021,December,Monthly,Number of Live Births,6669
+IOWA,2021,December,Monthly,Number of Live Births,2963
+KANSAS,2021,December,Monthly,Number of Live Births,2984
+KENTUCKY,2021,December,Monthly,Number of Live Births,4294
+LOUISIANA,2021,December,Monthly,Number of Live Births,4998
+MAINE,2021,December,Monthly,Number of Live Births,895
+MARYLAND,2021,December,Monthly,Number of Live Births,5639
+MASSACHUSETTS,2021,December,Monthly,Number of Live Births,5487
+MICHIGAN,2021,December,Monthly,Number of Live Births,8674
+MINNESOTA,2021,December,Monthly,Number of Live Births,5199
+MISSISSIPPI,2021,December,Monthly,Number of Live Births,2982
+MISSOURI,2021,December,Monthly,Number of Live Births,5726
+MONTANA,2021,December,Monthly,Number of Live Births,962
+NEBRASKA,2021,December,Monthly,Number of Live Births,2022
+NEVADA,2021,December,Monthly,Number of Live Births,2865
+NEW HAMPSHIRE,2021,December,Monthly,Number of Live Births,973
+NEW JERSEY,2021,December,Monthly,Number of Live Births,8416
+NEW MEXICO,2021,December,Monthly,Number of Live Births,1813
+NEW YORK,2021,December,Monthly,Number of Live Births,17626
+NORTH CAROLINA,2021,December,Monthly,Number of Live Births,10490
+NORTH DAKOTA,2021,December,Monthly,Number of Live Births,858
+OHIO,2021,December,Monthly,Number of Live Births,10766
+OKLAHOMA,2021,December,Monthly,Number of Live Births,4169
+OREGON,2021,December,Monthly,Number of Live Births,3349
+PENNSYLVANIA,2021,December,Monthly,Number of Live Births,10810
+RHODE ISLAND,2021,December,Monthly,Number of Live Births,846
+SOUTH CAROLINA,2021,December,Monthly,Number of Live Births,4806
+SOUTH DAKOTA,2021,December,Monthly,Number of Live Births,898
+TENNESSEE,2021,December,Monthly,Number of Live Births,7107
+TEXAS,2021,December,Monthly,Number of Live Births,33270
+UTAH,2021,December,Monthly,Number of Live Births,3766
+VERMONT,2021,December,Monthly,Number of Live Births,405
+VIRGINIA,2021,December,Monthly,Number of Live Births,8123
+WASHINGTON,2021,December,Monthly,Number of Live Births,6896
+WEST VIRGINIA,2021,December,Monthly,Number of Live Births,1478
+WISCONSIN,2021,December,Monthly,Number of Live Births,5074
+WYOMING,2021,December,Monthly,Number of Live Births,518
+PUERTO RICO,2021,December,Monthly,Number of Live Births,1767
+ALABAMA,2022,January,Monthly,Number of Live Births,4831
+ALASKA,2022,January,Monthly,Number of Live Births,730
+ARIZONA,2022,January,Monthly,Number of Live Births,6542
+ARKANSAS,2022,January,Monthly,Number of Live Births,2863
+CALIFORNIA,2022,January,Monthly,Number of Live Births,34475
+COLORADO,2022,January,Monthly,Number of Live Births,4896
+CONNECTICUT,2022,January,Monthly,Number of Live Births,2708
+DELAWARE,2022,January,Monthly,Number of Live Births,899
+DISTRICT OF COLUMBIA,2022,January,Monthly,Number of Live Births,684
+FLORIDA,2022,January,Monthly,Number of Live Births,18487
+GEORGIA,2022,January,Monthly,Number of Live Births,10386
+HAWAII,2022,January,Monthly,Number of Live Births,1358
+IDAHO,2022,January,Monthly,Number of Live Births,1800
+ILLINOIS,2022,January,Monthly,Number of Live Births,10107
+INDIANA,2022,January,Monthly,Number of Live Births,6213
+IOWA,2022,January,Monthly,Number of Live Births,2897
+KANSAS,2022,January,Monthly,Number of Live Births,2799
+KENTUCKY,2022,January,Monthly,Number of Live Births,4294
+LOUISIANA,2022,January,Monthly,Number of Live Births,4568
+MAINE,2022,January,Monthly,Number of Live Births,872
+MARYLAND,2022,January,Monthly,Number of Live Births,5550
+MASSACHUSETTS,2022,January,Monthly,Number of Live Births,5300
+MICHIGAN,2022,January,Monthly,Number of Live Births,7897
+MINNESOTA,2022,January,Monthly,Number of Live Births,4921
+MISSISSIPPI,2022,January,Monthly,Number of Live Births,2821
+MISSOURI,2022,January,Monthly,Number of Live Births,5440
+MONTANA,2022,January,Monthly,Number of Live Births,848
+NEBRASKA,2022,January,Monthly,Number of Live Births,1876
+NEVADA,2022,January,Monthly,Number of Live Births,2767
+NEW HAMPSHIRE,2022,January,Monthly,Number of Live Births,903
+NEW JERSEY,2022,January,Monthly,Number of Live Births,8157
+NEW MEXICO,2022,January,Monthly,Number of Live Births,1696
+NEW YORK,2022,January,Monthly,Number of Live Births,16576
+NORTH CAROLINA,2022,January,Monthly,Number of Live Births,10028
+NORTH DAKOTA,2022,January,Monthly,Number of Live Births,782
+OHIO,2022,January,Monthly,Number of Live Births,9978
+OKLAHOMA,2022,January,Monthly,Number of Live Births,3950
+OREGON,2022,January,Monthly,Number of Live Births,3155
+PENNSYLVANIA,2022,January,Monthly,Number of Live Births,10372
+RHODE ISLAND,2022,January,Monthly,Number of Live Births,807
+SOUTH CAROLINA,2022,January,Monthly,Number of Live Births,4674
+SOUTH DAKOTA,2022,January,Monthly,Number of Live Births,883
+TENNESSEE,2022,January,Monthly,Number of Live Births,6831
+TEXAS,2022,January,Monthly,Number of Live Births,31352
+UTAH,2022,January,Monthly,Number of Live Births,3572
+VERMONT,2022,January,Monthly,Number of Live Births,434
+VIRGINIA,2022,January,Monthly,Number of Live Births,7670
+WASHINGTON,2022,January,Monthly,Number of Live Births,6604
+WEST VIRGINIA,2022,January,Monthly,Number of Live Births,1311
+WISCONSIN,2022,January,Monthly,Number of Live Births,4701
+WYOMING,2022,January,Monthly,Number of Live Births,404
+PUERTO RICO,2022,January,Monthly,Number of Live Births,1595
+ALABAMA,2022,February,Monthly,Number of Live Births,4376
+ALASKA,2022,February,Monthly,Number of Live Births,723
+ARIZONA,2022,February,Monthly,Number of Live Births,6003
+ARKANSAS,2022,February,Monthly,Number of Live Births,2767
+CALIFORNIA,2022,February,Monthly,Number of Live Births,31931
+COLORADO,2022,February,Monthly,Number of Live Births,4642
+CONNECTICUT,2022,February,Monthly,Number of Live Births,2581
+DELAWARE,2022,February,Monthly,Number of Live Births,795
+DISTRICT OF COLUMBIA,2022,February,Monthly,Number of Live Births,595
+FLORIDA,2022,February,Monthly,Number of Live Births,17041
+GEORGIA,2022,February,Monthly,Number of Live Births,9598
+HAWAII,2022,February,Monthly,Number of Live Births,1272
+IDAHO,2022,February,Monthly,Number of Live Births,1632
+ILLINOIS,2022,February,Monthly,Number of Live Births,9608
+INDIANA,2022,February,Monthly,Number of Live Births,5901
+IOWA,2022,February,Monthly,Number of Live Births,2742
+KANSAS,2022,February,Monthly,Number of Live Births,2578
+KENTUCKY,2022,February,Monthly,Number of Live Births,4037
+LOUISIANA,2022,February,Monthly,Number of Live Births,4380
+MAINE,2022,February,Monthly,Number of Live Births,882
+MARYLAND,2022,February,Monthly,Number of Live Births,5231
+MASSACHUSETTS,2022,February,Monthly,Number of Live Births,5046
+MICHIGAN,2022,February,Monthly,Number of Live Births,7675
+MINNESOTA,2022,February,Monthly,Number of Live Births,4916
+MISSISSIPPI,2022,February,Monthly,Number of Live Births,2615
+MISSOURI,2022,February,Monthly,Number of Live Births,5019
+MONTANA,2022,February,Monthly,Number of Live Births,839
+NEBRASKA,2022,February,Monthly,Number of Live Births,1824
+NEVADA,2022,February,Monthly,Number of Live Births,2498
+NEW HAMPSHIRE,2022,February,Monthly,Number of Live Births,878
+NEW JERSEY,2022,February,Monthly,Number of Live Births,7699
+NEW MEXICO,2022,February,Monthly,Number of Live Births,1516
+NEW YORK,2022,February,Monthly,Number of Live Births,15633
+NORTH CAROLINA,2022,February,Monthly,Number of Live Births,9239
+NORTH DAKOTA,2022,February,Monthly,Number of Live Births,701
+OHIO,2022,February,Monthly,Number of Live Births,9477
+OKLAHOMA,2022,February,Monthly,Number of Live Births,3559
+OREGON,2022,February,Monthly,Number of Live Births,3016
+PENNSYLVANIA,2022,February,Monthly,Number of Live Births,9667
+RHODE ISLAND,2022,February,Monthly,Number of Live Births,766
+SOUTH CAROLINA,2022,February,Monthly,Number of Live Births,4298
+SOUTH DAKOTA,2022,February,Monthly,Number of Live Births,780
+TENNESSEE,2022,February,Monthly,Number of Live Births,6078
+TEXAS,2022,February,Monthly,Number of Live Births,28817
+UTAH,2022,February,Monthly,Number of Live Births,3420
+VERMONT,2022,February,Monthly,Number of Live Births,366
+VIRGINIA,2022,February,Monthly,Number of Live Births,7370
+WASHINGTON,2022,February,Monthly,Number of Live Births,6282
+WEST VIRGINIA,2022,February,Monthly,Number of Live Births,1307
+WISCONSIN,2022,February,Monthly,Number of Live Births,4473
+WYOMING,2022,February,Monthly,Number of Live Births,478
+PUERTO RICO,2022,February,Monthly,Number of Live Births,1481
+ALABAMA,2022,March,Monthly,Number of Live Births,4810
+ALASKA,2022,March,Monthly,Number of Live Births,834
+ARIZONA,2022,March,Monthly,Number of Live Births,6468
+ARKANSAS,2022,March,Monthly,Number of Live Births,3054
+CALIFORNIA,2022,March,Monthly,Number of Live Births,35392
+COLORADO,2022,March,Monthly,Number of Live Births,5283
+CONNECTICUT,2022,March,Monthly,Number of Live Births,2977
+DELAWARE,2022,March,Monthly,Number of Live Births,949
+DISTRICT OF COLUMBIA,2022,March,Monthly,Number of Live Births,654
+FLORIDA,2022,March,Monthly,Number of Live Births,18825
+GEORGIA,2022,March,Monthly,Number of Live Births,10665
+HAWAII,2022,March,Monthly,Number of Live Births,1359
+IDAHO,2022,March,Monthly,Number of Live Births,1918
+ILLINOIS,2022,March,Monthly,Number of Live Births,10638
+INDIANA,2022,March,Monthly,Number of Live Births,6751
+IOWA,2022,March,Monthly,Number of Live Births,3148
+KANSAS,2022,March,Monthly,Number of Live Births,2929
+KENTUCKY,2022,March,Monthly,Number of Live Births,4434
+LOUISIANA,2022,March,Monthly,Number of Live Births,4489
+MAINE,2022,March,Monthly,Number of Live Births,1020
+MARYLAND,2022,March,Monthly,Number of Live Births,5770
+MASSACHUSETTS,2022,March,Monthly,Number of Live Births,5814
+MICHIGAN,2022,March,Monthly,Number of Live Births,8744
+MINNESOTA,2022,March,Monthly,Number of Live Births,5349
+MISSISSIPPI,2022,March,Monthly,Number of Live Births,2812
+MISSOURI,2022,March,Monthly,Number of Live Births,5762
+MONTANA,2022,March,Monthly,Number of Live Births,949
+NEBRASKA,2022,March,Monthly,Number of Live Births,2044
+NEVADA,2022,March,Monthly,Number of Live Births,2661
+NEW HAMPSHIRE,2022,March,Monthly,Number of Live Births,995
+NEW JERSEY,2022,March,Monthly,Number of Live Births,8589
+NEW MEXICO,2022,March,Monthly,Number of Live Births,1786
+NEW YORK,2022,March,Monthly,Number of Live Births,17204
+NORTH CAROLINA,2022,March,Monthly,Number of Live Births,10209
+NORTH DAKOTA,2022,March,Monthly,Number of Live Births,812
+OHIO,2022,March,Monthly,Number of Live Births,10869
+OKLAHOMA,2022,March,Monthly,Number of Live Births,4006
+OREGON,2022,March,Monthly,Number of Live Births,3386
+PENNSYLVANIA,2022,March,Monthly,Number of Live Births,10784
+RHODE ISLAND,2022,March,Monthly,Number of Live Births,840
+SOUTH CAROLINA,2022,March,Monthly,Number of Live Births,4812
+SOUTH DAKOTA,2022,March,Monthly,Number of Live Births,1012
+TENNESSEE,2022,March,Monthly,Number of Live Births,6875
+TEXAS,2022,March,Monthly,Number of Live Births,32160
+UTAH,2022,March,Monthly,Number of Live Births,4008
+VERMONT,2022,March,Monthly,Number of Live Births,464
+VIRGINIA,2022,March,Monthly,Number of Live Births,7893
+WASHINGTON,2022,March,Monthly,Number of Live Births,7022
+WEST VIRGINIA,2022,March,Monthly,Number of Live Births,1408
+WISCONSIN,2022,March,Monthly,Number of Live Births,5088
+WYOMING,2022,March,Monthly,Number of Live Births,527
+PUERTO RICO,2022,March,Monthly,Number of Live Births,1584
+ALABAMA,2022,April,Monthly,Number of Live Births,4444
+ALASKA,2022,April,Monthly,Number of Live Births,788
+ARIZONA,2022,April,Monthly,Number of Live Births,5969
+ARKANSAS,2022,April,Monthly,Number of Live Births,2741
+CALIFORNIA,2022,April,Monthly,Number of Live Births,32539
+COLORADO,2022,April,Monthly,Number of Live Births,5088
+CONNECTICUT,2022,April,Monthly,Number of Live Births,2889
+DELAWARE,2022,April,Monthly,Number of Live Births,812
+DISTRICT OF COLUMBIA,2022,April,Monthly,Number of Live Births,636
+FLORIDA,2022,April,Monthly,Number of Live Births,17120
+GEORGIA,2022,April,Monthly,Number of Live Births,9615
+HAWAII,2022,April,Monthly,Number of Live Births,1201
+IDAHO,2022,April,Monthly,Number of Live Births,1829
+ILLINOIS,2022,April,Monthly,Number of Live Births,10166
+INDIANA,2022,April,Monthly,Number of Live Births,6314
+IOWA,2022,April,Monthly,Number of Live Births,2952
+KANSAS,2022,April,Monthly,Number of Live Births,2659
+KENTUCKY,2022,April,Monthly,Number of Live Births,4149
+LOUISIANA,2022,April,Monthly,Number of Live Births,4149
+MAINE,2022,April,Monthly,Number of Live Births,960
+MARYLAND,2022,April,Monthly,Number of Live Births,5397
+MASSACHUSETTS,2022,April,Monthly,Number of Live Births,5577
+MICHIGAN,2022,April,Monthly,Number of Live Births,8329
+MINNESOTA,2022,April,Monthly,Number of Live Births,5194
+MISSISSIPPI,2022,April,Monthly,Number of Live Births,2552
+MISSOURI,2022,April,Monthly,Number of Live Births,5412
+MONTANA,2022,April,Monthly,Number of Live Births,888
+NEBRASKA,2022,April,Monthly,Number of Live Births,1923
+NEVADA,2022,April,Monthly,Number of Live Births,2627
+NEW HAMPSHIRE,2022,April,Monthly,Number of Live Births,986
+NEW JERSEY,2022,April,Monthly,Number of Live Births,8130
+NEW MEXICO,2022,April,Monthly,Number of Live Births,1653
+NEW YORK,2022,April,Monthly,Number of Live Births,16740
+NORTH CAROLINA,2022,April,Monthly,Number of Live Births,9556
+NORTH DAKOTA,2022,April,Monthly,Number of Live Births,792
+OHIO,2022,April,Monthly,Number of Live Births,10235
+OKLAHOMA,2022,April,Monthly,Number of Live Births,3728
+OREGON,2022,April,Monthly,Number of Live Births,3192
+PENNSYLVANIA,2022,April,Monthly,Number of Live Births,10580
+RHODE ISLAND,2022,April,Monthly,Number of Live Births,788
+SOUTH CAROLINA,2022,April,Monthly,Number of Live Births,4547
+SOUTH DAKOTA,2022,April,Monthly,Number of Live Births,935
+TENNESSEE,2022,April,Monthly,Number of Live Births,6428
+TEXAS,2022,April,Monthly,Number of Live Births,29757
+UTAH,2022,April,Monthly,Number of Live Births,3852
+VERMONT,2022,April,Monthly,Number of Live Births,420
+VIRGINIA,2022,April,Monthly,Number of Live Births,7635
+WASHINGTON,2022,April,Monthly,Number of Live Births,6844
+WEST VIRGINIA,2022,April,Monthly,Number of Live Births,1397
+WISCONSIN,2022,April,Monthly,Number of Live Births,4842
+WYOMING,2022,April,Monthly,Number of Live Births,480
+PUERTO RICO,2022,April,Monthly,Number of Live Births,1486
+ALABAMA,2022,May,Monthly,Number of Live Births,4559
+ALASKA,2022,May,Monthly,Number of Live Births,792
+ARIZONA,2022,May,Monthly,Number of Live Births,6016
+ARKANSAS,2022,May,Monthly,Number of Live Births,2832
+CALIFORNIA,2022,May,Monthly,Number of Live Births,34002
+COLORADO,2022,May,Monthly,Number of Live Births,5398
+CONNECTICUT,2022,May,Monthly,Number of Live Births,2954
+DELAWARE,2022,May,Monthly,Number of Live Births,878
+DISTRICT OF COLUMBIA,2022,May,Monthly,Number of Live Births,605
+FLORIDA,2022,May,Monthly,Number of Live Births,17341
+GEORGIA,2022,May,Monthly,Number of Live Births,9883
+HAWAII,2022,May,Monthly,Number of Live Births,1207
+IDAHO,2022,May,Monthly,Number of Live Births,1894
+ILLINOIS,2022,May,Monthly,Number of Live Births,10669
+INDIANA,2022,May,Monthly,Number of Live Births,6463
+IOWA,2022,May,Monthly,Number of Live Births,3022
+KANSAS,2022,May,Monthly,Number of Live Births,2700
+KENTUCKY,2022,May,Monthly,Number of Live Births,4150
+LOUISIANA,2022,May,Monthly,Number of Live Births,4396
+MAINE,2022,May,Monthly,Number of Live Births,1039
+MARYLAND,2022,May,Monthly,Number of Live Births,5631
+MASSACHUSETTS,2022,May,Monthly,Number of Live Births,5763
+MICHIGAN,2022,May,Monthly,Number of Live Births,8798
+MINNESOTA,2022,May,Monthly,Number of Live Births,5616
+MISSISSIPPI,2022,May,Monthly,Number of Live Births,2630
+MISSOURI,2022,May,Monthly,Number of Live Births,5568
+MONTANA,2022,May,Monthly,Number of Live Births,1014
+NEBRASKA,2022,May,Monthly,Number of Live Births,1961
+NEVADA,2022,May,Monthly,Number of Live Births,2669
+NEW HAMPSHIRE,2022,May,Monthly,Number of Live Births,1067
+NEW JERSEY,2022,May,Monthly,Number of Live Births,8327
+NEW MEXICO,2022,May,Monthly,Number of Live Births,1714
+NEW YORK,2022,May,Monthly,Number of Live Births,17368
+NORTH CAROLINA,2022,May,Monthly,Number of Live Births,9678
+NORTH DAKOTA,2022,May,Monthly,Number of Live Births,852
+OHIO,2022,May,Monthly,Number of Live Births,10666
+OKLAHOMA,2022,May,Monthly,Number of Live Births,3787
+OREGON,2022,May,Monthly,Number of Live Births,3324
+PENNSYLVANIA,2022,May,Monthly,Number of Live Births,10791
+RHODE ISLAND,2022,May,Monthly,Number of Live Births,846
+SOUTH CAROLINA,2022,May,Monthly,Number of Live Births,4561
+SOUTH DAKOTA,2022,May,Monthly,Number of Live Births,1003
+TENNESSEE,2022,May,Monthly,Number of Live Births,6424
+TEXAS,2022,May,Monthly,Number of Live Births,30387
+UTAH,2022,May,Monthly,Number of Live Births,3947
+VERMONT,2022,May,Monthly,Number of Live Births,468
+VIRGINIA,2022,May,Monthly,Number of Live Births,7844
+WASHINGTON,2022,May,Monthly,Number of Live Births,7015
+WEST VIRGINIA,2022,May,Monthly,Number of Live Births,1362
+WISCONSIN,2022,May,Monthly,Number of Live Births,4989
+WYOMING,2022,May,Monthly,Number of Live Births,545
+PUERTO RICO,2022,May,Monthly,Number of Live Births,1508
+ALABAMA,2022,June,Monthly,Number of Live Births,4688
+ALASKA,2022,June,Monthly,Number of Live Births,814
+ARIZONA,2022,June,Monthly,Number of Live Births,6247
+ARKANSAS,2022,June,Monthly,Number of Live Births,3018
+CALIFORNIA,2022,June,Monthly,Number of Live Births,34181
+COLORADO,2022,June,Monthly,Number of Live Births,5311
+CONNECTICUT,2022,June,Monthly,Number of Live Births,2925
+DELAWARE,2022,June,Monthly,Number of Live Births,949
+DISTRICT OF COLUMBIA,2022,June,Monthly,Number of Live Births,656
+FLORIDA,2022,June,Monthly,Number of Live Births,18100
+GEORGIA,2022,June,Monthly,Number of Live Births,10402
+HAWAII,2022,June,Monthly,Number of Live Births,1258
+IDAHO,2022,June,Monthly,Number of Live Births,1938
+ILLINOIS,2022,June,Monthly,Number of Live Births,10974
+INDIANA,2022,June,Monthly,Number of Live Births,6723
+IOWA,2022,June,Monthly,Number of Live Births,3089
+KANSAS,2022,June,Monthly,Number of Live Births,2878
+KENTUCKY,2022,June,Monthly,Number of Live Births,4266
+LOUISIANA,2022,June,Monthly,Number of Live Births,4431
+MAINE,2022,June,Monthly,Number of Live Births,1052
+MARYLAND,2022,June,Monthly,Number of Live Births,5740
+MASSACHUSETTS,2022,June,Monthly,Number of Live Births,5836
+MICHIGAN,2022,June,Monthly,Number of Live Births,8934
+MINNESOTA,2022,June,Monthly,Number of Live Births,5608
+MISSISSIPPI,2022,June,Monthly,Number of Live Births,2848
+MISSOURI,2022,June,Monthly,Number of Live Births,5914
+MONTANA,2022,June,Monthly,Number of Live Births,1018
+NEBRASKA,2022,June,Monthly,Number of Live Births,2060
+NEVADA,2022,June,Monthly,Number of Live Births,2648
+NEW HAMPSHIRE,2022,June,Monthly,Number of Live Births,1034
+NEW JERSEY,2022,June,Monthly,Number of Live Births,8610
+NEW MEXICO,2022,June,Monthly,Number of Live Births,1659
+NEW YORK,2022,June,Monthly,Number of Live Births,17754
+NORTH CAROLINA,2022,June,Monthly,Number of Live Births,9830
+NORTH DAKOTA,2022,June,Monthly,Number of Live Births,807
+OHIO,2022,June,Monthly,Number of Live Births,10880
+OKLAHOMA,2022,June,Monthly,Number of Live Births,3890
+OREGON,2022,June,Monthly,Number of Live Births,3383
+PENNSYLVANIA,2022,June,Monthly,Number of Live Births,10966
+RHODE ISLAND,2022,June,Monthly,Number of Live Births,886
+SOUTH CAROLINA,2022,June,Monthly,Number of Live Births,4650
+SOUTH DAKOTA,2022,June,Monthly,Number of Live Births,1002
+TENNESSEE,2022,June,Monthly,Number of Live Births,6750
+TEXAS,2022,June,Monthly,Number of Live Births,32127
+UTAH,2022,June,Monthly,Number of Live Births,3971
+VERMONT,2022,June,Monthly,Number of Live Births,489
+VIRGINIA,2022,June,Monthly,Number of Live Births,8223
+WASHINGTON,2022,June,Monthly,Number of Live Births,7065
+WEST VIRGINIA,2022,June,Monthly,Number of Live Births,1469
+WISCONSIN,2022,June,Monthly,Number of Live Births,5152
+WYOMING,2022,June,Monthly,Number of Live Births,457
+PUERTO RICO,2022,June,Monthly,Number of Live Births,1530
+ALABAMA,2022,July,Monthly,Number of Live Births,5002
+ALASKA,2022,July,Monthly,Number of Live Births,811
+ARIZONA,2022,July,Monthly,Number of Live Births,6721
+ARKANSAS,2022,July,Monthly,Number of Live Births,3050
+CALIFORNIA,2022,July,Monthly,Number of Live Births,36601
+COLORADO,2022,July,Monthly,Number of Live Births,5537
+CONNECTICUT,2022,July,Monthly,Number of Live Births,3132
+DELAWARE,2022,July,Monthly,Number of Live Births,1015
+DISTRICT OF COLUMBIA,2022,July,Monthly,Number of Live Births,671
+FLORIDA,2022,July,Monthly,Number of Live Births,19219
+GEORGIA,2022,July,Monthly,Number of Live Births,10868
+HAWAII,2022,July,Monthly,Number of Live Births,1331
+IDAHO,2022,July,Monthly,Number of Live Births,2013
+ILLINOIS,2022,July,Monthly,Number of Live Births,11283
+INDIANA,2022,July,Monthly,Number of Live Births,6758
+IOWA,2022,July,Monthly,Number of Live Births,3232
+KANSAS,2022,July,Monthly,Number of Live Births,2981
+KENTUCKY,2022,July,Monthly,Number of Live Births,4488
+LOUISIANA,2022,July,Monthly,Number of Live Births,4962
+MAINE,2022,July,Monthly,Number of Live Births,1063
+MARYLAND,2022,July,Monthly,Number of Live Births,6023
+MASSACHUSETTS,2022,July,Monthly,Number of Live Births,6071
+MICHIGAN,2022,July,Monthly,Number of Live Births,9013
+MINNESOTA,2022,July,Monthly,Number of Live Births,5676
+MISSISSIPPI,2022,July,Monthly,Number of Live Births,2995
+MISSOURI,2022,July,Monthly,Number of Live Births,6094
+MONTANA,2022,July,Monthly,Number of Live Births,1014
+NEBRASKA,2022,July,Monthly,Number of Live Births,2143
+NEVADA,2022,July,Monthly,Number of Live Births,2907
+NEW HAMPSHIRE,2022,July,Monthly,Number of Live Births,1128
+NEW JERSEY,2022,July,Monthly,Number of Live Births,9038
+NEW MEXICO,2022,July,Monthly,Number of Live Births,1926
+NEW YORK,2022,July,Monthly,Number of Live Births,18554
+NORTH CAROLINA,2022,July,Monthly,Number of Live Births,10615
+NORTH DAKOTA,2022,July,Monthly,Number of Live Births,812
+OHIO,2022,July,Monthly,Number of Live Births,11161
+OKLAHOMA,2022,July,Monthly,Number of Live Births,4230
+OREGON,2022,July,Monthly,Number of Live Births,3430
+PENNSYLVANIA,2022,July,Monthly,Number of Live Births,11600
+RHODE ISLAND,2022,July,Monthly,Number of Live Births,930
+SOUTH CAROLINA,2022,July,Monthly,Number of Live Births,5003
+SOUTH DAKOTA,2022,July,Monthly,Number of Live Births,1005
+TENNESSEE,2022,July,Monthly,Number of Live Births,7119
+TEXAS,2022,July,Monthly,Number of Live Births,33494
+UTAH,2022,July,Monthly,Number of Live Births,4119
+VERMONT,2022,July,Monthly,Number of Live Births,462
+VIRGINIA,2022,July,Monthly,Number of Live Births,8540
+WASHINGTON,2022,July,Monthly,Number of Live Births,7384
+WEST VIRGINIA,2022,July,Monthly,Number of Live Births,1551
+WISCONSIN,2022,July,Monthly,Number of Live Births,5256
+WYOMING,2022,July,Monthly,Number of Live Births,548
+PUERTO RICO,2022,July,Monthly,Number of Live Births,1538
+ALABAMA,2022,August,Monthly,Number of Live Births,5486
+ALASKA,2022,August,Monthly,Number of Live Births,829
+ARIZONA,2022,August,Monthly,Number of Live Births,7091
+ARKANSAS,2022,August,Monthly,Number of Live Births,3288
+CALIFORNIA,2022,August,Monthly,Number of Live Births,37853
+COLORADO,2022,August,Monthly,Number of Live Births,5513
+CONNECTICUT,2022,August,Monthly,Number of Live Births,3199
+DELAWARE,2022,August,Monthly,Number of Live Births,1006
+DISTRICT OF COLUMBIA,2022,August,Monthly,Number of Live Births,705
+FLORIDA,2022,August,Monthly,Number of Live Births,20824
+GEORGIA,2022,August,Monthly,Number of Live Births,11814
+HAWAII,2022,August,Monthly,Number of Live Births,1307
+IDAHO,2022,August,Monthly,Number of Live Births,2046
+ILLINOIS,2022,August,Monthly,Number of Live Births,11688
+INDIANA,2022,August,Monthly,Number of Live Births,7361
+IOWA,2022,August,Monthly,Number of Live Births,3292
+KANSAS,2022,August,Monthly,Number of Live Births,3286
+KENTUCKY,2022,August,Monthly,Number of Live Births,4932
+LOUISIANA,2022,August,Monthly,Number of Live Births,5403
+MAINE,2022,August,Monthly,Number of Live Births,1084
+MARYLAND,2022,August,Monthly,Number of Live Births,6249
+MASSACHUSETTS,2022,August,Monthly,Number of Live Births,6307
+MICHIGAN,2022,August,Monthly,Number of Live Births,9045
+MINNESOTA,2022,August,Monthly,Number of Live Births,5539
+MISSISSIPPI,2022,August,Monthly,Number of Live Births,3413
+MISSOURI,2022,August,Monthly,Number of Live Births,6328
+MONTANA,2022,August,Monthly,Number of Live Births,945
+NEBRASKA,2022,August,Monthly,Number of Live Births,2241
+NEVADA,2022,August,Monthly,Number of Live Births,3034
+NEW HAMPSHIRE,2022,August,Monthly,Number of Live Births,1112
+NEW JERSEY,2022,August,Monthly,Number of Live Births,9241
+NEW MEXICO,2022,August,Monthly,Number of Live Births,1900
+NEW YORK,2022,August,Monthly,Number of Live Births,18554
+NORTH CAROLINA,2022,August,Monthly,Number of Live Births,11231
+NORTH DAKOTA,2022,August,Monthly,Number of Live Births,882
+OHIO,2022,August,Monthly,Number of Live Births,11702
+OKLAHOMA,2022,August,Monthly,Number of Live Births,4492
+OREGON,2022,August,Monthly,Number of Live Births,3517
+PENNSYLVANIA,2022,August,Monthly,Number of Live Births,11737
+RHODE ISLAND,2022,August,Monthly,Number of Live Births,923
+SOUTH CAROLINA,2022,August,Monthly,Number of Live Births,5550
+SOUTH DAKOTA,2022,August,Monthly,Number of Live Births,999
+TENNESSEE,2022,August,Monthly,Number of Live Births,7515
+TEXAS,2022,August,Monthly,Number of Live Births,36539
+UTAH,2022,August,Monthly,Number of Live Births,4068
+VERMONT,2022,August,Monthly,Number of Live Births,453
+VIRGINIA,2022,August,Monthly,Number of Live Births,8979
+WASHINGTON,2022,August,Monthly,Number of Live Births,7545
+WEST VIRGINIA,2022,August,Monthly,Number of Live Births,1605
+WISCONSIN,2022,August,Monthly,Number of Live Births,5508
+WYOMING,2022,August,Monthly,Number of Live Births,539
+PUERTO RICO,2022,August,Monthly,Number of Live Births,1677
+ALABAMA,2022,September,Monthly,Number of Live Births,5022
+ALASKA,2022,September,Monthly,Number of Live Births,804
+ARIZONA,2022,September,Monthly,Number of Live Births,6859
+ARKANSAS,2022,September,Monthly,Number of Live Births,3100
+CALIFORNIA,2022,September,Monthly,Number of Live Births,35926
+COLORADO,2022,September,Monthly,Number of Live Births,5238
+CONNECTICUT,2022,September,Monthly,Number of Live Births,2961
+DELAWARE,2022,September,Monthly,Number of Live Births,883
+DISTRICT OF COLUMBIA,2022,September,Monthly,Number of Live Births,607
+FLORIDA,2022,September,Monthly,Number of Live Births,18963
+GEORGIA,2022,September,Monthly,Number of Live Births,10596
+HAWAII,2022,September,Monthly,Number of Live Births,1314
+IDAHO,2022,September,Monthly,Number of Live Births,1927
+ILLINOIS,2022,September,Monthly,Number of Live Births,10736
+INDIANA,2022,September,Monthly,Number of Live Births,6687
+IOWA,2022,September,Monthly,Number of Live Births,3137
+KANSAS,2022,September,Monthly,Number of Live Births,3112
+KENTUCKY,2022,September,Monthly,Number of Live Births,4519
+LOUISIANA,2022,September,Monthly,Number of Live Births,4924
+MAINE,2022,September,Monthly,Number of Live Births,1015
+MARYLAND,2022,September,Monthly,Number of Live Births,5717
+MASSACHUSETTS,2022,September,Monthly,Number of Live Births,6029
+MICHIGAN,2022,September,Monthly,Number of Live Births,8621
+MINNESOTA,2022,September,Monthly,Number of Live Births,5315
+MISSISSIPPI,2022,September,Monthly,Number of Live Births,2983
+MISSOURI,2022,September,Monthly,Number of Live Births,5949
+MONTANA,2022,September,Monthly,Number of Live Births,980
+NEBRASKA,2022,September,Monthly,Number of Live Births,2033
+NEVADA,2022,September,Monthly,Number of Live Births,2849
+NEW HAMPSHIRE,2022,September,Monthly,Number of Live Births,1064
+NEW JERSEY,2022,September,Monthly,Number of Live Births,8567
+NEW MEXICO,2022,September,Monthly,Number of Live Births,1717
+NEW YORK,2022,September,Monthly,Number of Live Births,17283
+NORTH CAROLINA,2022,September,Monthly,Number of Live Births,10520
+NORTH DAKOTA,2022,September,Monthly,Number of Live Births,830
+OHIO,2022,September,Monthly,Number of Live Births,10719
+OKLAHOMA,2022,September,Monthly,Number of Live Births,4050
+OREGON,2022,September,Monthly,Number of Live Births,3434
+PENNSYLVANIA,2022,September,Monthly,Number of Live Births,11055
+RHODE ISLAND,2022,September,Monthly,Number of Live Births,837
+SOUTH CAROLINA,2022,September,Monthly,Number of Live Births,4786
+SOUTH DAKOTA,2022,September,Monthly,Number of Live Births,937
+TENNESSEE,2022,September,Monthly,Number of Live Births,7123
+TEXAS,2022,September,Monthly,Number of Live Births,33799
+UTAH,2022,September,Monthly,Number of Live Births,3794
+VERMONT,2022,September,Monthly,Number of Live Births,459
+VIRGINIA,2022,September,Monthly,Number of Live Births,8194
+WASHINGTON,2022,September,Monthly,Number of Live Births,6965
+WEST VIRGINIA,2022,September,Monthly,Number of Live Births,1481
+WISCONSIN,2022,September,Monthly,Number of Live Births,5037
+WYOMING,2022,September,Monthly,Number of Live Births,519
+PUERTO RICO,2022,September,Monthly,Number of Live Births,1653
+ALABAMA,2022,October,Monthly,Number of Live Births,4824
+ALASKA,2022,October,Monthly,Number of Live Births,765
+ARIZONA,2022,October,Monthly,Number of Live Births,6654
+ARKANSAS,2022,October,Monthly,Number of Live Births,2888
+CALIFORNIA,2022,October,Monthly,Number of Live Births,35398
+COLORADO,2022,October,Monthly,Number of Live Births,5392
+CONNECTICUT,2022,October,Monthly,Number of Live Births,2916
+DELAWARE,2022,October,Monthly,Number of Live Births,866
+DISTRICT OF COLUMBIA,2022,October,Monthly,Number of Live Births,642
+FLORIDA,2022,October,Monthly,Number of Live Births,19138
+GEORGIA,2022,October,Monthly,Number of Live Births,10384
+HAWAII,2022,October,Monthly,Number of Live Births,1308
+IDAHO,2022,October,Monthly,Number of Live Births,1872
+ILLINOIS,2022,October,Monthly,Number of Live Births,10675
+INDIANA,2022,October,Monthly,Number of Live Births,6684
+IOWA,2022,October,Monthly,Number of Live Births,3061
+KANSAS,2022,October,Monthly,Number of Live Births,2830
+KENTUCKY,2022,October,Monthly,Number of Live Births,4297
+LOUISIANA,2022,October,Monthly,Number of Live Births,4761
+MAINE,2022,October,Monthly,Number of Live Births,970
+MARYLAND,2022,October,Monthly,Number of Live Births,5764
+MASSACHUSETTS,2022,October,Monthly,Number of Live Births,5761
+MICHIGAN,2022,October,Monthly,Number of Live Births,8410
+MINNESOTA,2022,October,Monthly,Number of Live Births,5284
+MISSISSIPPI,2022,October,Monthly,Number of Live Births,2767
+MISSOURI,2022,October,Monthly,Number of Live Births,5661
+MONTANA,2022,October,Monthly,Number of Live Births,892
+NEBRASKA,2022,October,Monthly,Number of Live Births,2042
+NEVADA,2022,October,Monthly,Number of Live Births,2822
+NEW HAMPSHIRE,2022,October,Monthly,Number of Live Births,992
+NEW JERSEY,2022,October,Monthly,Number of Live Births,8625
+NEW MEXICO,2022,October,Monthly,Number of Live Births,1709
+NEW YORK,2022,October,Monthly,Number of Live Births,17781
+NORTH CAROLINA,2022,October,Monthly,Number of Live Births,9988
+NORTH DAKOTA,2022,October,Monthly,Number of Live Births,762
+OHIO,2022,October,Monthly,Number of Live Births,10642
+OKLAHOMA,2022,October,Monthly,Number of Live Births,3920
+OREGON,2022,October,Monthly,Number of Live Births,3167
+PENNSYLVANIA,2022,October,Monthly,Number of Live Births,10763
+RHODE ISLAND,2022,October,Monthly,Number of Live Births,883
+SOUTH CAROLINA,2022,October,Monthly,Number of Live Births,4668
+SOUTH DAKOTA,2022,October,Monthly,Number of Live Births,948
+TENNESSEE,2022,October,Monthly,Number of Live Births,6803
+TEXAS,2022,October,Monthly,Number of Live Births,33018
+UTAH,2022,October,Monthly,Number of Live Births,3835
+VERMONT,2022,October,Monthly,Number of Live Births,423
+VIRGINIA,2022,October,Monthly,Number of Live Births,7936
+WASHINGTON,2022,October,Monthly,Number of Live Births,6883
+WEST VIRGINIA,2022,October,Monthly,Number of Live Births,1460
+WISCONSIN,2022,October,Monthly,Number of Live Births,5021
+WYOMING,2022,October,Monthly,Number of Live Births,486
+PUERTO RICO,2022,October,Monthly,Number of Live Births,1629
+ALABAMA,2022,November,Monthly,Number of Live Births,4898
+ALASKA,2022,November,Monthly,Number of Live Births,725
+ARIZONA,2022,November,Monthly,Number of Live Births,6827
+ARKANSAS,2022,November,Monthly,Number of Live Births,2951
+CALIFORNIA,2022,November,Monthly,Number of Live Births,35065
+COLORADO,2022,November,Monthly,Number of Live Births,5035
+CONNECTICUT,2022,November,Monthly,Number of Live Births,2900
+DELAWARE,2022,November,Monthly,Number of Live Births,897
+DISTRICT OF COLUMBIA,2022,November,Monthly,Number of Live Births,622
+FLORIDA,2022,November,Monthly,Number of Live Births,19543
+GEORGIA,2022,November,Monthly,Number of Live Births,10739
+HAWAII,2022,November,Monthly,Number of Live Births,1266
+IDAHO,2022,November,Monthly,Number of Live Births,1741
+ILLINOIS,2022,November,Monthly,Number of Live Births,10703
+INDIANA,2022,November,Monthly,Number of Live Births,6608
+IOWA,2022,November,Monthly,Number of Live Births,3113
+KANSAS,2022,November,Monthly,Number of Live Births,2989
+KENTUCKY,2022,November,Monthly,Number of Live Births,4389
+LOUISIANA,2022,November,Monthly,Number of Live Births,4879
+MAINE,2022,November,Monthly,Number of Live Births,999
+MARYLAND,2022,November,Monthly,Number of Live Births,5629
+MASSACHUSETTS,2022,November,Monthly,Number of Live Births,5633
+MICHIGAN,2022,November,Monthly,Number of Live Births,8265
+MINNESOTA,2022,November,Monthly,Number of Live Births,5174
+MISSISSIPPI,2022,November,Monthly,Number of Live Births,2935
+MISSOURI,2022,November,Monthly,Number of Live Births,5571
+MONTANA,2022,November,Monthly,Number of Live Births,871
+NEBRASKA,2022,November,Monthly,Number of Live Births,1969
+NEVADA,2022,November,Monthly,Number of Live Births,2842
+NEW HAMPSHIRE,2022,November,Monthly,Number of Live Births,999
+NEW JERSEY,2022,November,Monthly,Number of Live Births,8609
+NEW MEXICO,2022,November,Monthly,Number of Live Births,1708
+NEW YORK,2022,November,Monthly,Number of Live Births,17376
+NORTH CAROLINA,2022,November,Monthly,Number of Live Births,10273
+NORTH DAKOTA,2022,November,Monthly,Number of Live Births,777
+OHIO,2022,November,Monthly,Number of Live Births,10639
+OKLAHOMA,2022,November,Monthly,Number of Live Births,4119
+OREGON,2022,November,Monthly,Number of Live Births,3303
+PENNSYLVANIA,2022,November,Monthly,Number of Live Births,10765
+RHODE ISLAND,2022,November,Monthly,Number of Live Births,845
+SOUTH CAROLINA,2022,November,Monthly,Number of Live Births,4798
+SOUTH DAKOTA,2022,November,Monthly,Number of Live Births,908
+TENNESSEE,2022,November,Monthly,Number of Live Births,6865
+TEXAS,2022,November,Monthly,Number of Live Births,33381
+UTAH,2022,November,Monthly,Number of Live Births,3710
+VERMONT,2022,November,Monthly,Number of Live Births,405
+VIRGINIA,2022,November,Monthly,Number of Live Births,7887
+WASHINGTON,2022,November,Monthly,Number of Live Births,6685
+WEST VIRGINIA,2022,November,Monthly,Number of Live Births,1393
+WISCONSIN,2022,November,Monthly,Number of Live Births,4905
+WYOMING,2022,November,Monthly,Number of Live Births,437
+PUERTO RICO,2022,November,Monthly,Number of Live Births,1705
+ALABAMA,2022,December,Monthly,Number of Live Births,5063
+ALASKA,2022,December,Monthly,Number of Live Births,757
+ARIZONA,2022,December,Monthly,Number of Live Births,7045
+ARKANSAS,2022,December,Monthly,Number of Live Births,3146
+CALIFORNIA,2022,December,Monthly,Number of Live Births,35430
+COLORADO,2022,December,Monthly,Number of Live Births,5100
+CONNECTICUT,2022,December,Monthly,Number of Live Births,2958
+DELAWARE,2022,December,Monthly,Number of Live Births,886
+DISTRICT OF COLUMBIA,2022,December,Monthly,Number of Live Births,634
+FLORIDA,2022,December,Monthly,Number of Live Births,19818
+GEORGIA,2022,December,Monthly,Number of Live Births,11042
+HAWAII,2022,December,Monthly,Number of Live Births,1267
+IDAHO,2022,December,Monthly,Number of Live Births,1835
+ILLINOIS,2022,December,Monthly,Number of Live Births,10594
+INDIANA,2022,December,Monthly,Number of Live Births,6813
+IOWA,2022,December,Monthly,Number of Live Births,3132
+KANSAS,2022,December,Monthly,Number of Live Births,3018
+KENTUCKY,2022,December,Monthly,Number of Live Births,4521
+LOUISIANA,2022,December,Monthly,Number of Live Births,4878
+MAINE,2022,December,Monthly,Number of Live Births,1037
+MARYLAND,2022,December,Monthly,Number of Live Births,5856
+MASSACHUSETTS,2022,December,Monthly,Number of Live Births,5668
+MICHIGAN,2022,December,Monthly,Number of Live Births,8468
+MINNESOTA,2022,December,Monthly,Number of Live Births,5338
+MISSISSIPPI,2022,December,Monthly,Number of Live Births,3115
+MISSOURI,2022,December,Monthly,Number of Live Births,5870
+MONTANA,2022,December,Monthly,Number of Live Births,958
+NEBRASKA,2022,December,Monthly,Number of Live Births,1989
+NEVADA,2022,December,Monthly,Number of Live Births,2866
+NEW HAMPSHIRE,2022,December,Monthly,Number of Live Births,1016
+NEW JERSEY,2022,December,Monthly,Number of Live Births,8700
+NEW MEXICO,2022,December,Monthly,Number of Live Births,1815
+NEW YORK,2022,December,Monthly,Number of Live Births,17584
+NORTH CAROLINA,2022,December,Monthly,Number of Live Births,10472
+NORTH DAKOTA,2022,December,Monthly,Number of Live Births,830
+OHIO,2022,December,Monthly,Number of Live Births,11147
+OKLAHOMA,2022,December,Monthly,Number of Live Births,4255
+OREGON,2022,December,Monthly,Number of Live Births,3294
+PENNSYLVANIA,2022,December,Monthly,Number of Live Births,10711
+RHODE ISLAND,2022,December,Monthly,Number of Live Births,821
+SOUTH CAROLINA,2022,December,Monthly,Number of Live Births,5140
+SOUTH DAKOTA,2022,December,Monthly,Number of Live Births,928
+TENNESSEE,2022,December,Monthly,Number of Live Births,7265
+TEXAS,2022,December,Monthly,Number of Live Births,34586
+UTAH,2022,December,Monthly,Number of Live Births,3714
+VERMONT,2022,December,Monthly,Number of Live Births,387
+VIRGINIA,2022,December,Monthly,Number of Live Births,8015
+WASHINGTON,2022,December,Monthly,Number of Live Births,6833
+WEST VIRGINIA,2022,December,Monthly,Number of Live Births,1439
+WISCONSIN,2022,December,Monthly,Number of Live Births,4961
+WYOMING,2022,December,Monthly,Number of Live Births,489
+PUERTO RICO,2022,December,Monthly,Number of Live Births,1678

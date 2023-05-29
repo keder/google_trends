@@ -1,0 +1,8 @@
+Total mortality
+https://data.cdc.gov/api/views/hmz2-vwda/rows.csv?accessType=DOWNLOAD
+
+COVID-19 Incidence and mortality
+https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36/data
+
+Population
+https://www.census.gov/data/datasets/time-series/demo/popest/2020s-state-total.html
