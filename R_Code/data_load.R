@@ -9,6 +9,40 @@ abbreviate_state <- function(state) {
   return(state.abb[match(tolower(state), tolower(state.name))])
 }
 
+.interpolate_negatives <- function(series) {
+  negative_indices <- which(series < 0)
+  if (length(negative_indices) == 0)
+  {
+    return(series)
+  }
+  clusters <- list()
+  current_cluster <- c(negative_indices[1], negative_indices[1])
+
+  # Iterate over the indices
+  for (i in 2:length(negative_indices)) {
+    if (negative_indices[i] == negative_indices[i - 1] + 1) {
+      # Extend the current cluster
+      current_cluster[2] <- negative_indices[i]
+    } else {
+      # Add the current cluster to the list
+      clusters <- c(clusters, list(current_cluster))
+
+      # Start a new cluster
+      current_cluster <- c(negative_indices[i], negative_indices[i])
+    }
+  }
+
+  # Add the final cluster to the list
+  clusters <- c(clusters, list(current_cluster))
+
+  for (cluster in clusters)
+  {
+    series[cluster[1]:cluster[2]] <- round(approx(x = c(cluster[1] - 1, cluster[2] + 1), y = series[c(cluster[1] - 1, cluster[2] + 1)], xout = cluster[1]:cluster[2])$y)
+  }
+
+  return(series)
+}
+
 .make.get_next_trend <- function() {
   dirs <- NULL
   dir_position <- NULL
@@ -76,6 +110,42 @@ abbreviate_state <- function(state) {
   return(.get_next_trend)
 }
 
+load_trends <- function(trend_dir)
+{
+  print("Loading trends...")
+  result <- data.frame()
+  kw_dirs <- list.dirs(path = trend_dir)[-1]
+  for (kw_dir in kw_dirs)
+  {
+    kw <- tail(strsplit(kw_dir, "/")[[1]], 1)
+    files <- list.files(path = kw_dir, pattern = "\\.csv$")
+    for (file in files)
+    {
+      file_path <- paste(kw_dir, file, sep = "/")
+      state <- strsplit(file, ".", fixed = TRUE)[[1]][1]
+      print(paste0("Loading trend for \"", kw, "\" in ", state))
+      table <- NULL
+      tryCatch(
+        {
+          table <- read.csv(file = file_path)
+        },
+        error = function(e) { }
+      )
+      if (!is.null(table)) {
+        table <- table[table$isPartial == "False", ]
+        table$kw <- kw
+        table$state <- state
+        table$ds <- as.Date(table$date)
+        table$data <- table[, 2]
+        table <- table[, c(-2, -3)]
+        result <- rbind(result, table)
+      }
+    }
+  }
+  print("Trends successfully loaded.")
+  return(result)
+}
+
 load_incidence <- function(path) {
   table <- read.csv(file = path)
   table$ds <- as.Date(table$submission_date, format = "%m/%d/%Y")
@@ -127,71 +197,40 @@ load_mortality <- function(path) {
   return(df)
 }
 
-load_hopkins <- function(path) {
-  files <- list.files(path = path, pattern = "\\.csv$")
-  extension_len <- nchar(".csv")
-  incidence_table <- NULL
-  specific_mortality_table <- NULL
-  for (file in files)
-  {
-    orig_date <- as.Date(substr(file, 1, nchar(file) - extension_len), format = "%m-%d-%Y")
-    date <- orig_date %m+% months(-1)
-    if (day(date) != 1) {
-      next()
-    }
-    table <- read.csv(paste(path, file, sep = "/"))
-    if (is.null(incidence_table)) {
-      incidence_table <- data.frame(ds = date, cumm_data = table$Confirmed, state = abbreviate_state(table$Province_State))
-      specific_mortality_table <- data.frame(ds = date, cumm_data = table$Deaths, state = abbreviate_state(table$Province_State))
-    } else {
-      incidence_table <- rbind(incidence_table, data.frame(ds = date, cumm_data = table$Confirmed, state = abbreviate_state(table$Province_State)))
-      specific_mortality_table <- rbind(specific_mortality_table, data.frame(ds = date, cumm_data = table$Deaths, state = abbreviate_state(table$Province_State)))
-    }
-  }
-  incidence_table <- incidence_table[!is.na(incidence_table$state), ]
-  incidence_table <- incidence_table[order(incidence_table$state, incidence_table$ds), ]
-  specific_mortality_table <- specific_mortality_table[!is.na(specific_mortality_table$state), ]
-  specific_mortality_table <- specific_mortality_table[order(specific_mortality_table$state, specific_mortality_table$ds), ]
-  incidence_table <- .diff_foreach_state(incidence_table)
-  specific_mortality_table <- .diff_foreach_state(specific_mortality_table)
-  result <- list(incidence = incidence_table, specific_mortality = specific_mortality_table)
-  return(result)
-}
-
 load_hopkins_timeseries <- function(path) {
   print(paste0("Loading timeseries from ", path, "..."))
   table <- read.csv(file = path, check.names = FALSE)
-  table <- table[table$FIPS < 80000,]
+  table <- table[table$FIPS < 80000, ]
   col_names <- colnames(table)
   date_start_index <- grep("\\d{1,2}/\\d{2}/\\d{2}", col_names)[1]
   date_columns <- date_start_index:ncol(table)
   table <- table %>%
-  group_by(table$Province_State) %>%
-  summarise(across(-date_columns, first), across(date_columns, sum))
-  table <- table[!is.na(table$Province_State),]
-  table <- table[,2:ncol(table)]
-  table <- table %>% pivot_longer(cols=date_columns, names_to = "date", values_to = "data")
+    group_by(table$Province_State) %>%
+    summarise(across(-date_columns, first), across(date_columns, sum))
+  table <- table[!is.na(table$Province_State), ]
+  table <- table[, 2:ncol(table)]
+  table <- table %>% pivot_longer(cols = date_columns, names_to = "date", values_to = "data")
   table$ds <- as.Date(table$date, format = "%m/%d/%y")
   selected_dates <- unique(table$ds[day(table$ds) == days_in_month(table$ds)])
-  table <- table[table$ds %in% selected_dates,]
+  table <- table[table$ds %in% selected_dates, ]
   result <- data.frame(ds = table$ds, state = abbreviate_state(table$Province_State), cumm_data = table$data)
   day(result$ds) <- 1
   result <- result[!is.na(result$state), ]
+  result$date_num <- as.numeric(result$ds)
   result <- result[order(result$state, result$ds), ]
   result <- .diff_foreach_state(result)
+  result$data <- .interpolate_negatives(result$data)
   print("Loading was successful")
   return(result)
 }
 
-load_population <- function(path)
-{
+load_population <- function(path) {
   table <- read.csv(file = path, check.names = FALSE)
   table$state <- abbreviate_state(table$NAME)
   table <- table[!is.na(table$state), ]
-  table <- table %>% pivot_longer(cols=c("POPESTIMATE2020", "POPESTIMATE2021", "POPESTIMATE2022"), names_to = "year", values_to = "population")
+  table <- table %>% pivot_longer(cols = c("POPESTIMATE2020", "POPESTIMATE2021", "POPESTIMATE2022"), names_to = "year", values_to = "population")
   table$year <- as.integer(substr(table$year, 12, nchar(table$year)))
-  # print(head(table[,c("state", "year", "population")]))
-  result <- data.frame(state = table$state, year = table$year, population=table$population)
+  result <- data.frame(state = table$state, year = table$year, population = table$population)
   return(result)
 }
 
