@@ -1,0 +1,1800 @@
+# Incidence and Mortality Forecasting with Google Trends as external regressors
+
+## Preparation
+
+This is section that is required for all other sections.
+
+First, we need to load all nessessary libraraies.
+```{r}
+library("xtable")
+library("lmtest")
+library("dplyr")
+library("pheatmap")
+library("grid")
+library("tidyr")
+library("parallel")
+library("prophet")
+library("forecast")
+library("xgboost")
+library("boot")
+library("dtw")
+library("lubridate")
+library("purrr")
+library("readr")
+library("scoringutils")
+library("stats")
+library("parallel")
+library("grid")
+library("stringr")
+```
+
+Here we initialize all variables that are common for all other sections.
+
+```{r}
+# Date cutoffs
+start_date <- as.Date("2020-01-01")
+end_date <- as.Date("2022-12-31")
+# Where input data is stored
+data_dir <- "../data"
+
+
+# overall_causes_mortality <- paste(mortality_trend_dir, "total_mortality.csv", sep = "/")
+# Where output plots to
+plot_dir <- "../plots"
+# Other output files' location
+output_dir <- "../R_Output"
+
+
+# incidence_analysis_result_file <- paste0(output_dir, "/", "incidence_analysis_result.RData")
+# mortality_analysis_result_file <- paste0(output_dir, "/", "incidence_analysis_result.RData")
+
+
+# Verbose printing
+print_results <- TRUE
+# How much best predicting trends to select
+
+# Number of time points that we use to train/fit/calibrate model.
+# Could be a vector of multiple lenghts
+# Make sure that fit_lengths + horizons do not exceed size of the time series!
+fit_lengths <- 12:34
+# How many predictions forward we need to issue. Could be a vector of multiple horizons.
+horizons <- 2
+# If set TRUE, it will use rolling windows of fit_lengths sizes to issue predictions.
+# Performance will be averaged for each fit_lengths value
+rolling_window <- FALSE
+
+# Specifies number of threads to do computations in parallel.
+# No parallelism in Windows, however. Set to 1 to not use parallelism.
+cores <- 1
+# Sets size of the bootstrap sample
+# Boostrap size of 0 turns off bootstrapping
+bootstrap_size <- 0
+# bootstrap_size <- 10
+# model_params <- list(
+#     arima_pred = list(max.p=12)
+# )
+# Use cumulative or differential data? Note that input data ALWAYS should be differential (incidence)!
+# For ARIMA and XGBoost it is advised to use differential, for Prophet it is cumulative.
+cumm_data <- FALSE
+prediction_plots <- TRUE
+# You can select transformation of data before fit and after fit/prediction. Values: "boxcox" and "disabled".
+# For prophet it is strongly recommended to disable transformation.
+
+make_side_by_side_plot_style <- list(
+    incidence = list(legend_position = rep("topleft", trend_top_count * state_top_count)),
+    mortality = list(legend_position = c(rep("topright", trend_top_count * 2), rep("topleft", trend_top_count)))
+)
+
+if (!("DC" %in% state.abb)) {
+    state.abb[length(state.abb) + 1] <- "DC"
+    state.name[length(state.name) + 1] <- "District of Columbia"
+}
+
+if (!basename(getwd()) == "R_Code") {
+    setwd("R_Code")
+}
+
+set.seed(1234)
+```
+
+Here we define some common utility functions.
+
+```{r}
+abbreviate_state <- function(state) {
+    return(state.abb[match(tolower(state), tolower(state.name))])
+}
+
+# We want data between certain dates
+trim_by_dates <- function(df) {
+    return(df[df$ds >= start_date & df$ds <= end_date, ])
+}
+
+limit_signif_digits <- function(x) {
+    digits_after_point <- 2
+    ifelse(abs(x) < 10^(digits_after_point - 1),
+        signif(x, digits = digits_after_point), round(x)
+    )
+}
+
+# Time series scaler
+my_scale <- function(data) {
+    if (all(data == 0)) {
+        warning("Zero sequence scaling")
+        return(as.numeric(data))
+    }
+    result <- 100 * data / mean(data)
+    return(result)
+    # sigma <- sd(data)
+    # mu <- mean(data)
+    # return(((data - mu) / sigma + 3) * 100 / 6)
+}
+
+create_lagged_features <- function(df, lags) {
+    result <- NULL
+    df <- as.data.frame(df)
+
+    for (i in 2:ncol(df)) {
+        col_values <- as.vector(df[, i])
+        curr_lag <- lags[i - 1]
+        # col_name <- names(df)[i]
+
+        lagged <- embed(col_values, curr_lag + 1)
+        # print(lagged)
+        diff_features <- apply(lagged[, -1], 1, function(x) rev(diff(rev(x))))
+        if (is.matrix(diff_features)) {
+            diff_features <- t(diff_features)
+        } else {
+            diff_features <- as.matrix(diff_features)
+        }
+        future_growth <- as.matrix(apply(lagged[, c(1, 2)], 1, function(x) rev(diff(rev(x)))))
+        # print(result)
+        # print(future_growth)
+        # print(lagged[, 2])
+        # print(diff_features)
+        if (is.null(result)) {
+            result <- cbind(future_growth, lagged[, 2], diff_features)
+        } else {
+            result <- cbind(result, future_growth, lagged[, 2], diff_features)
+        }
+        # print(result)
+        # stop()
+        # names(iteration_result) <- paste0(col_name, ".lag(", (curr_lag - 1) : 0, )
+    }
+    return(result)
+}
+
+synchronize <- function(result_parallel) {
+    while (cores > 1 && !all(sapply(result_parallel, function(x) inherits(x, "try-error")))) {
+        Sys.sleep(1)
+    }
+}
+```
+
+## Data load
+
+Common variables for this section.
+
+```{r}
+incidence_table_file <- paste0(output_dir, "/", "incidence.RData")
+mortality_table_file <- paste0(output_dir, "/", "mortality.RData")
+
+incidence_trend_table_file <- paste0(output_dir, "/", "incidence_trend.RData")
+mortality_trend_table_file <- paste0(output_dir, "/", "mortality_trend.RData")
+```
+
+For each rate (incidence and trend) we have separate set of keywords. Each keyword search frequency time series recorded for each state. 
+That means we have $number of keywords * number of states$ time series for each rate. 
+Scraped file have following template for paths: "<keyword>/<two letter code for state>.csv", e.g. "covid/AR.csv".
+
+We want to aggregate different Google Trend files in a single table for incidence/mortality keywords and save it for further use. 
+It will take some time. **If you already ran this block once (and it created .RData files), you can just skip this step.**
+
+```{r}
+# Function to aggregate files
+load_trends <- function(trend_dir) {
+    result <- data.frame()
+    kw_dirs <- list.dirs(path = trend_dir)[-1]
+    for (kw_dir in kw_dirs)
+    {
+        kw <- tail(strsplit(kw_dir, "/")[[1]], 1)
+        files <- list.files(path = kw_dir, pattern = "\\.csv$")
+        for (file in files)
+        {
+            file_path <- paste(kw_dir, file, sep = "/")
+            state <- strsplit(file, ".", fixed = TRUE)[[1]][1]
+            print(paste0("Loading trend for \"", kw, "\" in ", state))
+            table <- NULL
+            tryCatch(
+                {
+                    table <- read.csv(file = file_path)
+                },
+                error = function(e) { }
+            )
+            if (!is.null(table)) {
+                table <- table[table$isPartial == "False", ]
+                table$kw <- kw
+                table$state <- state
+                table$ds <- as.Date(table$date)
+                table$data <- table[, 2]
+                table <- table[, c(-2, -3)]
+                result <- rbind(result, table)
+            }
+        }
+    }
+    return(result)
+}
+
+
+incidence_trend_dir <- paste(data_dir, "incidence", sep = "/")
+mortality_trend_dir <- paste(data_dir, "mortality", sep = "/")
+
+incidence_trend <- load_trends(incidence_trend_dir)
+incidence_trend <- trim_by_dates(incidence_trend)
+save(incidence_trend, file = incidence_trend_table_file)
+
+
+mortality_trend <- load_trends(mortality_trend_dir)
+mortality_trend <- trim_by_dates(mortality_trend)
+save(mortality_trend, file = mortality_trend_table_file)
+```
+
+Next, we need state population data to compute number of cases per 100000 people.
+
+```{r}
+load_population <- function(path) {
+    table <- read.csv(file = path, check.names = FALSE)
+    table$state <- abbreviate_state(table$NAME)
+    table <- table[!is.na(table$state), ]
+    table <- table %>% pivot_longer(cols = c("POPESTIMATE2020", "POPESTIMATE2021", "POPESTIMATE2022"), names_to = "year", values_to = "population")
+    table$year <- as.integer(substr(table$year, 12, nchar(table$year)))
+    result <- data.frame(state = table$state, year = table$year, population = table$population)
+    return(result)
+}
+
+population_path <- paste(data_dir, "population.csv", sep = "/")
+
+population <- load_population(population_path)
+population <- population[population$year == 2020, c("population", "state")]
+```
+
+Now we want to load rate data itself. We would like to use Hopkins data for this. 
+It is packed in a single file for each rate. We only need to clean and transform data.
+It will take some time. If you already ran this block once (and it created .RData files), you can just skip this step.
+
+```{r}
+load_hopkins_timeseries <- function(path) {
+    print(paste0("Loading timeseries from ", path, "..."))
+    table <- read.csv(file = path, check.names = FALSE)
+    table <- table[table$FIPS < 80000, ]
+    col_names <- colnames(table)
+    date_start_index <- grep("\\d{1,2}/\\d{2}/\\d{2}", col_names)[1]
+    date_columns <- date_start_index:ncol(table)
+    table <- table %>%
+        group_by(table$Province_State) %>%
+        summarise(across(-date_columns, first), across(date_columns, sum))
+    table <- table[!is.na(table$Province_State), ]
+    table <- table[, 2:ncol(table)]
+    table <- table %>% pivot_longer(cols = date_columns, names_to = "date", values_to = "data")
+    table$ds <- as.Date(table$date, format = "%m/%d/%y")
+    selected_dates <- unique(table$ds[day(table$ds) == days_in_month(table$ds)])
+    table <- table[table$ds %in% selected_dates, ]
+    result <- data.frame(ds = table$ds, state = abbreviate_state(table$Province_State), cumm_data = table$data)
+    day(result$ds) <- 1
+    result <- result[!is.na(result$state), ]
+    result$date_num <- as.numeric(result$ds)
+    result <- result[order(result$state, result$ds), ]
+    result <- result %>%
+        group_by(state) %>%
+        mutate(data = c(0, diff(cumm_data)))
+    return(as.data.frame(result))
+}
+
+divide_by_population <- function(rate, population) {
+    if (!nrow(population)) {
+        stop("Population is empty")
+    }
+    rate <- merge(rate, population, by = "state")
+    rate$data <- rate$data * 100000 / rate$population
+    return(rate)
+}
+
+hopkins_path <- paste(data_dir, "hopkins", "timeseries", sep = "/")
+
+hopkins_incidence_path <- paste(hopkins_path, "time_series_covid19_confirmed_US.csv", sep = "/")
+hopkins_mortality_path <- paste(hopkins_path, "time_series_covid19_deaths_US.csv", sep = "/")
+
+
+
+
+incidence <- load_hopkins_timeseries(hopkins_incidence_path)
+incidence <- divide_by_population(incidence, population)
+incidence <- trim_by_dates(incidence)
+save(incidence, file = incidence_table_file)
+
+
+
+mortality <- load_hopkins_timeseries(hopkins_mortality_path)
+mortality <- divide_by_population(mortality, population)
+mortality <- trim_by_dates(mortality)
+save(mortality, file = mortality_table_file)
+```
+
+If we already have loaded all data from original data into .RData files, we can just load them.
+
+```{r}
+load(file = incidence_trend_table_file)
+load(file = mortality_trend_table_file)
+
+load(file = incidence_table_file)
+load(file = mortality_table_file)
+```
+
+
+Now we can merge rates and trends for "Time series comparison" section.
+
+```{r}
+incidence_merged <- incidence_trend %>%
+    rename(trend = data) %>%
+    inner_join(
+        incidence %>%
+            rename(rate = data),
+        by = c("state", "ds")
+    ) %>%
+    select(state, kw, ds, trend, rate)
+
+mortality_merged <- mortality_trend %>%
+    rename(trend = data) %>%
+    inner_join(
+        mortality %>%
+            rename(rate = data),
+        by = c("state", "ds")
+    ) %>%
+    select(state, kw, ds, trend, rate)
+```
+
+## Time series comparison
+
+In this section we want to study if Google Trends time series have any similarity with time series of rates 
+(incidence and mortality). We will run Granger test and Cross-correlation function of them. 
+
+We will start with Granger test. We will get p-values and F-statistics. We need to adjust p-values to false discovery rate.
+
+```{r}
+gr_test <- function(df) {
+    result <- grangertest(rate ~ trend, order = 1, data = df)
+    # What an ugly output structure!
+    return(data.frame(
+        f_stat = result$"F"[2],
+        p_value = result$"Pr(>F)"[2]
+    ))
+}
+
+incidence_granger_results <- incidence_merged %>%
+    group_by(state, kw) %>%
+    group_modify(~ gr_test(.x))
+
+incidence_granger_pval <- incidence_granger_results %>%
+    select(kw, state, p_value) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = p_value
+    )
+
+incidence_granger_pval[, -1] <- t(apply(incidence_granger_pval[, -1], 1, p.adjust, method = "fdr"))
+
+incidence_granger_fstat <- incidence_granger_results %>%
+    select(kw, state, f_stat) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = f_stat
+    )
+
+
+mortality_granger_results <- mortality_merged %>%
+    group_by(state, kw) %>%
+    group_modify(~ gr_test(.x))
+
+mortality_granger_pval <- mortality_granger_results %>%
+    select(kw, state, p_value) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = p_value
+    )
+
+mortality_granger_pval[, -1] <- t(apply(mortality_granger_pval[, -1], 1, p.adjust, method = "fdr"))
+
+mortality_granger_fstat <- mortality_granger_results %>%
+    select(kw, state, f_stat) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = f_stat
+    )
+```
+
+Now we need to calculate cross-correlation function. We will collect cross-correlation coefficient 
+with following lags: minus one period, zero, and plus one period lag.
+
+```{r}
+ccf_wrap <- function(df) {
+    result <- ccf(df$rate, df$trend, plot = FALSE)
+    return(data.frame(
+        cross_correlation = result$acf[result$lag == 0],
+        cross_correlation_minus_one = result$acf[result$lag == -1],
+        cross_correlation_plus_one = result$acf[result$lag == 1]
+    ))
+}
+
+incidence_ccf_results <- incidence_merged %>%
+    group_by(state, kw) %>%
+    group_modify(~ ccf_wrap(.x))
+
+incidence_cc <- incidence_ccf_results %>%
+    select(kw, state, cross_correlation) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation
+    )
+
+incidence_cc_plus_one <- incidence_ccf_results %>%
+    select(kw, state, cross_correlation_plus_one) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation_plus_one
+    )
+
+incidence_cc_minus_one <- incidence_ccf_results %>%
+    select(kw, state, cross_correlation_minus_one) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation_minus_one
+    )
+
+
+mortality_ccf_results <- mortality_merged %>%
+    group_by(state, kw) %>%
+    group_modify(~ ccf_wrap(.x))
+
+mortality_cc <- mortality_ccf_results %>%
+    select(kw, state, cross_correlation) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation
+    )
+
+mortality_cc_plus_one <- mortality_ccf_results %>%
+    select(kw, state, cross_correlation_plus_one) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation_plus_one
+    )
+
+mortality_cc_minus_one <- mortality_ccf_results %>%
+    select(kw, state, cross_correlation_minus_one) %>%
+    pivot_wider(
+        names_from = state,
+        values_from = cross_correlation_minus_one
+    )
+```
+
+We select top and bottom keywords by cross-correlation coefficient. 
+We will use them as external regressors for prediction models.
+
+```{r}
+select_top <- function(df, count, order = -1) {
+    means <- abs(rowMeans(df[, -1]))
+    df <- df[order(order * means), ]
+    return(head(df, count))
+}
+
+top_bottom_count <- 4
+
+top_incidence_trends <- select_top(incidence_cc, top_bottom_count)$kw
+bottom_incidence_trends <- select_top(incidence_cc, top_bottom_count, order = 1)$kw
+
+top_mortality_trends <- select_top(mortality_cc, top_bottom_count)$kw
+bottom_mortality_trends <- select_top(mortality_cc, top_bottom_count, order = 1)$kw
+```
+
+Save cross-correlation and Granger test results as .csv and .tex tables.
+
+```{r}
+save_gr_tables <- function(granger_pval, granger_fstat, rate_name) {
+    # Directory to save
+    # curr_dir <- paste(output_dir, rate_name, sep = "/")
+    # if (!file.exists(curr_dir)) {
+    #     dir.create(curr_dir, recursive = TRUE)
+    # }
+
+    # P-value transformations
+    numeric_cols <- sapply(granger_pval, is.numeric)
+    granger_pval[, numeric_cols] <- lapply(granger_pval[, numeric_cols], limit_signif_digits)
+    granger_pval <- granger_pval %>%
+        mutate_if(is.character, ~ gsub("_", " ", .))
+
+    file_name <- paste0(output_dir, "/", rate_name, "_granger_pvalue")
+    # Save .csv
+    write.csv(granger_pval, paste0(file_name, ".csv"))
+
+    # Save LaTeX table
+    granger_pval <- granger_pval %>%
+        mutate(across(-1, ~ ifelse(. < 0.001, "\\cellcolor{green!25}{<.001}", ifelse(. < 0.05, paste0("\\cellcolor{green!25}{", ., "}"), as.character(.)))))
+    granger_pval_tablex <- xtable(x = granger_pval)
+    print.xtable(x = granger_pval_tablex, file = paste0(file_name, ".tex"), type = "latex", include.rownames = FALSE, NA.string = "--")
+
+    # F-statistics transformations
+    numeric_cols <- sapply(granger_fstat, is.numeric)
+    # What a beautiful language is R
+    gmean <- rowMeans(granger_fstat[, numeric_cols])
+    gmedian <- apply(granger_fstat[, numeric_cols], 1, median)
+    granger_fstat$mean <- gmean
+    granger_fstat$median <- gmedian
+    # numeric_cols <- sapply(granger_fstat, is.numeric)
+    # granger_fstat[numeric_cols] <- lapply(granger_fstat[numeric_cols], limit_signif_digits)
+    granger_fstat <- granger_fstat %>%
+        mutate_if(is.numeric, ~ limit_signif_digits(.)) %>%
+        mutate_if(is.character, ~ gsub("_", " ", .))
+
+    file_name <- paste0(output_dir, "/", rate_name, "_granger_fstat")
+    # Save .csv
+    write.csv(granger_fstat, paste0(file_name, ".csv"))
+
+    # Save LaTeX table
+    granger_fstat_tablex <- xtable(x = granger_fstat)
+    print.xtable(x = granger_fstat_tablex, file = paste0(file_name, ".tex"), type = "latex", include.rownames = FALSE, NA.string = "--")
+}
+
+save_gr_tables(incidence_granger_pval, incidence_granger_fstat, "incidence")
+save_gr_tables(mortality_granger_pval, mortality_granger_fstat, "mortality")
+```
+
+```{r}
+save_ccf_tables <- function(df, rate_name, file_name) {
+    # Directory to save
+    curr_dir <- paste(output_dir, rate_name, sep = "/")
+    if (!file.exists(curr_dir)) {
+        dir.create(curr_dir, recursive = TRUE)
+    }
+
+    numeric_cols <- sapply(df, is.numeric)
+    gmean <- rowMeans(df[, numeric_cols])
+    gmedian <- apply(df[, numeric_cols], 1, median)
+    df$mean <- gmean
+    df$median <- gmedian
+    numeric_cols <- sapply(df, is.numeric)
+    df[, numeric_cols] <- lapply(df[, numeric_cols], limit_signif_digits)
+    df <- df %>%
+        mutate_if(is.character, ~ gsub("_", " ", .))
+
+    # Save .csv
+    write.csv(df, paste0(curr_dir, "/", file_name, ".csv"))
+
+    # Save LaTeX table
+    tablex <- xtable(x = df)
+    table_file_name <- paste0(curr_dir, "/", file_name, ".tex")
+    print.xtable(x = tablex, file = table_file_name, type = "latex", include.rownames = FALSE, NA.string = "--")
+}
+
+save_ccf_tables(incidence_cc, "incidence", "cross_correlation")
+save_ccf_tables(incidence_cc_minus_one, "incidence", "cross_correlation_minus_one")
+save_ccf_tables(incidence_cc_plus_one, "incidence", "cross_correlation_plus_one")
+
+save_ccf_tables(mortality_cc, "mortality", "cross_correlation")
+save_ccf_tables(mortality_cc_minus_one, "mortality", "cross_correlation_minus_one")
+save_ccf_tables(mortality_cc_plus_one, "mortality", "cross_correlation_plus_one")
+```
+
+Now we save cross-correlation coefficient heatmaps for Google Trends keywords versus States as .pdf.
+
+```{r}
+heatmap_palette <- c("#e66101", "white", "#5e3c99")
+
+save_heatmap <- function(df, file_name) {
+    df <- as.data.frame(df)
+    pdf(paste0(file_name, ".pdf"), height = 6, width = 13)
+    par(mar = c(5.5, 5.1, 5.1, 2.1))
+
+    rownames(df) <- gsub("_", " ", df[, 1])
+    rownames(df) <- gsub("sars-cov-2", "SARS-CoV-2", rownames(df))
+
+    pheatmap(
+        df[, -1],
+        color = colorRampPalette(heatmap_palette)(100), # Define color palette
+        breaks = seq(-1.0, 1.0, length.out = 101),
+        fontsize_row = 8, # Adjust row font size
+        fontsize_col = 8, # Adjust column font size
+        cluster_rows = FALSE, # Cluster rows
+        cluster_cols = FALSE, # Cluster columns
+        display_numbers = TRUE,
+        fontsize_number = 6,
+        angle_col = 45,
+        legend = TRUE,
+        # cex = .25,
+        # gpar(fontface="bold"),
+    )
+
+    dev.off()
+}
+
+save_heatmap(incidence_cc, paste0(plot_dir, "/incidence_cross_correlation_heatmap"))
+save_heatmap(incidence_cc_minus_one, paste0(plot_dir, "/incidence_cross_correlation_minus_one_heatmap"))
+save_heatmap(incidence_cc_plus_one, paste0(plot_dir, "/incidence_cross_correlation_plus_one_heatmap"))
+
+save_heatmap(mortality_cc, paste0(plot_dir, "/mortality_cross_correlation_heatmap"))
+save_heatmap(mortality_cc_minus_one, paste0(plot_dir, "/mortality_cross_correlation_minus_one_heatmap"))
+save_heatmap(mortality_cc_plus_one, paste0(plot_dir, "/mortality_cross_correlation_plus_one_heatmap"))
+```
+
+## Foreascting
+
+Define Box-Cox transform. This transformation is from the family of power transformations, 
+allowing to stabilize variance, thus making data more like normally distributed. 
+For some models it improves forecast metrics significantly.
+
+```{r}
+box_cox <- list()
+box_cox$transform <- function(input_data, params = NULL, ...) {
+    if (is.null(params)) {
+        params <- list()
+        params$lambda <- BoxCox.lambda(input_data + 1, method = "loglik")
+    }
+    result <- list(data = BoxCox(input_data + 1, params$lambda), params = params)
+    return(result)
+}
+
+box_cox$inverse <- function(input_data, params) {
+    result <- InvBoxCox(x = input_data, lambda = params$lambda) - 1
+    return(result)
+}
+```
+
+Here we use adapter design pattern to make forecast model interfaces more uniform. 
+Input data for both "model.fit" and "model.forecast" should be a data.frame. 
+First column is date, second is dependent variable 
+(only for "model.fit", for "model.forecast" only dates and external regressors are required),
+rest are external regressors.
+
+```{r}
+.fit_arima <- function(df, ...) {
+    # print(df)
+    # stop()
+    fit_data <- df[2]
+    if (ncol(df) > 2) {
+        xreg <- as.matrix(df[, -c(1, 2)])
+    } else {
+        xreg <- NULL
+    }
+    # print(fit_data)
+    # print(list(...))
+    # print(xreg)
+    obj <- auto.arima(fit_data,
+        # d = 2,
+        # D = 2,
+        # ic = "aic",
+        max.p = length(fit_data),
+        max.q = length(fit_data),
+        start.p = length(fit_data) - 1,
+        start.q = length(fit_data) - 1,
+        max.P = length(fit_data),
+        max.Q = length(fit_data),
+        start.P = length(fit_data) - 1,
+        start.Q = length(fit_data) - 1,
+        # max.d = 4,
+        # approximation = FALSE,
+        # stepwise = FALSE,
+        # stationary = TRUE,
+        xreg = xreg,
+        # seasonal = FALSE,
+        # allowdrift = FALSE,
+        # lambda = "auto",
+        ...
+    )
+    obj$fit <- data.frame(
+        ds = df[, 1],
+        yhat = as.numeric(obj$fitted),
+        yhat_lower = NA,
+        yhat_upper = NA
+    )
+
+    return(obj)
+}
+
+.predict_arima <- function(obj, df) {
+    forecast_length <- nrow(df)
+    # print(xreg)
+    if (ncol(df) > 1) {
+        xreg <- as.matrix(df[, -1])
+    } else {
+        xreg <- NULL
+    }
+    prediction <- forecast(obj, xreg = xreg, h = forecast_length)
+    prediction_lower <- prediction$lower[, 2]
+    prediction_upper <- prediction$upper[, 2]
+    # print(prediction$lower)
+    # print(attributes(yhat_lower))
+    # print(as.numeric(yhat_lower))
+    # names(yhat) <- NULL
+    # names(yhat_lower) <- NULL
+    # names(yhat_upper) <- NULL
+    # print(result$mean)
+    # print(obj$fitted)
+    result <- data.frame(
+        ds = df[, 1],
+        yhat = as.numeric(prediction$mean),
+        yhat_lower = as.numeric(prediction_lower),
+        yhat_upper = as.numeric(prediction_upper)
+    )
+    # print(obj$fit)
+    # print(result)
+    # readline()
+    # result <- result[2:length(result)]
+    # readline()
+    return(result)
+}
+
+.fit_prophet <- function(df, ...) {
+    # print(df)
+    names(df)[1] <- "ds"
+    names(df)[2] <- "y"
+    obj <- prophet(
+        # yearly.seasonality = TRUE,
+        yearly.seasonality = 4,
+        weekly.seasonality = FALSE,
+        daily.seasonality = FALSE,
+        # seasonality.prior.scale = 3,
+        # interval.width = 0.1,
+        # changepoint.range = 0.45,
+        fit = FALSE
+    )
+    for (xreg_name in names(df)[-c(1, 2)]) {
+        obj <- add_regressor(
+            obj,
+            xreg_name
+        )
+    }
+    obj <- fit.prophet(obj, df)
+    fit <- predict(obj, df)
+    obj$fit <- data.frame(
+        ds = df[, 1],
+        yhat = as.numeric(fit$yhat),
+        yhat_lower = as.numeric(fit$yhat_lower),
+        yhat_upper = as.numeric(fit$yhat_upper)
+    )
+    # print(obj$fit)
+    # print(obj)
+    # stop()
+    return(obj)
+}
+
+.predict_prophet <- function(obj, df) {
+    result <- predict(obj, df) %>%
+        select(ds, yhat, yhat_lower, yhat_upper) %>%
+        as.data.frame()
+
+    # print(result)
+    # stop()
+
+    return(result)
+}
+
+.fit_xgboost <- function(df, lags = 5, ...) {
+    # print(df)
+    df <- as.data.frame(df)
+    lagged_features <- create_lagged_features(df, rep(lags, ncol(df) - 1))
+    # print(lagged_features)
+    # stop()
+
+    train_data <- lagged_features[, -1]
+    train_labels <- lagged_features[, 1]
+    # print(train_data)
+
+    best_model <- xgboost(
+        params = list(
+            eta = 0.1,
+            subsample = 0.80,
+            colsample_bytree = 0.85,
+            max_depth = 10
+        ),
+        data = train_data,
+        label = train_labels,
+        nrounds = 100,
+        objective = "reg:squarederror",
+        early_stopping_rounds = 50,
+        verbose = 0
+    )
+    best_model$lags <- lags
+    if (ncol(df) > 2) {
+        best_model$xreg <- df[, -c(1, 2), drop = FALSE]
+    } else {
+        best_model$xreg <- NULL
+    }
+
+    fit_pred <- predict(best_model, train_data)
+    # print(c(df[, 2]))
+    # print(c(df[1:(best_model$lags - 1), 2], train_data[, 1] + fit_pred))
+    best_model$fit <- data.frame(
+        ds = df$ds,
+        yhat = c(df[1:best_model$lags, 2], train_data[, 1] + fit_pred),
+        yhat_lower = NA,
+        yhat_upper = NA
+    )
+
+    # print(best_model$fit)
+    # stop()
+    # print(typeof(best_model))
+    return(best_model)
+}
+
+.predict_xgboost <- function(obj, df) {
+    forecast_length <- nrow(df)
+    # print(obj$fit)
+    # print(dates)
+    # df <- .ts_to_df(obj$fit, obj$lags)
+    data <- obj$fit$yhat
+    xreg_data <- rbind(obj$xreg, df[, -1])
+    for (i in 1:forecast_length) {
+        n <- length(data)
+        # print(data)
+        step_data <- data[(n - obj$lags + 1):n] %>%
+            diff() %>%
+            rev() %>%
+            c(data[n], .)
+        if (!is.null(obj$xreg)) {
+            xreg_end <- nrow(xreg_data) - (forecast_length - i)
+            xreg_start <- xreg_end - obj$lag
+            step_xreg_data <- xreg_data[xreg_start:xreg_end, , drop = FALSE]
+            # print(step_xreg_data)
+            xreg_transformed <- step_xreg_data %>%
+                map(~ {
+                    original_diff <- diff(.x)
+                    second_value <- rev(.x)[2]
+                    rev_diff <- rev(original_diff)
+                    c(rev_diff[1], second_value, rev_diff[-1])
+                }) %>%
+                unlist()
+            step_data <- c(step_data, xreg_transformed)
+        }
+        # print(xreg_transformed)
+        # print(step_data)
+        # print(matrix(step_data, nrow=1))
+        # print(c(step_data, xreg_transformed))
+        # stop()
+        single_point_prediction <- predict(obj, matrix(step_data, nrow = 1))
+        # print(prediction)
+        data <- c(data, data[n] + single_point_prediction)
+        # print(data)
+    }
+    prediction <- data[(length(data) - forecast_length + 1):length(data)]
+    result <- data.frame(
+        ds = df[, 1],
+        yhat = prediction,
+        yhat_lower = NA,
+        yhat_upper = NA
+    )
+    # print(result)
+    # stop()
+    return(result)
+}
+
+model.fit <- function(df, prediction_method, transformation = NULL, ...) {
+    if (length(data) == 0) {
+        stop("Empty input data frame")
+    }
+    transform_params <- NULL
+    if (!is.null(transformation)) {
+        transform_params <- list()
+        for (column in names(df)[-1]) {
+            transformed_data <- transformation$transform(df[, column])
+            df[, column] <- transformed_data$data
+            transform_params[[length(transform_params) + 1]] <- transformed_data$params
+        }
+    }
+    # print(df)
+    # stop()
+    obj <- switch(prediction_method,
+        xgboost = {
+            .fit_xgboost(df, ...)
+        },
+        arima = {
+            .fit_arima(df, ...)
+        },
+        prophet = {
+            .fit_prophet(df, ...)
+        }
+    )
+    if (!is.null(transform_params)) {
+        obj$transformation <- transformation
+        obj$transform_params <- transform_params
+        for (column in names(obj$fit)[-1]) {
+            obj$fit[, column] <- obj$transformation$inverse(obj$fit[, column], obj$transform_params[[1]])
+        }
+    }
+    return(obj)
+}
+
+model.forecast <- function(obj, df, prediction_method) {
+    if (!is.null(obj$transformation)) {
+        for (column in names(df[, -1])) {
+            transformed_data <- obj$transformation$transform(df[, column], obj$transform_params[[column]])
+            df[, column] <- transformed_data$data
+        }
+    }
+    result <- switch(prediction_method,
+        xgboost = {
+            .predict_xgboost(obj, df)
+        },
+        arima = {
+            .predict_arima(obj, df)
+        },
+        prophet = {
+            .predict_prophet(obj, df)
+        }
+    )
+    if (is.null(result)) {
+        stop("Wrong prediction method")
+    }
+    if (!is.null(obj$transform_params)) {
+        for (column in names(result)[-1]) {
+            result[, column] <- obj$transformation$inverse(result[, column], obj$transform_params[[1]])
+        }
+    }
+    return(result)
+}
+```
+
+For the prediction we want dataframe of top/bottom keywords ranked by cross-correlation coefficient we calculated earlier,
+plus incidence/mortality counts. This way we get data frame with state, date, rate and top/bottom keywords columns. 
+
+```{r}
+rate_pipe <- function(trends, rate, top_trends, accumulate_data) {
+    result <- trends %>%
+        filter(kw %in% top_trends) %>%
+        select(state, kw, ds, data) %>%
+        pivot_wider(
+            names_from = kw,
+            values_from = data
+        ) %>%
+        left_join(rate %>% select(state, ds, data), by = c("state", "ds")) %>%
+        rename(rate = data) %>%
+        relocate(rate, .after = ds) %>%
+        as.data.frame()
+    # Such elegant language
+    remaining_columns <- setdiff(names(result), top_trends)
+    new_order <- c(remaining_columns, top_trends)
+    result <- result %>%
+        select(all_of(new_order))
+    return(result)
+}
+
+incidence_plus_selected_trends <- rate_pipe(incidence_trend, incidence, c(top_incidence_trends, bottom_incidence_trends))
+
+mortality_plus_selected_trends <- rate_pipe(mortality_trend, mortality, c(top_mortality_trends, bottom_mortality_trends))
+```
+
+Now we roll windows over each state's time series and issue predictions for each window.
+
+```{r}
+# This function applies other functions to each rolling window
+my_better_rollapply <- function(df, FUN, window, ...) {
+    result <- NULL
+    if (is.null(df)) {
+        stop("Data is NULL, nothing to predict.")
+    }
+    if (nrow(df) < window) {
+        stop(paste0("Window is wider than the data frame ", window, " vs ", nrow(df)))
+    }
+    for (start_idx in 1:(nrow(df) - window)) {
+        iteration_result <- FUN(df[start_idx:(start_idx + window - 1), ], ...)
+        if (is.null(result)) {
+            result <- data.frame(iteration_result)
+        } else {
+            result <- rbind(result, iteration_result)
+        }
+    }
+    return(result)
+}
+
+# This is prediction wrapper funnction. It prepears data for each window, fits and forecasts data.
+roll_fun <- function(df, horizon, method, transformation, state) {
+    fit_and_predict <- function(fit_data, prediction_data, model_name, method, transformation, result = NULL) {
+        print(paste0("Running model ", model_name, " for ", tail(fit_data$ds, n = 1), " in state ", state))
+        prediction <- NULL
+        tryCatch(
+            {
+                m <- model.fit(
+                    fit_data,
+                    method,
+                    transformation = transformation
+                )
+                in_sample <- m$fit
+                in_sample$prediction_type <- "in-sample"
+                out_of_sample <- model.forecast(
+                    m,
+                    prediction_data,
+                    method
+                )
+                out_of_sample$prediction_type <- "out-of-sample"
+                # print(in_sample)
+                # print(out_of_sample)
+                prediction <- rbind(in_sample, out_of_sample)
+            },
+            error = function(e) {
+                print(paste0("Model ", model_name, " failed with error: ", e$message))
+            }
+        )
+        if (is.null(prediction)) {
+            prediction <- rbind(
+                data.frame(
+                    ds = fit_data$ds,
+                    yhat = NA,
+                    yhat_lower = NA,
+                    yhat_upper = NA,
+                    prediction_type = "in-sample"
+                ),
+                data.frame(
+                    ds = prediction_data$ds,
+                    yhat = NA,
+                    yhat_lower = NA,
+                    yhat_upper = NA,
+                    prediction_type = "out-of-sample"
+                )
+            )
+            # print(df)
+            # stop()
+        }
+        prediction$model <- model_name
+
+        if (is.null(result)) {
+            result <- prediction
+        } else {
+            result <- rbind(result, prediction)
+        }
+        return(result)
+    }
+
+    # print(df)
+    # stop()
+    in_sample_data <- df[1:(nrow(df) - horizon), ]
+    # This is data needed for forecast. It is dates plus external regressors
+    out_of_sample_data <- df[(nrow(df) - horizon + 1):nrow(df), -2]
+
+    result <- fit_and_predict(
+        in_sample_data,
+        out_of_sample_data,
+        paste0(method, "(", paste(names(df)[-1], collapse = ", "), ")"),
+        method,
+        transformation
+    )
+    result$fit_length <- nrow(in_sample_data)
+    result$horizon <- horizon
+    result$state <- state
+
+    return(result)
+}
+
+# This function makes minor preparations of data and then uses rolling window method to issue predictions
+prediction_pipe <- function(df, method, fit_lengths, horizons, transformation, selected_regressors = NULL) {
+    # We shift values by +1. This required for some models to converge.
+    shift_const <- 1
+    nested_data <- df %>%
+        select(c("ds", "state", "rate", selected_regressors)) %>%
+        group_by(state) %>%
+        mutate(across(-1, my_scale)) %>%
+        ungroup() %>%
+        mutate(across(-c(1, 2), ~ . + shift_const)) %>%
+        nest_by(state) %>%
+        split(seq(nrow(.)))
+    # mutate(prediction = list(my_better_rollapply(
+    #     data,
+    #     roll_fun,
+    #     window = fit_length + horizon,
+    #     horizon = horizon,
+    #     method = method,
+    #     transformation = transformation,
+    #     state = cur_group()$state
+    # ))) %>%
+
+    if (cores == 1) {
+        lapply_fun <- lapply
+    } else {
+        lapply_fun <- mclapply
+    }
+    prediction <- NULL
+    for (horizon in horizons) {
+        for (fit_length in fit_lengths) {
+            tmp_prediction <- lapply_fun(
+                nested_data,
+                function(x, ...) {
+                    data <- x$data[[1]]
+                    if (rolling_window) {
+                        result <- my_better_rollapply(
+                            data,
+                            FUN = roll_fun,
+                            state = x$state,
+                            window = fit_length + horizon,
+                            horizon = horizon,
+                            method = method,
+                            transformation = transformation
+                        )
+                    } else {
+                        end <- fit_length + horizon
+                        start <- 1
+                        result <- roll_fun(
+                            data[start:end, ],
+                            state = x$state,
+                            horizon = horizon,
+                            method = method,
+                            transformation = transformation
+                        )
+                    }
+                    return(result)
+                },
+                mc.cores = cores
+            )
+            tmp_prediction <- do.call(rbind, tmp_prediction)
+            prediction <- rbind(prediction, tmp_prediction)
+        }
+    }
+
+    result <- prediction %>%
+        mutate(across(c("yhat", "yhat_lower", "yhat_upper"), ~ . - shift_const)) %>%
+        filter(prediction_type == "out-of-sample") %>%
+        as.data.frame()
+    return(result)
+}
+
+# This function runs forecast model with different sets of external regressors
+run_model <- function(df, method, fit_lengths, horizons, transformation, top_trends, bottom_trends) {
+    # Model without external regressors
+    result <- prediction_pipe(
+        df,
+        method,
+        fit_lengths,
+        horizons,
+        transformation
+    )
+
+    # Models with single external regressor
+    for (kw in c(top_trends, rev(bottom_trends))) {
+        # result <- prediction_pipe(
+        #     df,
+        #     method,
+        #     fit_length,
+        #     horizon,
+        #     transformation,
+        #     selected_regressors = c(kw)
+        # )
+
+        result <- rbind(
+            result,
+            prediction_pipe(
+                df,
+                method,
+                fit_lengths,
+                horizons,
+                transformation,
+                selected_regressors = c(kw)
+            )
+        )
+    }
+
+    # Models with increasing number i=2,3,...,n of top external regressors
+    for (i in 2:length(top_trends)) {
+        result <- rbind(
+            result,
+            prediction_pipe(
+                df,
+                method,
+                fit_lengths,
+                horizons,
+                transformation,
+                selected_regressors = top_trends[1:i]
+            )
+        )
+    }
+
+    # Models with increasing number i=2,3,...,n of bottom external regressors
+    for (i in 2:length(bottom_trends)) {
+        result <- rbind(
+            result,
+            prediction_pipe(
+                df,
+                method,
+                fit_lengths,
+                horizons,
+                transformation,
+                selected_regressors = rev(bottom_trends)[1:i]
+            )
+        )
+    }
+    return(result)
+}
+```
+
+Common file path declarations for the blocks below.
+
+```{r}
+incidence_arima_predictions_file <- paste0(output_dir, "/incidence_arima_predictions.RData")
+mortality_arima_predictions_file <- paste0(output_dir, "/mortality_arima_predictions.RData")
+
+incidence_prophet_predictions_file <- paste0(output_dir, "/incidence_prophet_predictions.RData")
+mortality_prophet_predictions_file <- paste0(output_dir, "/mortality_prophet_predictions.RData")
+
+incidence_xgboost_predictions_file <- paste0(output_dir, "/incidence_xgboost_predictions.RData")
+mortality_xgboost_predictions_file <- paste0(output_dir, "/mortality_xgboost_predictions.RData")
+```
+
+Here we run ARIMA predictive model and save predictions as files.
+
+```{r}
+incidence_arima_predictions <- run_model(
+    incidence_plus_selected_trends,
+    "arima",
+    fit_lengths,
+    horizons,
+    box_cox,
+    top_incidence_trends,
+    bottom_incidence_trends
+)
+
+mortality_arima_predictions <- run_model(
+    mortality_plus_selected_trends,
+    "arima",
+    fit_lengths,
+    horizons,
+    box_cox,
+    top_mortality_trends,
+    bottom_mortality_trends
+)
+
+save(incidence_arima_predictions, file = incidence_arima_predictions_file)
+save(mortality_arima_predictions, file = mortality_arima_predictions_file)
+```
+
+Here we run Prophet predictive model and save predictions as files.
+
+```{r}
+incidence_prophet_predictions <- run_model(
+    incidence_plus_selected_trends,
+    "prophet",
+    fit_lengths,
+    horizons,
+    NULL,
+    top_incidence_trends,
+    bottom_incidence_trends
+)
+
+mortality_prophet_predictions <- run_model(
+    mortality_plus_selected_trends,
+    "prophet",
+    fit_lengths,
+    horizons,
+    NULL,
+    top_mortality_trends,
+    bottom_mortality_trends
+)
+
+save(incidence_prophet_predictions, file = incidence_prophet_predictions_file)
+save(mortality_prophet_predictions, file = mortality_prophet_predictions_file)
+```
+
+XGBoost models run.
+
+```{r}
+incidence_xgboost_predictions <- run_model(
+    incidence_plus_selected_trends,
+    "xgboost",
+    fit_lengths,
+    horizons,
+    NULL,
+    top_incidence_trends,
+    bottom_incidence_trends
+)
+
+mortality_xgboost_predictions <- run_model(
+    mortality_plus_selected_trends,
+    "xgboost",
+    fit_lengths,
+    horizons,
+    NULL,
+    top_mortality_trends,
+    bottom_mortality_trends
+)
+
+save(incidence_xgboost_predictions, file = incidence_xgboost_predictions_file)
+save(mortality_xgboost_predictions, file = mortality_xgboost_predictions_file)
+```
+
+Load and combine all predictions in single table for each rate.
+
+```{r}
+load(file = incidence_arima_predictions_file)
+load(file = mortality_arima_predictions_file)
+
+load(file = incidence_prophet_predictions_file)
+load(file = mortality_prophet_predictions_file)
+
+load(file = incidence_xgboost_predictions_file)
+load(file = mortality_xgboost_predictions_file)
+
+incidence_arima_predictions$model_family <- "arima"
+incidence_prophet_predictions$model_family <- "prophet"
+incidence_xgboost_predictions$model_family <- "xgboost"
+
+mortality_arima_predictions$model_family <- "arima"
+mortality_prophet_predictions$model_family <- "prophet"
+mortality_xgboost_predictions$model_family <- "xgboost"
+
+incidence_predictions <- rbind(
+    incidence_arima_predictions,
+    incidence_prophet_predictions,
+    incidence_xgboost_predictions,
+    NULL
+)
+
+mortality_predictions <- rbind(
+    mortality_arima_predictions,
+    mortality_prophet_predictions,
+    mortality_xgboost_predictions,
+    NULL
+)
+```
+
+Now we want to calculate metrics for each model. We will use Mean Absolute Error and Root Mean Square Error.
+
+```{r}
+incidence_model_order <- unique(incidence_predictions$model)
+mortality_model_order <- unique(mortality_predictions$model)
+
+# Add real data to predictions
+incidence_predictions_and_data <- incidence_predictions %>%
+    inner_join(
+        incidence %>%
+            group_by(state) %>%
+            mutate(across(data, my_scale)) %>%
+            ungroup(),
+        by = c("state", "ds")
+    ) %>%
+    filter(!is.na(yhat)) %>%
+    select(state, ds, model, model_family, fit_length, horizon, data, yhat, yhat_lower, yhat_upper)
+
+mortality_predictions_and_data <- mortality_predictions %>%
+    inner_join(
+        mortality %>%
+            group_by(state) %>%
+            mutate(across(data, my_scale)) %>%
+            ungroup(),
+        by = c("state", "ds")
+    ) %>%
+    filter(!is.na(yhat)) %>%
+    select(state, ds, model, model_family, fit_length, horizon, data, yhat, yhat_lower, yhat_upper)
+
+# Calculate metrics for each model and state
+incidence_raw_metrics <- incidence_predictions_and_data %>%
+    group_by(model, model_family, state, fit_length, horizon) %>%
+    mutate(abs_error = abs(data - yhat), sqr_error = (data - yhat)^2, in_prediction_interval = (data > yhat_lower & data < yhat_upper)) %>%
+    summarise(
+        MAE = mean(abs_error),
+        RMSE = sqrt(mean(sqr_error)),
+        WIS = interval_score(data, yhat_lower, yhat_upper, 90),
+        `95% PI Coverage` = mean(in_prediction_interval),
+        .groups = "drop"
+    ) %>%
+    pivot_longer(cols = c("MAE", "RMSE", "WIS", "95% PI Coverage"), names_to = "metric", values_to = "value") %>%
+    mutate(order_index = match(model, incidence_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+
+mortality_raw_metrics <- mortality_predictions_and_data %>%
+    group_by(model, model_family, state, fit_length, horizon) %>%
+    mutate(abs_error = abs(data - yhat), sqr_error = (data - yhat)^2, in_prediction_interval = (data > yhat_lower & data < yhat_upper)) %>%
+    summarise(
+        MAE = mean(abs_error),
+        RMSE = sqrt(mean(sqr_error)),
+        WIS = interval_score(data, yhat_lower, yhat_upper, 90),
+        `95% PI Coverage` = mean(in_prediction_interval),
+        .groups = "drop"
+    ) %>%
+    pivot_longer(cols = c("MAE", "RMSE", "WIS", "95% PI Coverage"), names_to = "metric", values_to = "value") %>%
+    mutate(order_index = match(model, mortality_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+
+# Summarize metrics across states for each model
+incidence_metrics <- incidence_raw_metrics %>%
+    group_by(model, model_family, metric, fit_length, horizon) %>%
+    drop_na() %>%
+    summarise(
+        Min = quantile(value, probs = 0),
+        `2.5%` = quantile(value, probs = 0.025),
+        `25%` = quantile(value, probs = 0.25),
+        Median = quantile(value, probs = 0.5),
+        `75%` = quantile(value, probs = 0.75),
+        `97.5%` = quantile(value, probs = 0.975),
+        Max = quantile(value, probs = 1),
+        Mean = mean(value),
+        SD = sd(value),
+        .groups = "drop"
+    ) %>%
+    mutate(order_index = match(model, incidence_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+
+mortality_metrics <- mortality_raw_metrics %>%
+    group_by(model, model_family, metric, fit_length, horizon) %>%
+    drop_na() %>%
+    summarise(
+        Min = quantile(value, probs = 0),
+        `2.5%` = quantile(value, probs = 0.025),
+        `25%` = quantile(value, probs = 0.25),
+        Median = quantile(value, probs = 0.5),
+        `75%` = quantile(value, probs = 0.75),
+        `97.5%` = quantile(value, probs = 0.975),
+        Max = quantile(value, probs = 1),
+        Mean = mean(value),
+        SD = sd(value),
+        .groups = "drop"
+    ) %>%
+    mutate(order_index = match(model, mortality_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+```
+
+Now we calculate summaries from performance tables.
+
+```{r}
+# Here we only interested in median and 95% quantiles for each fit_length. Could be handy when we have many fit_lengths.
+incidence_metrics_by_fit <- incidence_metrics %>%
+    mutate(median_formatted = paste0(round(Median, 2), " (", round(`2.5%`, 2), ", ", round(`97.5%`, 2), ")")) %>%
+    select(model, metric, fit_length, horizon, median_formatted) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = median_formatted
+    ) %>%
+    mutate(order_index = match(model, incidence_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+
+mortality_metrics_by_fit <- mortality_metrics %>%
+    mutate(median_formatted = paste0(round(Median, 2), " (", round(`2.5%`, 2), ", ", round(`97.5%`, 2), ")")) %>%
+    select(model, metric, fit_length, horizon, median_formatted) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = median_formatted
+    ) %>%
+    mutate(order_index = match(model, mortality_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    as.data.frame()
+
+# Calculate how median performance improved, compared to baseline model (first model we ran)
+incidence_relative_improvement <- incidence_metrics %>%
+    select(model, model_family, metric, fit_length, horizon, Median) %>%
+    filter(metric %in% c("MAE", "RMSE")) %>%
+    group_by(model_family, metric, fit_length, horizon) %>%
+    mutate(across(Median, ~ ( . - first(.) ) / first(.) * 100)) %>%
+    dplyr::slice(-1) %>%
+    ungroup() %>%
+    # select(-model_family) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = Median
+    ) %>%
+    mutate(order_index = match(model, incidence_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    mutate(model = str_replace_all(model, "arima", "ARIMA")) %>%
+    mutate(model = str_replace_all(model, "prophet", "Prophet")) %>%
+    mutate(model = str_replace_all(model, "xgboost", "XGBoost")) %>%
+    as.data.frame()
+
+mortality_relative_improvement <- mortality_metrics %>%
+    select(model, model_family, metric, fit_length, horizon, Median) %>%
+    filter(metric %in% c("MAE", "RMSE")) %>%
+    group_by(model_family, metric, fit_length, horizon) %>%
+    mutate(across(Median, ~ ( . - first(.) ) / first(.) * 100)) %>%
+    dplyr::slice(-1) %>%
+    ungroup() %>%
+    # select(-model_family) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = Median
+    ) %>%
+    mutate(order_index = match(model, mortality_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    mutate(model = str_replace_all(model, "arima", "ARIMA")) %>%
+    mutate(model = str_replace_all(model, "prophet", "Prophet")) %>%
+    mutate(model = str_replace_all(model, "xgboost", "XGBoost")) %>%
+    as.data.frame()
+
+
+incidence_absolute_improvement <- incidence_metrics %>%
+    select(model, model_family, metric, fit_length, horizon, Median) %>%
+    filter(metric %in% c("MAE", "RMSE")) %>%
+    group_by(model_family, metric, fit_length, horizon) %>%
+    mutate(across(Median, ~ . - first(.) )) %>%
+    dplyr::slice(-1) %>%
+    ungroup() %>%
+    # select(-model_family) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = Median
+    ) %>%
+    mutate(order_index = match(model, incidence_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    mutate(model = str_replace_all(model, "arima", "ARIMA")) %>%
+    mutate(model = str_replace_all(model, "prophet", "Prophet")) %>%
+    mutate(model = str_replace_all(model, "xgboost", "XGBoost")) %>%
+    as.data.frame()
+
+mortality_absolute_improvement <- mortality_metrics %>%
+    select(model, model_family, metric, fit_length, horizon, Median) %>%
+    filter(metric %in% c("MAE", "RMSE")) %>%
+    group_by(model_family, metric, fit_length, horizon) %>%
+    mutate(across(Median, ~ . - first(.))) %>%
+    dplyr::slice(-1) %>%
+    ungroup() %>%
+    # select(-model_family) %>%
+    pivot_wider(
+        names_from = fit_length,
+        values_from = Median
+    ) %>%
+    mutate(order_index = match(model, mortality_model_order)) %>%
+    arrange(order_index) %>%
+    select(-order_index) %>%
+    mutate(model = str_replace_all(model, "arima", "ARIMA")) %>%
+    mutate(model = str_replace_all(model, "prophet", "Prophet")) %>%
+    mutate(model = str_replace_all(model, "xgboost", "XGBoost")) %>%
+    as.data.frame()
+```
+
+We can save prediction metric results as files. NOTE: this will produce individual file for each combination of fit_length+horizon.
+If you have lots of such combinations you will get lots of files!
+
+```{r}
+incidence_metrics %>%
+    select(-model_family) %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, fit_length, horizon) %>%
+    group_split() %>%
+    walk(~ {
+        write_csv(select(.x, -metric, -fit_length, -horizon), paste0(
+            output_dir,
+            "/incidence_",
+            unique(.x$metric),
+            "_fit_",
+            unique(.x$fit_length),
+            "_horizon_",
+            unique(.x$horizon),
+            ".csv"
+        ))
+
+        latex_table <- xtable(select(.x, -metric, -fit_length, -horizon))
+        print(latex_table,
+            file = paste0(
+                output_dir,
+                "/incidence_",
+                unique(.x$metric),
+                "_fit_",
+                unique(.x$fit_length),
+                "_horizon_",
+                unique(.x$horizon),
+                ".tex"
+            ),
+            type = "latex",
+            include.rownames = FALSE
+        )
+    })
+
+mortality_metrics %>%
+    select(-model_family) %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, fit_length, horizon) %>%
+    group_split() %>%
+    walk(~ {
+        write_csv(select(.x, -metric, -fit_length, -horizon), paste0(
+            output_dir,
+            "/mortality_",
+            unique(.x$metric),
+            "_fit_",
+            unique(.x$fit_length),
+            "_horizon_",
+            unique(.x$horizon),
+            ".csv"
+        ))
+
+        latex_table <- xtable(select(.x, -metric, -fit_length, -horizon))
+        print(latex_table,
+            file = paste0(
+                output_dir,
+                "/mortality_",
+                unique(.x$metric),
+                "_fit_",
+                unique(.x$fit_length),
+                "_horizon_",
+                unique(.x$horizon),
+                ".tex"
+            ),
+            type = "latex",
+            include.rownames = FALSE
+        )
+    })
+```
+
+Those are summary files that produce statistics for each fit_length and put all of them in single table file (.tex and .csv).
+
+```{r}
+incidence_metrics_by_fit %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon) %>%
+    group_split() %>%
+    walk(~ {
+        write_csv(select(.x, -metric, -horizon), paste0(
+            output_dir,
+            "/incidence_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon),
+            ".csv"
+        ))
+
+        latex_table <- xtable(select(.x, -metric, -horizon))
+        print(latex_table,
+            file = paste0(
+                output_dir,
+                "/incidence_",
+                unique(.x$metric),
+                "_horizon_",
+                unique(.x$horizon),
+                ".tex"
+            ),
+            type = "latex",
+            include.rownames = FALSE
+        )
+    })
+
+mortality_metrics_by_fit %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon) %>%
+    group_split() %>%
+    walk(~ {
+        write_csv(select(.x, -metric, -horizon), paste0(
+            output_dir,
+            "/mortality_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon),
+            ".csv"
+        ))
+
+        latex_table <- xtable(select(.x, -metric, -horizon))
+        print(latex_table,
+            file = paste0(
+                output_dir,
+                "/mortality_",
+                unique(.x$metric),
+                "_horizon_",
+                unique(.x$horizon),
+                ".tex"
+            ),
+            type = "latex",
+            include.rownames = FALSE
+        )
+    })
+```
+
+Heatmaps for performance improvement by adding exogenous regressors.
+
+```{r}
+heatmap_palette <- c("#1065AB", "white", "#B31529")
+
+save_heatmap <- function(df, file_name, value_range = NULL) {
+    df <- as.data.frame(df)
+    pdf(paste0(file_name, ".pdf"), height = 6, width = 13)
+    par(mar = c(5.5, 5.1, 5.1, 2.1))
+
+    rownames(df) <- gsub("_", " ", df[, 1])
+    rownames(df) <- gsub("sars-cov-2", "SARS-CoV-2", rownames(df))
+    color_range <- round(101 + max(df[, -1]))
+    if (is.null(value_range)) {
+        value_range = c(-100.0, 100.0)
+    }
+    breaks <- c(seq(value_range[1], 0.0, length.out = floor(color_range / 2) + 1),
+            seq(0, value_range[2], length.out = ceiling(color_range / 2) + 1)[-1])
+
+    # print(df)
+    # stop()
+    pheatmap(
+        df[, -1],
+        color = colorRampPalette(heatmap_palette)(color_range), # Define color palette
+        breaks = breaks,
+        fontsize_row = 11, # Adjust row font size
+        fontsize_col = 11, # Adjust column font size
+        cluster_rows = FALSE, # Cluster rows
+        cluster_cols = FALSE, # Cluster columns
+        display_numbers = TRUE,
+        fontsize_number = 7,
+        angle_col = 0,
+        legend = TRUE,
+        # cex = .25,
+        # gpar(fontface="bold"),
+    )
+
+    dev.off()
+}
+
+incidence_relative_improvement %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon, model_family) %>%
+    group_split() %>%
+    walk(~ {
+        save_heatmap(select(.x, -metric, -horizon, -model_family), paste0(
+            plot_dir,
+            "/incidence_improvement_heatmap_",
+            unique(.x$model_family),
+            "_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon)
+        ))
+    })
+
+mortality_relative_improvement %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon, model_family) %>%
+    group_split() %>%
+    walk(~ {
+        save_heatmap(select(.x, -metric, -horizon, -model_family), paste0(
+            plot_dir,
+            "/mortality_improvement_heatmap_",
+            unique(.x$model_family),
+            "_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon)
+        ))
+    })
+
+incidence_max_diff <- quantile(incidence_absolute_improvement %>% select_if(is.numeric) %>% abs() %>% unlist(), probs = 0.9)[[1]]
+mortality_max_diff <- quantile(mortality_absolute_improvement %>% select_if(is.numeric) %>% abs() %>% unlist(), probs = 0.9)[[1]]
+
+incidence_absolute_improvement %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon, model_family) %>%
+    group_split() %>%
+    walk(~ {
+        save_heatmap(select(.x, -metric, -horizon, -model_family), paste0(
+            plot_dir,
+            "/incidence_abs_improvement_heatmap_",
+            unique(.x$model_family),
+            "_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon)
+        ),
+        value_range = c(-incidence_max_diff, incidence_max_diff))
+    })
+
+mortality_absolute_improvement %>%
+    mutate_if(is.numeric, ~ round(., 2)) %>%
+    group_by(metric, horizon, model_family) %>%
+    group_split() %>%
+    walk(~ {
+        save_heatmap(select(.x, -metric, -horizon, -model_family), paste0(
+            plot_dir,
+            "/mortality_abs_improvement_heatmap_",
+            unique(.x$model_family),
+            "_",
+            unique(.x$metric),
+            "_horizon_",
+            unique(.x$horizon)
+        ),
+        value_range = c(-mortality_max_diff, mortality_max_diff))
+    })
+```
