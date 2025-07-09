@@ -118,8 +118,8 @@ limit_signif_digits <- function(x) {
 
 # Time series scaler
 my_scale <- function(data) {
-    if (all(data == 0)) {
-        warning("Zero sequence scaling")
+    if (any(is.na(data)) || all(data == 0, na.rm = TRUE)) {
+        warning("Zero or NA sequence scaling")
         return(as.numeric(data))
     }
     result <- 100 * data / mean(data)
@@ -160,6 +160,23 @@ create_lagged_features <- function(df, lags) {
         # stop()
         # names(iteration_result) <- paste0(col_name, ".lag(", (curr_lag - 1) : 0, )
     }
+    return(result)
+}
+
+create_pca_features <- function(df) {
+    df <- df[, colSums(is.na(df)) == 0]
+    predictors <- df[, -c(1, 2)]
+    date_and_rate <- df[, c(1, 2)]
+    pca_features <- prcomp(predictors, center = TRUE)
+
+    explained_var <- summary(pca_features)$importance[3, ]
+    num_components <- which(cumsum(explained_var) >= 0.9)[1]
+
+    pca_features <- as.data.frame(pca_features$x[, 1:num_components])
+    colnames(pca_features) <- paste0("pc", 1:num_components)
+
+    result <- cbind(date_and_rate, pca_features)
+
     return(result)
 }
 
@@ -259,7 +276,7 @@ population <- population[population$year == 2020, c("population", "state")]
 
 Now we want to load rate data itself. We would like to use Hopkins data for this. 
 It is packed in a single file for each rate. We only need to clean and transform data.
-It will take some time. If you already ran this block once (and it created .RData files), you can just skip this step.
+It will take some time. **If you already ran this block once (and it created .RData files), you can just skip this step.**
 
 ```{r}
 load_hopkins_timeseries <- function(path) {
@@ -731,6 +748,65 @@ rest are external regressors.
     return(result)
 }
 
+.fit_arfima <- function(df, ...) {
+    # print(df)
+    # stop()
+    fit_data <- df[2]
+    if (ncol(df) > 2) {
+        xreg <- as.matrix(df[, -c(1, 2)])
+    } else {
+        xreg <- NULL
+    }
+    # print(fit_data)
+    # print(list(...))
+    # print(xreg)
+    obj <- auto.arima(fit_data,
+        xreg = xreg,
+        ...
+    )
+    obj$fit <- data.frame(
+        ds = df[, 1],
+        yhat = as.numeric(obj$fitted),
+        yhat_lower = NA,
+        yhat_upper = NA
+    )
+
+    return(obj)
+}
+
+.predict_arfima <- function(obj, df) {
+    forecast_length <- nrow(df)
+    # print(xreg)
+    if (ncol(df) > 1) {
+        xreg <- as.matrix(df[, -1])
+    } else {
+        xreg <- NULL
+    }
+    prediction <- forecast(obj, xreg = xreg, h = forecast_length)
+    prediction_lower <- prediction$lower[, 2]
+    prediction_upper <- prediction$upper[, 2]
+    # print(prediction$lower)
+    # print(attributes(yhat_lower))
+    # print(as.numeric(yhat_lower))
+    # names(yhat) <- NULL
+    # names(yhat_lower) <- NULL
+    # names(yhat_upper) <- NULL
+    # print(result$mean)
+    # print(obj$fitted)
+    result <- data.frame(
+        ds = df[, 1],
+        yhat = as.numeric(prediction$mean),
+        yhat_lower = as.numeric(prediction_lower),
+        yhat_upper = as.numeric(prediction_upper)
+    )
+    # print(obj$fit)
+    # print(result)
+    # readline()
+    # result <- result[2:length(result)]
+    # readline()
+    return(result)
+}
+
 .fit_prophet <- function(df, ...) {
     # print(df)
     names(df)[1] <- "ds"
@@ -897,6 +973,9 @@ model.fit <- function(df, prediction_method, transformation = NULL, ...) {
         arima = {
             .fit_arima(df, ...)
         },
+        arfima = {
+            .fit_arfima(df, ...)
+        },
         prophet = {
             .fit_prophet(df, ...)
         }
@@ -925,6 +1004,9 @@ model.forecast <- function(obj, df, prediction_method) {
         arima = {
             .predict_arima(obj, df)
         },
+        arfima = {
+            .predict_arima(obj, df)
+        },
         prophet = {
             .predict_prophet(obj, df)
         }
@@ -947,7 +1029,7 @@ plus incidence/mortality counts. This way we get data frame with state, date, ra
 ```{r}
 rate_pipe <- function(trends, rate, top_trends, accumulate_data) {
     result <- trends %>%
-        filter(kw %in% top_trends) %>%
+        # filter(kw %in% top_trends) %>%
         select(state, kw, ds, data) %>%
         pivot_wider(
             names_from = kw,
@@ -1142,6 +1224,92 @@ prediction_pipe <- function(df, method, fit_lengths, horizons, transformation, s
     return(result)
 }
 
+pca_prediction_pipe <- function(df, method, fit_lengths, horizons, transformation) {
+    # We shift values by +1. This required for some models to converge.
+    shift_const <- 1
+    selected_regressors <- names(df[, -c(1, 2, 3)])
+    nested_data <- df %>%
+        select(c("ds", "state", "rate", selected_regressors)) %>%
+        group_by(state) %>%
+        mutate(across(-1, my_scale)) %>%
+        ungroup() %>%
+        mutate(across(-c(1, 2), ~ . + shift_const)) %>%
+        nest_by(state) %>%
+        mutate(data = list(create_pca_features(data))) %>%
+        split(seq(nrow(.)))
+    column_counts <- map_dfr(nested_data, function(row) {
+        tibble(
+            state = row$state[[1]], # extract scalar from tibble column
+            n_cols = ncol(row$data[[1]]) - 2 # extract the actual nested df
+        )
+    })
+    print(paste0(
+        "Principal component number ", 
+        mean(column_counts$n_cols), 
+        " (", 
+        min(column_counts$n_cols),
+        ", ",
+        max(column_counts$n_cols),
+        ")"))
+    # mutate(prediction = list(my_better_rollapply(
+    #     data,
+    #     roll_fun,
+    #     window = fit_length + horizon,
+    #     horizon = horizon,
+    #     method = method,
+    #     transformation = transformation,
+    #     state = cur_group()$state
+    # ))) %>%
+
+    if (cores == 1) {
+        lapply_fun <- lapply
+    } else {
+        lapply_fun <- mclapply
+    }
+    prediction <- NULL
+    for (horizon in horizons) {
+        for (fit_length in fit_lengths) {
+            tmp_prediction <- lapply_fun(
+                nested_data,
+                function(x, ...) {
+                    data <- x$data[[1]]
+                    if (rolling_window) {
+                        result <- my_better_rollapply(
+                            data,
+                            FUN = roll_fun,
+                            state = x$state,
+                            window = fit_length + horizon,
+                            horizon = horizon,
+                            method = method,
+                            transformation = transformation
+                        )
+                    } else {
+                        end <- fit_length + horizon
+                        start <- 1
+                        result <- roll_fun(
+                            data[start:end, ],
+                            state = x$state,
+                            horizon = horizon,
+                            method = method,
+                            transformation = transformation
+                        )
+                    }
+                    return(result)
+                },
+                mc.cores = cores
+            )
+            tmp_prediction <- do.call(rbind, tmp_prediction)
+            prediction <- rbind(prediction, tmp_prediction)
+        }
+    }
+
+    result <- prediction %>%
+        mutate(across(c("yhat", "yhat_lower", "yhat_upper"), ~ . - shift_const)) %>%
+        filter(prediction_type == "out-of-sample") %>%
+        as.data.frame()
+    return(result)
+}
+
 # This function runs forecast model with different sets of external regressors
 run_model <- function(df, method, fit_lengths, horizons, transformation, top_trends, bottom_trends) {
     # Model without external regressors
@@ -1158,8 +1326,8 @@ run_model <- function(df, method, fit_lengths, horizons, transformation, top_tre
         # result <- prediction_pipe(
         #     df,
         #     method,
-        #     fit_length,
-        #     horizon,
+        #     fit_lengths,
+        #     horizons,
         #     transformation,
         #     selected_regressors = c(kw)
         # )
@@ -1206,6 +1374,21 @@ run_model <- function(df, method, fit_lengths, horizons, transformation, top_tre
             )
         )
     }
+
+    pca_result <- pca_prediction_pipe(
+        df,
+        method,
+        fit_lengths,
+        horizons,
+        NULL
+    )
+    pca_result$model <- paste0(method, "(rate, principal components)")
+    result <- rbind(
+        result,
+        pca_result
+    )
+    # result <- pca_result
+
     return(result)
 }
 ```
@@ -1215,6 +1398,9 @@ Common file path declarations for the blocks below.
 ```{r}
 incidence_arima_predictions_file <- paste0(output_dir, "/incidence_arima_predictions.RData")
 mortality_arima_predictions_file <- paste0(output_dir, "/mortality_arima_predictions.RData")
+
+incidence_arfima_predictions_file <- paste0(output_dir, "/incidence_arfima_predictions.RData")
+mortality_arfima_predictions_file <- paste0(output_dir, "/mortality_arfima_predictions.RData")
 
 incidence_prophet_predictions_file <- paste0(output_dir, "/incidence_prophet_predictions.RData")
 mortality_prophet_predictions_file <- paste0(output_dir, "/mortality_prophet_predictions.RData")
@@ -1248,6 +1434,31 @@ mortality_arima_predictions <- run_model(
 
 save(incidence_arima_predictions, file = incidence_arima_predictions_file)
 save(mortality_arima_predictions, file = mortality_arima_predictions_file)
+```
+
+```{r}
+incidence_arfima_predictions <- run_model(
+    incidence_plus_selected_trends,
+    "arfima",
+    fit_lengths,
+    horizons,
+    box_cox,
+    top_incidence_trends,
+    bottom_incidence_trends
+)
+
+mortality_arfima_predictions <- run_model(
+    mortality_plus_selected_trends,
+    "arfima",
+    fit_lengths,
+    horizons,
+    box_cox,
+    top_mortality_trends,
+    bottom_mortality_trends
+)
+
+save(incidence_arfima_predictions, file = incidence_arfima_predictions_file)
+save(mortality_arfima_predictions, file = mortality_arfima_predictions_file)
 ```
 
 Here we run Prophet predictive model and save predictions as files.
@@ -1310,6 +1521,9 @@ Load and combine all predictions in single table for each rate.
 load(file = incidence_arima_predictions_file)
 load(file = mortality_arima_predictions_file)
 
+# load(file = incidence_arfima_predictions_file)
+# load(file = mortality_arfima_predictions_file)
+
 load(file = incidence_prophet_predictions_file)
 load(file = mortality_prophet_predictions_file)
 
@@ -1317,15 +1531,18 @@ load(file = incidence_xgboost_predictions_file)
 load(file = mortality_xgboost_predictions_file)
 
 incidence_arima_predictions$model_family <- "arima"
+# incidence_arfima_predictions$model_family <- "arfima"
 incidence_prophet_predictions$model_family <- "prophet"
 incidence_xgboost_predictions$model_family <- "xgboost"
 
 mortality_arima_predictions$model_family <- "arima"
+# mortality_arfima_predictions$model_family <- "arfima"
 mortality_prophet_predictions$model_family <- "prophet"
 mortality_xgboost_predictions$model_family <- "xgboost"
 
 incidence_predictions <- rbind(
     incidence_arima_predictions,
+    # incidence_arfima_predictions,
     incidence_prophet_predictions,
     incidence_xgboost_predictions,
     NULL
@@ -1333,6 +1550,7 @@ incidence_predictions <- rbind(
 
 mortality_predictions <- rbind(
     mortality_arima_predictions,
+    # mortality_arfima_predictions,
     mortality_prophet_predictions,
     mortality_xgboost_predictions,
     NULL
@@ -1476,7 +1694,7 @@ incidence_relative_improvement <- incidence_metrics %>%
     select(model, model_family, metric, fit_length, horizon, Median) %>%
     filter(metric %in% c("MAE", "RMSE")) %>%
     group_by(model_family, metric, fit_length, horizon) %>%
-    mutate(across(Median, ~ ( . - first(.) ) / first(.) * 100)) %>%
+    mutate(across(Median, ~ (. - first(.)) / first(.) * 100)) %>%
     dplyr::slice(-1) %>%
     ungroup() %>%
     # select(-model_family) %>%
@@ -1496,7 +1714,7 @@ mortality_relative_improvement <- mortality_metrics %>%
     select(model, model_family, metric, fit_length, horizon, Median) %>%
     filter(metric %in% c("MAE", "RMSE")) %>%
     group_by(model_family, metric, fit_length, horizon) %>%
-    mutate(across(Median, ~ ( . - first(.) ) / first(.) * 100)) %>%
+    mutate(across(Median, ~ (. - first(.)) / first(.) * 100)) %>%
     dplyr::slice(-1) %>%
     ungroup() %>%
     # select(-model_family) %>%
@@ -1517,7 +1735,7 @@ incidence_absolute_improvement <- incidence_metrics %>%
     select(model, model_family, metric, fit_length, horizon, Median) %>%
     filter(metric %in% c("MAE", "RMSE")) %>%
     group_by(model_family, metric, fit_length, horizon) %>%
-    mutate(across(Median, ~ . - first(.) )) %>%
+    mutate(across(Median, ~ . - first(.))) %>%
     dplyr::slice(-1) %>%
     ungroup() %>%
     # select(-model_family) %>%
@@ -1549,6 +1767,7 @@ mortality_absolute_improvement <- mortality_metrics %>%
     arrange(order_index) %>%
     select(-order_index) %>%
     mutate(model = str_replace_all(model, "arima", "ARIMA")) %>%
+    mutate(model = str_replace_all(model, "arima", "ARFIMA")) %>%
     mutate(model = str_replace_all(model, "prophet", "Prophet")) %>%
     mutate(model = str_replace_all(model, "xgboost", "XGBoost")) %>%
     as.data.frame()
@@ -1703,10 +1922,12 @@ save_heatmap <- function(df, file_name, value_range = NULL) {
     rownames(df) <- gsub("sars-cov-2", "SARS-CoV-2", rownames(df))
     color_range <- round(101 + max(df[, -1]))
     if (is.null(value_range)) {
-        value_range = c(-100.0, 100.0)
+        value_range <- c(-100.0, 100.0)
     }
-    breaks <- c(seq(value_range[1], 0.0, length.out = floor(color_range / 2) + 1),
-            seq(0, value_range[2], length.out = ceiling(color_range / 2) + 1)[-1])
+    breaks <- c(
+        seq(value_range[1], 0.0, length.out = floor(color_range / 2) + 1),
+        seq(0, value_range[2], length.out = ceiling(color_range / 2) + 1)[-1]
+    )
 
     # print(df)
     # stop()
@@ -1778,7 +1999,8 @@ incidence_absolute_improvement %>%
             "_horizon_",
             unique(.x$horizon)
         ),
-        value_range = c(-incidence_max_diff, incidence_max_diff))
+        value_range = c(-incidence_max_diff, incidence_max_diff)
+        )
     })
 
 mortality_absolute_improvement %>%
@@ -1795,6 +2017,7 @@ mortality_absolute_improvement %>%
             "_horizon_",
             unique(.x$horizon)
         ),
-        value_range = c(-mortality_max_diff, mortality_max_diff))
+        value_range = c(-mortality_max_diff, mortality_max_diff)
+        )
     })
 ```
